@@ -1,0 +1,94 @@
+50 Python condition practice program questions
+
+# Basic Condition Programs
+
+1. Check whether a number is positive or negative.
+2. Check whether a number is even or odd.
+3. Check whether a number is divisible by 5.
+4. Check whether a number is divisible by both 3 and 7.
+5. Find greater number between two numbers.
+6. Find greatest among three numbers.
+7. Check whether a year is leap year or not.
+8. Check whether a character is vowel or consonant.
+9. Check whether a character is uppercase or lowercase.
+10. Check whether a number is zero, positive, or negative.
+
+---
+
+# Age / Eligibility Based Programs
+
+11. Check whether person is eligible for voting.
+12. Check whether person is eligible for driving license.
+13. Check whether person is senior citizen.
+14. Check admission eligibility based on marks.
+15. Check whether person can donate blood.
+
+---
+
+# Marks / Grade Programs
+
+16. Calculate grade using marks.
+17. Check pass or fail.
+18. Find division based on marks.
+19. Check distinction, first class, second class.
+20. Find result for multiple subjects.
+
+---
+
+# Salary / Bonus Programs
+
+21. Calculate employee bonus based on salary.
+22. Calculate tax based on salary slab.
+23. Check loan eligibility.
+24. Apply discount if purchase > amount.
+25. Calculate electricity bill based on units.
+
+---
+
+# Number Logic Programs
+
+26. Check largest among four numbers.
+27. Check smallest among three numbers.
+28. Check whether number is multiple of 11.
+29. Check whether number is 2-digit / 3-digit / 4-digit.
+30. Check whether number ends with 5.
+
+---
+
+# Nested Condition Programs
+
+31. Login system with username and password.
+32. ATM withdrawal if balance sufficient.
+33. Ticket booking age + seat availability check.
+34. Scholarship eligibility based on marks + income.
+35. Employee promotion eligibility.
+
+---
+
+# Logical Operator Programs
+
+36. Check number between two ranges.
+37. Check if person eligible for job (age + degree).
+38. Check if number divisible by 2 and 5.
+39. Check if triangle valid by angles.
+40. Check if sides form triangle.
+
+---
+
+# Menu Driven Programs
+
+41. Simple calculator using conditions.
+42. Menu for food ordering system.
+43. ATM menu options.
+44. Mobile recharge menu.
+45. Grade menu system.
+
+---
+
+# Advanced Logic Programs
+
+46. Find absolute value of number.
+47. Check palindrome number using conditions.
+48. Check whether alphabet is special character / digit / letter.
+49. Find day name from day number (1–7).
+50. Find month name from month number.

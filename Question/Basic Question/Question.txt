@@ -1,0 +1,63 @@
+### Basic Python Coding Questions 
+
+1. Write a program to print **"Hello World"**.
+
+2. Write a program to take a user's name as input and print a welcome message.
+
+3. Write a program to add two numbers entered by the user.
+
+4. Write a program to subtract two numbers.
+
+5. Write a program to multiply two numbers.
+
+6. Write a program to divide two numbers.
+
+7. Write a program to find the square of a number.
+
+8. Write a program to find the cube of a number.
+
+9. Write a program to swap two variables using a third variable.
+
+10. Write a program to swap two variables without using a third variable.
+
+11. Write a program to find the datatype of a variable.
+
+12. Write a program to convert a string into an integer.
+
+13. Write a program to convert an integer into a string.
+
+14. Write a program to find the length of a string.
+
+15. Write a program to concatenate two strings.
+
+16. Write a program to convert a string to uppercase.
+
+17. Write a program to convert a string to lowercase.
+
+18. Write a program to create a list and add an element using `append()`.
+
+19. Write a program to find the maximum value from a list using `max()`.
+
+20. Write a program to find the minimum value from a list using `min()`.
+
+### Bonus Interview Coding Questions
+
+21. Reverse a string using slicing.
+
+22. Extract the first 5 characters from a string.
+
+23. Count the total number of characters in a string.
+
+24. Find the sum of all elements in a list using `sum()`.
+
+25. Find the average of three numbers.
+
+26. Create a dictionary and print a specific value using its key.
+
+27. Create a tuple and print its length.
+
+28. Remove duplicate values from a list using a set.
+
+29. Find the absolute value of a number using `abs()`.
+
+30. Find the power of a number using `pow()`.

@@ -1,0 +1,29 @@
+1. Print all numbers from 1 to 10 using a loop.
+2. Print numbers from 10 down to 1 in reverse order.
+3. Print all even numbers between 1 and 100.
+4. Print all odd numbers between 1 and 100.
+5. Print the multiplication table of a given number from n × 1 to n × 10.
+6. Calculate and print the sum of the first n natural numbers.
+7. Calculate the sum of all even numbers from 1 up to n.
+8. Calculate the sum of all odd numbers from 1 up to n.
+9. Calculate and print the factorial of a given number.
+10. Find and print the product of all digits of a given number.
+11. Count and print the total number of digits in a given number.
+12. Reverse the given number and print the reversed value.
+13. Check whether the given number is a palindrome.
+14. Find and print the sum of digits of the given number.
+15. Check whether the given number is an Armstrong number.
+16. Check whether the given number is a Perfect number.
+17. Print all prime numbers between 1 and 100.
+18. Check whether the given number is a prime number.
+19. Print the Fibonacci series up to n terms.
+20. Find and print the sum of the Fibonacci series up to n terms.
+21. Print the square of each number from 1 to n.
+22. Print the cube of each number from 1 to n.
+23. Print all numbers between a and b that are divisible by 7.
+24. Print all factors of the given number.
+25. Find and print the sum of all factors of the given number.
+26. Find the HCF (Highest Common Factor) of two given numbers.
+27. Find the LCM (Least Common Multiple) of two given numbers.
+28. Find the smallest digit in the given number.
+29. Find the largest digit in the given number.
