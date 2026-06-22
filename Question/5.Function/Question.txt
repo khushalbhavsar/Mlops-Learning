@@ -1,0 +1,222 @@
+# 1. Basic Functions (10 Questions)
+
+1. Create a function that prints "Hello World".
+2. Create a function that prints your name.
+3. Create a function to print numbers from 1 to 10.
+4. Create a function to print the square of a number.
+5. Create a function to print the cube of a number.
+6. Create a function to display a welcome message.
+7. Create a function that prints today's date.
+8. Create a function that prints the first 10 even numbers.
+9. Create a function that prints the multiplication table of 5.
+10. Create a function that prints a star pattern.
+
+---
+
+# 2. Function with Parameters (10 Questions)
+
+1. Create a function to add two numbers.
+2. Create a function to subtract two numbers.
+3. Create a function to multiply two numbers.
+4. Create a function to divide two numbers.
+5. Create a function to find the square of a number.
+6. Create a function to find the cube of a number.
+7. Create a function to print a person's name and age.
+8. Create a function to calculate simple interest.
+9. Create a function to calculate the area of a rectangle.
+10. Create a function to swap two numbers.
+
+---
+
+# 3. Return Statement (10 Questions)
+
+1. Return the sum of two numbers.
+2. Return the product of two numbers.
+3. Return the square of a number.
+4. Return the cube of a number.
+5. Return the largest of two numbers.
+6. Return the smallest of three numbers.
+7. Return the average of three numbers.
+8. Return whether a number is positive or negative.
+9. Return the remainder when two numbers are divided.
+10. Return the area of a circle.
+
+---
+
+# 4. Local and Global Variables (10 Questions)
+
+1. Create a local variable and print it.
+2. Try accessing a local variable outside the function.
+3. Create a global variable and access it inside a function.
+4. Modify a global variable using `global`.
+5. Find the difference between local and global variables.
+6. Create two functions using the same local variable name.
+7. Use a global counter variable.
+8. Create a program with both local and global variables.
+9. Demonstrate variable shadowing.
+10. Create a bank balance program using a global variable.
+
+---
+
+# 5. Default Arguments (10 Questions)
+
+1. Create a greeting function with a default name.
+2. Create a function with default age = 18.
+3. Create a function to calculate tax with a default tax rate.
+4. Create a function to calculate interest with a default rate.
+5. Create a function to print a default country.
+6. Create a function to print a default city.
+7. Create a calculator with default values.
+8. Create a function with two default parameters.
+9. Create a function where some parameters are default and some are mandatory.
+10. Create a shopping bill calculator with a default discount.
+
+---
+
+# 6. Keyword Arguments (10 Questions)
+
+1. Pass arguments using keywords.
+2. Create a student information function.
+3. Create an employee information function.
+4. Create a function for product details.
+5. Create a function for bank account details.
+6. Create a function for movie details.
+7. Create a function for car details.
+8. Create a function with four keyword arguments.
+9. Pass arguments in a different order.
+10. Mix positional and keyword arguments.
+
+---
+
+# 7. *args (Variable-Length Arguments) (10 Questions)
+
+1. Sum all numbers passed to a function.
+2. Find the largest number using `*args`.
+3. Find the smallest number using `*args`.
+4. Calculate the average using `*args`.
+5. Count the number of arguments passed.
+6. Multiply all arguments.
+7. Print all arguments one by one.
+8. Find even numbers from `*args`.
+9. Find odd numbers from `*args`.
+10. Create a calculator using `*args`.
+
+---
+
+# 8. **kwargs (Keyword Variable Arguments) (10 Questions)
+
+1. Print all keyword arguments.
+2. Print student details.
+3. Print employee details.
+4. Print product details.
+5. Print bank details.
+6. Print address details.
+7. Count the number of keyword arguments.
+8. Display keys and values separately.
+9. Search for a specific key.
+10. Create a user profile using `**kwargs`.
+
+---
+
+# 9. Recursion (10 Questions)
+
+1. Find factorial using recursion.
+2. Print numbers from 1 to n recursively.
+3. Print numbers from n to 1 recursively.
+4. Find the sum of first n numbers.
+5. Find the power of a number.
+6. Find Fibonacci numbers recursively.
+7. Reverse a string recursively.
+8. Count digits recursively.
+9. Find GCD recursively.
+10. Solve Tower of Hanoi.
+
+---
+
+# 10. Lambda Functions (10 Questions)
+
+1. Square a number using lambda.
+2. Cube a number using lambda.
+3. Add two numbers using lambda.
+4. Multiply two numbers using lambda.
+5. Find the maximum of two numbers.
+6. Find the minimum of two numbers.
+7. Check even/odd using lambda.
+8. Sort a list using lambda.
+9. Sort tuples by the second element.
+10. Use lambda with `map()`.
+
+---
+
+# 11. map() Function (10 Questions)
+
+1. Square all numbers in a list.
+2. Cube all numbers in a list.
+3. Convert strings to uppercase.
+4. Convert strings to lowercase.
+5. Add 10 to each element.
+6. Multiply each element by 2.
+7. Convert temperatures from Celsius to Fahrenheit.
+8. Find lengths of strings.
+9. Convert strings to integers.
+10. Use map with a lambda function.
+
+---
+
+# 12. filter() Function (10 Questions)
+
+1. Filter even numbers.
+2. Filter odd numbers.
+3. Filter positive numbers.
+4. Filter negative numbers.
+5. Filter numbers greater than 50.
+6. Filter names starting with 'A'.
+7. Filter strings longer than 5 characters.
+8. Filter prime numbers.
+9. Filter palindromes.
+10. Filter students with marks above 75.
+
+---
+
+# 13. Closures (10 Questions)
+
+1. Create a simple closure.
+2. Create a greeting closure.
+3. Create a multiplier closure.
+4. Create an adder closure.
+5. Create a power function closure.
+6. Create a discount calculator closure.
+7. Create a tax calculator closure.
+8. Create a bank balance closure.
+9. Create a counter closure.
+10. Create a password validator closure.
+
+---
+
+# 14. Decorators (10 Questions)
+
+1. Create a simple decorator.
+2. Print a message before function execution.
+3. Print a message after function execution.
+4. Measure execution time.
+5. Log function calls.
+6. Check user authentication.
+7. Validate input.
+8. Count function calls.
+9. Create a retry decorator.
+10. Create a caching decorator.
+
+---
+
+# Most Important Interview-Level Function Questions
+
+1. Factorial using function.
+2. Prime number using function.
+3. Palindrome using function.
+4. Armstrong number using function.
+5. Fibonacci using function.
+6. Reverse a string using function.
+7. Reverse a number using function.
+8. Largest of three numbers using function.
+9. Count vowels using function.
+10. Remove duplicates from a list using function.
