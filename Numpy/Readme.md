@@ -1096,3 +1096,667 @@ print(arr[(arr < 20) | (arr > 40)])
 * ✅ Enclose each condition in parentheses when using `&` or `|`.
 
 ---
+
+# NumPy Array Operations
+
+**Array Operations** are mathematical and logical operations performed directly on NumPy arrays. NumPy performs these operations **element-wise**, meaning the operation is applied to each corresponding element without using loops.
+
+---
+
+# 1. Arithmetic Operations
+
+Arithmetic operations are performed element by element.
+
+```python
+import numpy as np
+
+a = np.array([10,20,30])
+b = np.array([1,2,3])
+```
+
+| Operation      | Example  | Output          |
+| -------------- | -------- | --------------- |
+| Addition       | `a + b`  | `[11 22 33]`    |
+| Subtraction    | `a - b`  | `[9 18 27]`     |
+| Multiplication | `a * b`  | `[10 40 90]`    |
+| Division       | `a / b`  | `[10. 10. 10.]` |
+| Floor Division | `a // b` | `[10 10 10]`    |
+| Modulus        | `a % b`  | `[0 0 0]`       |
+| Power          | `a ** 2` | `[100 400 900]` |
+
+---
+
+## Example
+
+```python
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a ** 2)
+```
+
+---
+
+# 2. Scalar Operations
+
+A scalar is a single number. NumPy applies the operation to every element.
+
+```python
+arr = np.array([1,2,3])
+
+print(arr + 10)
+print(arr * 5)
+print(arr / 2)
+```
+
+**Output**
+
+```text
+[11 12 13]
+[ 5 10 15]
+[0.5 1.  1.5]
+```
+
+---
+
+# 3. Comparison Operations
+
+Comparison operators return Boolean values.
+
+```python
+arr = np.array([10,20,30])
+```
+
+| Operation             | Example     | Output               |
+| --------------------- | ----------- | -------------------- |
+| Greater than          | `arr > 20`  | `[False False True]` |
+| Less than             | `arr < 20`  | `[True False False]` |
+| Equal                 | `arr == 20` | `[False True False]` |
+| Not Equal             | `arr != 20` | `[True False True]`  |
+| Greater than or Equal | `arr >= 20` | `[False True True]`  |
+| Less than or Equal    | `arr <= 20` | `[True True False]`  |
+
+---
+
+# 4. Aggregate Operations
+
+These operations return a single value.
+
+```python
+arr = np.array([10,20,30,40])
+```
+
+| Function       | Purpose            | Output  |
+| -------------- | ------------------ | ------- |
+| `arr.sum()`    | Sum                | `100`   |
+| `arr.mean()`   | Average            | `25.0`  |
+| `arr.max()`    | Maximum            | `40`    |
+| `arr.min()`    | Minimum            | `10`    |
+| `arr.argmax()` | Index of maximum   | `3`     |
+| `arr.argmin()` | Index of minimum   | `0`     |
+| `arr.std()`    | Standard deviation | `11.18` |
+| `arr.var()`    | Variance           | `125.0` |
+
+---
+
+# 5. Universal Functions (ufuncs)
+
+NumPy provides built-in mathematical functions.
+
+```python
+arr = np.array([4,9,16])
+```
+
+| Function    | Example           | Output                |
+| ----------- | ----------------- | --------------------- |
+| Square Root | `np.sqrt(arr)`    | `[2. 3. 4.]`          |
+| Square      | `np.square(arr)`  | `[16 81 256]`         |
+| Absolute    | `np.abs([-2,-5])` | `[2 5]`               |
+| Exponential | `np.exp([1,2])`   | `[2.718... 7.389...]` |
+| Logarithm   | `np.log([1,2])`   | `[0.0 0.693...]`      |
+
+---
+
+# 6. Logical Operations
+
+```python
+a = np.array([True, False, True])
+b = np.array([False, False, True])
+```
+
+| Function | Example               |
+| -------- | --------------------- |
+| AND      | `np.logical_and(a,b)` |
+| OR       | `np.logical_or(a,b)`  |
+| NOT      | `np.logical_not(a)`   |
+
+---
+
+# 7. Array-to-Array Operations
+
+```python
+a = np.array([1,2,3])
+b = np.array([4,5,6])
+```
+
+| Operation      | Example       | Output      |
+| -------------- | ------------- | ----------- |
+| Addition       | `a + b`       | `[5 7 9]`   |
+| Multiplication | `a * b`       | `[4 10 18]` |
+| Dot Product    | `np.dot(a,b)` | `32`        |
+
+---
+
+# 8. Matrix Operations
+
+```python
+A = np.array([[1,2],
+              [3,4]])
+
+B = np.array([[5,6],
+              [7,8]])
+```
+
+| Operation             | Example                     |
+| --------------------- | --------------------------- |
+| Matrix Multiplication | `A @ B` or `np.matmul(A,B)` |
+| Transpose             | `A.T`                       |
+| Determinant           | `np.linalg.det(A)`          |
+| Inverse               | `np.linalg.inv(A)`          |
+
+---
+
+# 9. Broadcasting
+
+Broadcasting allows operations between arrays of different shapes.
+
+```python
+arr = np.array([1,2,3])
+
+print(arr + 10)
+```
+
+Output
+
+```text
+[11 12 13]
+```
+
+NumPy automatically adds `10` to every element.
+
+---
+
+# 10. Sorting Operations
+
+```python
+arr = np.array([5,2,4,1,3])
+```
+
+| Function     | Example           |
+| ------------ | ----------------- |
+| Sort         | `np.sort(arr)`    |
+| Sort Indices | `np.argsort(arr)` |
+
+---
+
+# 11. Searching Operations
+
+| Function          | Example             |
+| ----------------- | ------------------- |
+| Find Condition    | `np.where(arr > 3)` |
+| Unique Values     | `np.unique(arr)`    |
+| Non-zero Elements | `np.nonzero(arr)`   |
+
+---
+
+# 12. Statistical Operations
+
+```python
+arr = np.array([10,20,30,40])
+```
+
+| Function          | Purpose            |
+| ----------------- | ------------------ |
+| `np.mean()`       | Mean               |
+| `np.median()`     | Median             |
+| `np.std()`        | Standard Deviation |
+| `np.var()`        | Variance           |
+| `np.percentile()` | Percentile         |
+
+---
+
+# Difference: `*` vs `np.dot()`
+
+```python
+a = np.array([1,2,3])
+b = np.array([4,5,6])
+```
+
+| Operation                   | Example       | Output      |
+| --------------------------- | ------------- | ----------- |
+| Element-wise Multiplication | `a * b`       | `[4 10 18]` |
+| Dot Product                 | `np.dot(a,b)` | `32`        |
+
+
+---
+
+## Key Interview Points
+
+* NumPy performs **element-wise operations** by default.
+* Operations are much faster than using Python loops because of **vectorization**.
+* Use `*` for **element-wise multiplication** and `np.dot()` or `@` for **matrix multiplication**.
+* Broadcasting lets you perform operations on arrays of compatible shapes without manually repeating data.
+* Aggregate functions like `sum()`, `mean()`, `max()`, and `min()` are heavily used in data analysis and machine learning.
+
+# Deep Copy and Shallow Copy in NumPy
+
+When you copy a NumPy array, there are **two types of copies**:
+
+1. **Shallow Copy (View)** – Shares the same memory as the original array.
+2. **Deep Copy (Copy)** – Creates a completely new array with separate memory.
+
+---
+
+# 1. Shallow Copy (View)
+
+## Definition
+
+A **shallow copy** creates a **view** of the original array. Both arrays share the **same memory**, so changing one affects the other.
+
+### Syntax
+
+```python
+view_arr = arr.view()
+```
+
+### Example
+
+```python
+import numpy as np
+
+arr = np.array([10,20,30,40])
+
+view_arr = arr.view()
+
+view_arr[0] = 100
+
+print(arr)
+print(view_arr)
+```
+
+### Output
+
+```python
+[100  20  30  40]
+[100  20  30  40]
+```
+
+### Explanation
+
+* `view()` creates a **shallow copy**.
+* Both arrays point to the **same memory**.
+* Changing `view_arr` also changes `arr`.
+
+---
+
+# 2. Deep Copy (Copy)
+
+## Definition
+
+A **deep copy** creates a **new array** with its own memory. Changes to the copied array do **not** affect the original array.
+
+### Syntax
+
+```python
+copy_arr = arr.copy()
+```
+
+### Example
+
+```python
+import numpy as np
+
+arr = np.array([10,20,30,40])
+
+copy_arr = arr.copy()
+
+copy_arr[0] = 100
+
+print(arr)
+print(copy_arr)
+```
+
+### Output
+
+```python
+[10 20 30 40]
+[100  20  30  40]
+```
+
+### Explanation
+
+* `copy()` creates a **deep copy**.
+* Both arrays have **different memory locations**.
+* Changing `copy_arr` does **not** affect `arr`.
+
+---
+
+# Shallow Copy vs Deep Copy
+
+| Feature                     | Shallow Copy (`view()`) | Deep Copy (`copy()`) |
+| --------------------------- | ----------------------- | -------------------- |
+| Memory                      | Shared                  | Separate             |
+| Changes affect original     | ✅ Yes                   | ❌ No                 |
+| Changes affect copied array | ✅ Yes                   | ❌ No                 |
+| Creates new memory          | ❌ No                    | ✅ Yes                |
+| Function                    | `arr.view()`            | `arr.copy()`         |
+
+---
+
+# Memory Check
+
+You can check whether arrays share memory using:
+
+```python
+import numpy as np
+
+arr = np.array([1,2,3])
+
+view_arr = arr.view()
+copy_arr = arr.copy()
+
+print(np.shares_memory(arr, view_arr))
+print(np.shares_memory(arr, copy_arr))
+```
+
+### Output
+
+```python
+True
+False
+```
+
+---
+
+# Quick Cheat Sheet
+
+| Function     | Type         | Memory   | Original Changes? |
+| ------------ | ------------ | -------- | ----------------- |
+| `arr.view()` | Shallow Copy | Shared   | ✅ Yes             |
+| `arr.copy()` | Deep Copy    | Separate | ❌ No              |
+
+---
+
+# Interview Questions
+
+| Question                                     | Answer                                                    |
+| -------------------------------------------- | --------------------------------------------------------- |
+| What is a shallow copy?                      | A view that shares the same memory as the original array. |
+| What is a deep copy?                         | A completely independent copy with separate memory.       |
+| Which function creates a shallow copy?       | `view()`                                                  |
+| Which function creates a deep copy?          | `copy()`                                                  |
+| How do you check if two arrays share memory? | `np.shares_memory()`                                      |
+
+## Key Points to Remember
+
+* **Shallow Copy (`view()`)**
+
+  * Shares the same memory.
+  * Changes in one array are reflected in the other.
+  * Faster because no new memory is allocated.
+
+* **Deep Copy (`copy()`)**
+
+  * Allocates new memory.
+  * Changes are independent.
+  * Safer when you don't want the original data to be modified.
+
+### Easy Way to Remember
+
+* **`view()` = Same Memory = Changes Reflect**
+* **`copy()` = New Memory = Independent Changes**
+
+# NumPy Array Manipulation
+
+## What is Array Manipulation?
+
+**Array Manipulation** means **changing the structure, shape, size, or arrangement of a NumPy array** without changing its data values (unless specifically intended).
+
+It is commonly used in **Data Science**, **Machine Learning**, and **MLOps** to prepare data for analysis and model training.
+
+---
+
+# Most Important Array Manipulation Functions
+
+| Function        | Purpose                       | Example                 |
+| --------------- | ----------------------------- | ----------------------- |
+| `reshape()`     | Change the shape of an array  | `arr.reshape(2,3)`      |
+| `resize()`      | Change the shape and size     | `arr.resize((2,3))`     |
+| `flatten()`     | Convert to a 1D copy          | `arr.flatten()`         |
+| `ravel()`       | Convert to a 1D view          | `arr.ravel()`           |
+| `transpose()`   | Swap rows and columns         | `arr.transpose()`       |
+| `T`             | Shortcut for transpose        | `arr.T`                 |
+| `concatenate()` | Join arrays                   | `np.concatenate((a,b))` |
+| `stack()`       | Stack arrays along a new axis | `np.stack((a,b))`       |
+| `vstack()`      | Stack vertically              | `np.vstack((a,b))`      |
+| `hstack()`      | Stack horizontally            | `np.hstack((a,b))`      |
+| `split()`       | Split an array                | `np.split(arr,2)`       |
+| `vsplit()`      | Split vertically              | `np.vsplit(arr,2)`      |
+| `hsplit()`      | Split horizontally            | `np.hsplit(arr,2)`      |
+| `append()`      | Add elements at the end       | `np.append(arr,6)`      |
+| `insert()`      | Insert elements at a position | `np.insert(arr,2,100)`  |
+| `delete()`      | Delete elements               | `np.delete(arr,1)`      |
+
+---
+
+# 1. Reshape
+
+Changes the shape of an array.
+
+```python
+arr = np.array([1,2,3,4,5,6])
+
+arr.reshape(2,3)
+```
+
+Output
+
+```text
+[[1 2 3]
+ [4 5 6]]
+```
+
+---
+
+# 2. Flatten
+
+Converts a multi-dimensional array into a **1D copy**.
+
+```python
+arr.flatten()
+```
+
+---
+
+# 3. Transpose
+
+Swaps rows and columns.
+
+```python
+arr.T
+```
+
+---
+
+# 4. Concatenate
+
+Joins two arrays.
+
+```python
+a = np.array([1,2])
+b = np.array([3,4])
+
+np.concatenate((a,b))
+```
+
+Output
+
+```text
+[1 2 3 4]
+```
+
+---
+
+# 5. Vertical Stack
+
+```python
+np.vstack((a,b))
+```
+
+Output
+
+```text
+[[1 2]
+ [3 4]]
+```
+
+---
+
+# 6. Horizontal Stack
+
+```python
+np.hstack((a,b))
+```
+
+Output
+
+```text
+[1 2 3 4]
+```
+
+---
+
+# 7. Split
+
+Splits an array into multiple parts.
+
+```python
+arr = np.array([1,2,3,4])
+
+np.split(arr,2)
+```
+
+Output
+
+```text
+[array([1,2]), array([3,4])]
+```
+
+---
+
+# 8. Append
+
+Adds elements at the end.
+
+```python
+np.append(arr,5)
+```
+
+Output
+
+```text
+[1 2 3 4 5]
+```
+
+---
+
+# 9. Insert
+
+Inserts an element at a specified index.
+
+```python
+np.insert(arr,2,100)
+```
+
+Output
+
+```text
+[1 2 100 3 4]
+```
+
+---
+
+# 10. Delete
+
+Removes an element from the array.
+
+```python
+np.delete(arr,1)
+```
+
+Output
+
+```text
+[1 3 4]
+```
+
+---
+
+# Difference Between Joining Functions
+
+| Function        | Purpose                                                           |
+| --------------- | ----------------------------------------------------------------- |
+| `concatenate()` | Joins arrays along an existing axis                               |
+| `stack()`       | Joins arrays along a new axis                                     |
+| `vstack()`      | Joins arrays vertically (row-wise)                                |
+| `hstack()`      | Joins arrays horizontally (column-wise for 2D, end-to-end for 1D) |
+
+---
+
+# Difference Between Split Functions
+
+| Function   | Purpose           |
+| ---------- | ----------------- |
+| `split()`  | General split     |
+| `vsplit()` | Split row-wise    |
+| `hsplit()` | Split column-wise |
+
+---
+
+# Most Asked Interview Questions
+
+| Question                                 | Answer                                             |
+| ---------------------------------------- | -------------------------------------------------- |
+| How do you change the shape of an array? | `reshape()`                                        |
+| How do you convert a 2D array to 1D?     | `flatten()` or `ravel()`                           |
+| How do you join arrays?                  | `concatenate()`, `stack()`, `vstack()`, `hstack()` |
+| How do you split arrays?                 | `split()`, `vsplit()`, `hsplit()`                  |
+| How do you add elements?                 | `append()` or `insert()`                           |
+| How do you remove elements?              | `delete()`                                         |
+
+---
+
+# Quick Cheat Sheet
+
+| Operation       | Function             |
+| --------------- | -------------------- |
+| Change shape    | `reshape()`          |
+| Flatten array   | `flatten()`          |
+| Transpose       | `T` or `transpose()` |
+| Join arrays     | `concatenate()`      |
+| Vertical join   | `vstack()`           |
+| Horizontal join | `hstack()`           |
+| Split array     | `split()`            |
+| Add element     | `append()`           |
+| Insert element  | `insert()`           |
+| Delete element  | `delete()`           |
+
+### Key Points to Remember
+
+* **Reshape** changes the array's dimensions without changing the data.
+* **Flatten** converts a multi-dimensional array into a 1D array.
+* **Transpose** swaps rows and columns.
+* **Concatenate/Stack** combine arrays in different ways.
+* **Split** divides an array into smaller arrays.
+* **Append**, **Insert**, and **Delete** modify the array by adding or removing elements.
