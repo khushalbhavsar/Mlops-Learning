@@ -558,3 +558,541 @@ print(arr.sum())      # Method
 
 ---
 
+# NumPy Array Indexing & Slicing
+
+**Array Indexing** and **Array Slicing** are used to access elements from a NumPy array.
+
+* **Indexing** → Access **a single element**.
+* **Slicing** → Access **multiple elements**.
+
+---
+
+# 1. Array Indexing
+
+**Definition:**
+Indexing is used to access a **single element** from an array using its index (position).
+
+## 1D Array Indexing
+
+```python
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+
+print(arr[0])    # First element
+print(arr[2])    # Third element
+print(arr[-1])   # Last element
+```
+
+**Output**
+
+```python
+10
+30
+50
+```
+
+### Explanation
+
+| Syntax    | Meaning                             | Output |
+| --------- | ----------------------------------- | ------ |
+| `arr[0]`  | First element (index starts from 0) | `10`   |
+| `arr[2]`  | Third element                       | `30`   |
+| `arr[-1]` | Last element                        | `50`   |
+
+> **Note:** NumPy uses **zero-based indexing**, so the first element is always at index `0`.
+
+---
+
+## 2D Array Indexing
+
+```python
+arr = np.array([
+    [1,2,3],
+    [4,5,6]
+])
+
+print(arr[0,1])
+print(arr[1,2])
+```
+
+**Output**
+
+```python
+2
+6
+```
+
+### Explanation
+
+| Syntax     | Meaning         | Output |
+| ---------- | --------------- | ------ |
+| `arr[0,1]` | Row 0, Column 1 | `2`    |
+| `arr[1,2]` | Row 1, Column 2 | `6`    |
+
+**Remember:**
+
+```text
+arr[row, column]
+```
+
+For example,
+
+```text
+[[1 2 3]
+ [4 5 6]]
+```
+
+* `arr[0,0]` → `1`
+* `arr[0,2]` → `3`
+* `arr[1,1]` → `5`
+
+---
+
+# 2. Array Slicing
+
+**Definition:**
+Slicing is used to access **multiple elements** from an array.
+
+### Syntax
+
+```python
+arr[start : stop : step]
+```
+
+* **start** → Starting index (included)
+* **stop** → Ending index (excluded)
+* **step** → Number of positions to skip
+
+---
+
+## 1D Array Slicing
+
+```python
+arr = np.array([10,20,30,40,50])
+```
+
+### Example 1
+
+```python
+print(arr[1:4])
+```
+
+**Output**
+
+```python
+[20 30 40]
+```
+
+### Explanation
+
+Starts from index **1** and stops **before** index **4**.
+
+| Index | Value |
+| ----- | ----- |
+| 1     | 20    |
+| 2     | 30    |
+| 3     | 40    |
+
+---
+
+### Example 2
+
+```python
+print(arr[:3])
+```
+
+**Output**
+
+```python
+[10 20 30]
+```
+
+### Explanation
+
+Starts from the beginning and stops before index `3`.
+
+---
+
+### Example 3
+
+```python
+print(arr[2:])
+```
+
+**Output**
+
+```python
+[30 40 50]
+```
+
+### Explanation
+
+Starts from index `2` and continues until the end.
+
+---
+
+### Example 4
+
+```python
+print(arr[::2])
+```
+
+**Output**
+
+```python
+[10 30 50]
+```
+
+### Explanation
+
+Selects every **2nd** element.
+
+---
+
+### Example 5
+
+```python
+print(arr[::-1])
+```
+
+**Output**
+
+```python
+[50 40 30 20 10]
+```
+
+### Explanation
+
+A step of `-1` reverses the array.
+
+---
+
+# 2D Array Slicing
+
+```python
+arr = np.array([
+    [1,2,3],
+    [4,5,6]
+])
+```
+
+### First Row
+
+```python
+print(arr[0,:])
+```
+
+**Output**
+
+```python
+[1 2 3]
+```
+
+**Explanation:** Row `0`, all columns (`:` means all).
+
+---
+
+### Second Row
+
+```python
+print(arr[1,:])
+```
+
+**Output**
+
+```python
+[4 5 6]
+```
+
+---
+
+### First Column
+
+```python
+print(arr[:,0])
+```
+
+**Output**
+
+```python
+[1 4]
+```
+
+**Explanation:** All rows, column `0`.
+
+---
+
+### Second Column
+
+```python
+print(arr[:,1])
+```
+
+**Output**
+
+```python
+[2 5]
+```
+
+---
+
+### First Two Columns
+
+```python
+print(arr[:,0:2])
+```
+
+**Output**
+
+```python
+[[1 2]
+ [4 5]]
+```
+
+**Explanation:** All rows, columns from `0` to `1` (`2` is excluded).
+
+---
+
+# Indexing vs Slicing
+
+| Feature | Indexing           | Slicing                  |
+| ------- | ------------------ | ------------------------ |
+| Purpose | Access one element | Access multiple elements |
+| Returns | Single value       | Array                    |
+| Example | `arr[2]`           | `arr[1:4]`               |
+
+---
+
+# Must-Remember Points
+
+* ✅ NumPy uses **0-based indexing**.
+* ✅ Negative indexing starts from the end (`-1` is the last element).
+* ✅ Slicing syntax is `arr[start:stop:step]`.
+* ✅ The **start index is included**, but the **stop index is excluded**.
+* ✅ In 2D arrays, use `arr[row, column]`.
+
+---
+
+# Quick Cheat Sheet
+
+| Operation            | Syntax      | Description                  |
+| -------------------- | ----------- | ---------------------------- |
+| First element        | `arr[0]`    | Access first element         |
+| Last element         | `arr[-1]`   | Access last element          |
+| Slice                | `arr[1:4]`  | Elements from index 1 to 3   |
+| From start           | `arr[:3]`   | First three elements         |
+| To end               | `arr[2:]`   | From index 2 to the end      |
+| Every second element | `arr[::2]`  | Skip one element each time   |
+| Reverse array        | `arr[::-1]` | Reverse the array            |
+| First row            | `arr[0,:]`  | All columns of the first row |
+| First column         | `arr[:,0]`  | All rows of the first column |
+| Specific element     | `arr[1,2]`  | Row 1, Column 2              |
+
+### Interview Tip
+
+A very common interview question is:
+
+> **What is the difference between indexing and slicing?**
+
+**Answer:**
+
+* **Indexing** is used to access **a single element** from an array.
+* **Slicing** is used to access **multiple elements** (a subarray) from an array.
+
+---
+
+## What is Boolean Indexing?
+
+**Boolean Indexing** is a technique used to **filter or select elements from a NumPy array based on a condition**.
+
+It returns only the elements for which the condition is **True**.
+
+---
+
+## Syntax
+
+```python
+arr[condition]
+```
+
+The condition can be:
+
+* `>`
+* `<`
+* `>=`
+* `<=`
+* `==`
+* `!=`
+
+---
+
+## Example 1: Select Elements Greater Than 30
+
+```python
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+
+print(arr[arr > 30])
+```
+
+**Output**
+
+```python
+[40 50]
+```
+
+### Explanation
+
+Condition:
+
+```python
+arr > 30
+```
+
+Result:
+
+```python
+[False False False True True]
+```
+
+Only the elements corresponding to **True** are returned.
+
+---
+
+## Example 2: Select Even Numbers
+
+```python
+arr = np.array([1,2,3,4,5,6])
+
+print(arr[arr % 2 == 0])
+```
+
+**Output**
+
+```python
+[2 4 6]
+```
+
+---
+
+## Example 3: Select Odd Numbers
+
+```python
+print(arr[arr % 2 != 0])
+```
+
+**Output**
+
+```python
+[1 3 5]
+```
+
+---
+
+## Example 4: Elements Less Than 25
+
+```python
+arr = np.array([10,20,30,40,50])
+
+print(arr[arr < 25])
+```
+
+**Output**
+
+```python
+[10 20]
+```
+
+---
+
+## Boolean Indexing on a 2D Array
+
+```python
+arr = np.array([
+    [10,20,30],
+    [40,50,60]
+])
+
+print(arr[arr > 30])
+```
+
+**Output**
+
+```python
+[40 50 60]
+```
+
+### Explanation
+
+The condition is applied to every element, and only elements greater than `30` are returned.
+
+---
+
+# Common Boolean Conditions
+
+| Condition             | Example          | Output                   |
+| --------------------- | ---------------- | ------------------------ |
+| Greater than          | `arr[arr > 20]`  | Elements greater than 20 |
+| Less than             | `arr[arr < 20]`  | Elements less than 20    |
+| Equal to              | `arr[arr == 20]` | Elements equal to 20     |
+| Not equal to          | `arr[arr != 20]` | Elements except 20       |
+| Greater than or equal | `arr[arr >= 20]` | Elements ≥ 20            |
+| Less than or equal    | `arr[arr <= 20]` | Elements ≤ 20            |
+
+---
+
+# Multiple Conditions
+
+Use `&` for **AND** and `|` for **OR**.
+
+### AND (`&`)
+
+```python
+arr = np.array([10,20,30,40,50])
+
+print(arr[(arr > 20) & (arr < 50)])
+```
+
+**Output**
+
+```python
+[30 40]
+```
+
+---
+
+### OR (`|`)
+
+```python
+print(arr[(arr < 20) | (arr > 40)])
+```
+
+**Output**
+
+```python
+[10 50]
+```
+
+---
+
+# Boolean Indexing vs Normal Indexing
+
+| Feature | Normal Indexing          | Boolean Indexing             |
+| ------- | ------------------------ | ---------------------------- |
+| Purpose | Access elements by index | Access elements by condition |
+| Example | `arr[2]`                 | `arr[arr > 20]`              |
+| Returns | Specific element         | Filtered array               |
+
+---
+
+# Must-Remember Points
+
+* ✅ Boolean indexing filters data based on a condition.
+* ✅ It returns only the elements where the condition is **True**.
+* ✅ Use comparison operators like `>`, `<`, `==`, `!=`, `>=`, and `<=`.
+* ✅ Use `&` for **AND** and `|` for **OR** when combining multiple conditions.
+* ✅ Enclose each condition in parentheses when using `&` or `|`.
+
+---
