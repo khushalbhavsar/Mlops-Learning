@@ -28,22 +28,7 @@
 
 ---
 
-# 3. Return Statement (10 Questions)
-
-1. Return the sum of two numbers.
-2. Return the product of two numbers.
-3. Return the square of a number.
-4. Return the cube of a number.
-5. Return the largest of two numbers.
-6. Return the smallest of three numbers.
-7. Return the average of three numbers.
-8. Return whether a number is positive or negative.
-9. Return the remainder when two numbers are divided.
-10. Return the area of a circle.
-
----
-
-# 4. Local and Global Variables (10 Questions)
+# 3. Local and Global Variables (10 Questions)
 
 1. Create a local variable and print it.
 2. Try accessing a local variable outside the function.
