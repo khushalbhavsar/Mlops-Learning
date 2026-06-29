@@ -428,3 +428,98 @@ print(result_transpose)
 | `np.random.seed()`    | Set a seed for reproducible random numbers    |
 
 ---
+
+# NumPy Array Attributes and Methods
+
+In NumPy, an **attribute** gives you **information about an array**, while a **method** performs **an operation on the array**.
+
+* **Attributes** → Describe the array (shape, size, data type, etc.).
+* **Methods** → Perform actions (reshape, flatten, sort, sum, etc.).
+
+---
+
+# NumPy Array Attributes
+
+| Attribute  | Purpose                                    | Example        | Output           |
+| ---------- | ------------------------------------------ | -------------- | ---------------- |
+| `shape`    | Returns the dimensions of the array        | `arr.shape`    | `(2, 3)`         |
+| `ndim`     | Returns the number of dimensions           | `arr.ndim`     | `2`              |
+| `size`     | Returns the total number of elements       | `arr.size`     | `6`              |
+| `dtype`    | Returns the data type                      | `arr.dtype`    | `int64`          |
+| `itemsize` | Returns the size (in bytes) of one element | `arr.itemsize` | `8`              |
+| `nbytes`   | Returns the total memory used by the array | `arr.nbytes`   | `48`             |
+| `T`        | Returns the transpose of the array         | `arr.T`        | Transposed array |
+
+### Example
+
+```python
+import numpy as np
+
+arr = np.array([[1,2,3],
+                [4,5,6]])
+
+print(arr.shape)      # (2, 3)
+print(arr.ndim)       # 2
+print(arr.size)       # 6
+print(arr.dtype)      # int64 (or int32)
+print(arr.itemsize)   # 8 (or 4)
+print(arr.nbytes)     # 48 (or 24)
+```
+
+---
+
+# NumPy Array Methods
+
+| Method        | Purpose                       | Example            |
+| ------------- | ----------------------------- | ------------------ |
+| `reshape()`   | Change the shape of the array | `arr.reshape(3,2)` |
+| `flatten()`   | Convert to a 1D array         | `arr.flatten()`    |
+| `ravel()`     | Flatten without copying       | `arr.ravel()`      |
+| `transpose()` | Transpose the array           | `arr.transpose()`  |
+| `copy()`      | Create a copy of the array    | `arr.copy()`       |
+| `sort()`      | Sort the array                | `arr.sort()`       |
+| `sum()`       | Sum of all elements           | `arr.sum()`        |
+| `mean()`      | Average of elements           | `arr.mean()`       |
+| `max()`       | Maximum value                 | `arr.max()`        |
+| `min()`       | Minimum value                 | `arr.min()`        |
+| `argmax()`    | Index of the maximum value    | `arr.argmax()`     |
+| `argmin()`    | Index of the minimum value    | `arr.argmin()`     |
+
+### Example
+
+```python
+import numpy as np
+
+arr = np.array([10,20,30,40])
+
+print(arr.sum())      # 100
+print(arr.mean())     # 25.0
+print(arr.max())      # 40
+print(arr.min())      # 10
+print(arr.argmax())   # 3
+print(arr.argmin())   # 0
+```
+
+---
+
+# Attribute vs Method
+
+| Feature          | Attribute                         | Method                             |
+| ---------------- | --------------------------------- | ---------------------------------- |
+| What it does     | Gives information about the array | Performs an operation on the array |
+| Parentheses `()` | ❌ No                              | ✅ Yes                              |
+| Example          | `arr.shape`                       | `arr.reshape(2,2)`                 |
+
+### Example
+
+```python
+import numpy as np
+
+arr = np.array([[1,2],
+                [3,4]])
+
+print(arr.shape)      # Attribute
+print(arr.sum())      # Method
+```
+
+---
