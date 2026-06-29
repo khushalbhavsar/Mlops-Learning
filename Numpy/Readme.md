@@ -1,4 +1,5 @@
 # What is Notebook
+
 A **Notebook** is an interactive environment where you can write **code, text, equations, visualizations, and outputs** all in one document. It is widely used by data scientists, machine learning engineers, and researchers for experimentation and analysis.
 
 The most common notebook is **Jupyter Notebook**.
@@ -7,11 +8,11 @@ The most common notebook is **Jupyter Notebook**.
 
 A notebook lets you:
 
-* Write and execute Python code one section (cell) at a time.
-* View the output immediately below the code.
-* Add explanations using Markdown.
-* Display graphs, tables, and images.
-* Save your entire analysis in a single file.
+- Write and execute Python code one section (cell) at a time.
+- View the output immediately below the code.
+- Add explanations using Markdown.
+- Display graphs, tables, and images.
+- Save your entire analysis in a single file.
 
 ## Example
 
@@ -35,33 +36,34 @@ print(x + y)
 
 ```markdown
 # Addition Example
+
 This notebook demonstrates basic addition.
 ```
 
 ## Features
 
-* **Code Cells** – Write and run Python code.
-* **Markdown Cells** – Write notes, headings, and documentation.
-* **Output Cells** – Show results, charts, and error messages.
-* **Interactive Execution** – Run only the cells you want.
+- **Code Cells** – Write and run Python code.
+- **Markdown Cells** – Write notes, headings, and documentation.
+- **Output Cells** – Show results, charts, and error messages.
+- **Interactive Execution** – Run only the cells you want.
 
 ## Why is it popular in Machine Learning?
 
 Notebooks make it easy to:
 
-* Load datasets.
-* Clean and preprocess data.
-* Train machine learning models.
-* Visualize results with graphs.
-* Test ideas quickly without running an entire program.
+- Load datasets.
+- Clean and preprocess data.
+- Train machine learning models.
+- Visualize results with graphs.
+- Test ideas quickly without running an entire program.
 
 ## Common Notebook Platforms
 
-* Jupyter Notebook – Runs on your local computer.
-* JupyterLab – A more advanced version of Jupyter Notebook.
-* Google Colaboratory (Google Colab) – Runs in the cloud for free and provides access to GPUs.
-* Visual Studio Code – Supports opening and running Jupyter notebooks directly.
-* Anaconda Navigator – Lets you launch Jupyter Notebook and JupyterLab easily.
+- Jupyter Notebook – Runs on your local computer.
+- JupyterLab – A more advanced version of Jupyter Notebook.
+- Google Colaboratory (Google Colab) – Runs in the cloud for free and provides access to GPUs.
+- Visual Studio Code – Supports opening and running Jupyter notebooks directly.
+- Anaconda Navigator – Lets you launch Jupyter Notebook and JupyterLab easily.
 
 ## Notebook vs Python Script
 
@@ -76,15 +78,16 @@ Notebooks make it easy to:
 
 Since you're learning MLOps, you'll use notebooks extensively for:
 
-* Data exploration (EDA)
-* Learning NumPy and Pandas
-* Building machine learning models with scikit-learn
-* Testing ML code before converting it into production-ready Python scripts
+- Data exploration (EDA)
+- Learning NumPy and Pandas
+- Building machine learning models with scikit-learn
+- Testing ML code before converting it into production-ready Python scripts
 
 A common workflow is:
 **Notebook (`.ipynb`) → Python script (`.py`) → Git → CI/CD → Docker → Kubernetes → Deployment.**
 
 # What is jupyter Notebook?
+
 ## What is Jupyter Notebook?
 
 **Jupyter Notebook** is a free, open-source web application that allows you to write, run, and document code in an interactive notebook. It is one of the most widely used tools for **Python, Data Science, Machine Learning, and MLOps**.
@@ -97,9 +100,9 @@ Instead of writing an entire Python program and running it all at once, you can 
 
 The name **Jupyter** comes from the three programming languages it originally supported:
 
-* **Ju** → Julia
-* **Pyt** → Python
-* **R** → R
+- **Ju** → Julia
+- **Pyt** → Python
+- **R** → R
 
 Today, it supports many more programming languages through kernels.
 
@@ -107,13 +110,13 @@ Today, it supports many more programming languages through kernels.
 
 ## Features of Jupyter Notebook
 
-* ✅ Write Python code interactively
-* ✅ Run code one cell at a time
-* ✅ View outputs immediately
-* ✅ Create graphs and charts
-* ✅ Display tables and images
-* ✅ Write explanations using Markdown
-* ✅ Save work in a single `.ipynb` notebook file
+- ✅ Write Python code interactively
+- ✅ Run code one cell at a time
+- ✅ View outputs immediately
+- ✅ Create graphs and charts
+- ✅ Display tables and images
+- ✅ Write explanations using Markdown
+- ✅ Save work in a single `.ipynb` notebook file
 
 ---
 
@@ -148,12 +151,12 @@ This notebook explains NumPy arrays.
 
 This is used to add:
 
-* Headings
-* Notes
-* Documentation
-* Images
-* Tables
-* Mathematical equations
+- Headings
+- Notes
+- Documentation
+- Images
+- Tables
+- Mathematical equations
 
 ---
 
@@ -228,10 +231,10 @@ This opens Jupyter Notebook in your web browser.
 
 Since you're learning MLOps, Jupyter Notebook is especially useful for:
 
-* Learning **NumPy**, **Pandas**, and **Matplotlib**
-* Performing Exploratory Data Analysis (EDA)
-* Training and testing machine learning models
-* Experimenting with code before turning it into production-ready Python scripts
+- Learning **NumPy**, **Pandas**, and **Matplotlib**
+- Performing Exploratory Data Analysis (EDA)
+- Training and testing machine learning models
+- Experimenting with code before turning it into production-ready Python scripts
 
 A typical workflow is:
 
@@ -248,16 +251,17 @@ Git → CI/CD → Docker → Kubernetes → Deploy
 For beginners in Python, Machine Learning, and MLOps, Jupyter Notebook is one of the best environments because it provides instant feedback and makes it easy to learn by experimenting.
 
 # What is Numpy?
+
 **NumPy** (short for **Numerical Python**) is a popular open-source Python library used for **fast numerical computing**. It provides a powerful **N-dimensional array (`ndarray`)** and a large collection of functions for performing mathematical operations efficiently. It is a foundational library for data science, machine learning, and scientific computing in Python. ([NumPy][1])
 
 Some of the main features of NumPy include:
 
-* Fast, memory-efficient arrays
-* Mathematical operations on entire arrays (vectorization)
-* Linear algebra functions
-* Statistical functions
-* Random number generation
-* Fourier transforms
+- Fast, memory-efficient arrays
+- Mathematical operations on entire arrays (vectorization)
+- Linear algebra functions
+- Statistical functions
+- Random number generation
+- Fourier transforms
 
 Here's a simple example:
 
@@ -281,18 +285,18 @@ Without NumPy, you would typically need to loop through each element manually.
 
 ### Why use NumPy instead of Python lists?
 
-* **Faster:** Operations on arrays are implemented in optimized C code.
-* **Less memory usage:** Arrays store data more efficiently.
-* **Powerful:** Supports multidimensional arrays and advanced mathematical operations.
+- **Faster:** Operations on arrays are implemented in optimized C code.
+- **Less memory usage:** Arrays store data more efficiently.
+- **Powerful:** Supports multidimensional arrays and advanced mathematical operations.
 
 ### Common applications
 
-* Data analysis
-* Machine learning
-* Scientific simulations
-* Image processing
-* Signal processing
-* Artificial intelligence
+- Data analysis
+- Machine learning
+- Scientific simulations
+- Image processing
+- Signal processing
+- Artificial intelligence
 
 To install NumPy, run:
 
@@ -305,17 +309,20 @@ For more information and tutorials, see the official [NumPy website](https://num
 [1]: https://numpy.org/?utm_source=chatgpt.com "NumPy"
 
 # Numpy Arrays
+
 NumPy arrays are the core data structure of the NumPy library. They are **homogeneous**, meaning all elements in the array must be of the same data type. NumPy arrays are more efficient than Python lists for numerical computations.
 
 # Difference between Python List and Numpy Array
-| Feature                  | Python List                     | NumPy Array                       |
-| ------------------------ | ------------------------------- | --------------------------------- |
-| Homogeneous              | No                              | Yes                               |
-| Memory Efficiency        | Less efficient                  | More efficient                    |
-| Performance              | Slower for large datasets       | Faster for large datasets         |
-| Mathematical Operations  | Requires loops                  | Supports vectorized operations    |
+
+| Feature                 | Python List               | NumPy Array                    |
+| ----------------------- | ------------------------- | ------------------------------ |
+| Homogeneous             | No                        | Yes                            |
+| Memory Efficiency       | Less efficient            | More efficient                 |
+| Performance             | Slower for large datasets | Faster for large datasets      |
+| Mathematical Operations | Requires loops            | Supports vectorized operations |
 
 # Creating NumPy Arrays
+
 You can create NumPy arrays using the `numpy.array()` function. Here are some examples:
 
 ```python
@@ -331,9 +338,10 @@ print(f"2D Array:\n{arr2d}")
 # Create a 3D array
 arr3d = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
 print(f"3D Array:\n{arr3d}")
-```     
+```
 
 # Vectorization in NumPy
+
 Vectorization is a key feature of NumPy that allows you to perform operations on entire arrays without the need for explicit loops. This leads to more concise code and improved performance.
 example:
 
@@ -355,6 +363,7 @@ print(result)
 ```
 
 # Matrix Operations in NumPy
+
 NumPy provides a variety of functions for performing matrix operations. Here are some common operations:
 
 ```python
@@ -377,7 +386,7 @@ print("Transpose of Matrix 1:")
 print(result_transpose)
 ```
 
-## Most Important NumPy Functions 
+## Most Important NumPy Functions
 
 | No. | Function              | Purpose                                     | Example                     |
 | --- | --------------------- | ------------------------------------------- | --------------------------- |
@@ -433,8 +442,8 @@ print(result_transpose)
 
 In NumPy, an **attribute** gives you **information about an array**, while a **method** performs **an operation on the array**.
 
-* **Attributes** → Describe the array (shape, size, data type, etc.).
-* **Methods** → Perform actions (reshape, flatten, sort, sum, etc.).
+- **Attributes** → Describe the array (shape, size, data type, etc.).
+- **Methods** → Perform actions (reshape, flatten, sort, sum, etc.).
 
 ---
 
@@ -507,7 +516,7 @@ print(arr.argmin())   # 0
 | Feature          | Attribute                         | Method                             |
 | ---------------- | --------------------------------- | ---------------------------------- |
 | What it does     | Gives information about the array | Performs an operation on the array |
-| Parentheses `()` | ❌ No                              | ✅ Yes                              |
+| Parentheses `()` | ❌ No                             | ✅ Yes                             |
 | Example          | `arr.shape`                       | `arr.reshape(2,2)`                 |
 
 ### Example
@@ -524,7 +533,7 @@ print(arr.sum())      # Method
 
 ---
 
-# NumPy Reshaping & Resizing 
+# NumPy Reshaping & Resizing
 
 | Function      | Purpose                                                                | Example             | Output              |
 | ------------- | ---------------------------------------------------------------------- | ------------------- | ------------------- |
@@ -541,20 +550,20 @@ print(arr.sum())      # Method
 
 | Feature                    | `reshape()` | `resize()` |
 | -------------------------- | ----------- | ---------- |
-| Changes shape              | ✅           | ✅          |
-| Changes number of elements | ❌           | ✅          |
-| Modifies original array    | ❌           | ✅          |
-| Adds/removes elements      | ❌           | ✅          |
+| Changes shape              | ✅          | ✅         |
+| Changes number of elements | ❌          | ✅         |
+| Modifies original array    | ❌          | ✅         |
+| Adds/removes elements      | ❌          | ✅         |
 
 ---
 
 ## Must-Remember Rules
 
-* ✅ `reshape()` **cannot change** the total number of elements.
-* ✅ `resize()` **can add or remove** elements.
-* ✅ `flatten()` returns a **copy**.
-* ✅ `ravel()` returns a **view** (whenever possible).
-* ✅ `transpose()` (or `T`) swaps rows and columns.
+- ✅ `reshape()` **cannot change** the total number of elements.
+- ✅ `resize()` **can add or remove** elements.
+- ✅ `flatten()` returns a **copy**.
+- ✅ `ravel()` returns a **view** (whenever possible).
+- ✅ `transpose()` (or `T`) swaps rows and columns.
 
 ---
 
@@ -562,8 +571,8 @@ print(arr.sum())      # Method
 
 **Array Indexing** and **Array Slicing** are used to access elements from a NumPy array.
 
-* **Indexing** → Access **a single element**.
-* **Slicing** → Access **multiple elements**.
+- **Indexing** → Access **a single element**.
+- **Slicing** → Access **multiple elements**.
 
 ---
 
@@ -643,9 +652,9 @@ For example,
  [4 5 6]]
 ```
 
-* `arr[0,0]` → `1`
-* `arr[0,2]` → `3`
-* `arr[1,1]` → `5`
+- `arr[0,0]` → `1`
+- `arr[0,2]` → `3`
+- `arr[1,1]` → `5`
 
 ---
 
@@ -660,9 +669,9 @@ Slicing is used to access **multiple elements** from an array.
 arr[start : stop : step]
 ```
 
-* **start** → Starting index (included)
-* **stop** → Ending index (excluded)
-* **step** → Number of positions to skip
+- **start** → Starting index (included)
+- **stop** → Ending index (excluded)
+- **step** → Number of positions to skip
 
 ---
 
@@ -866,11 +875,11 @@ print(arr[:,0:2])
 
 # Must-Remember Points
 
-* ✅ NumPy uses **0-based indexing**.
-* ✅ Negative indexing starts from the end (`-1` is the last element).
-* ✅ Slicing syntax is `arr[start:stop:step]`.
-* ✅ The **start index is included**, but the **stop index is excluded**.
-* ✅ In 2D arrays, use `arr[row, column]`.
+- ✅ NumPy uses **0-based indexing**.
+- ✅ Negative indexing starts from the end (`-1` is the last element).
+- ✅ Slicing syntax is `arr[start:stop:step]`.
+- ✅ The **start index is included**, but the **stop index is excluded**.
+- ✅ In 2D arrays, use `arr[row, column]`.
 
 ---
 
@@ -897,8 +906,8 @@ A very common interview question is:
 
 **Answer:**
 
-* **Indexing** is used to access **a single element** from an array.
-* **Slicing** is used to access **multiple elements** (a subarray) from an array.
+- **Indexing** is used to access **a single element** from an array.
+- **Slicing** is used to access **multiple elements** (a subarray) from an array.
 
 ---
 
@@ -918,12 +927,12 @@ arr[condition]
 
 The condition can be:
 
-* `>`
-* `<`
-* `>=`
-* `<=`
-* `==`
-* `!=`
+- `>`
+- `<`
+- `>=`
+- `<=`
+- `==`
+- `!=`
 
 ---
 
@@ -1089,11 +1098,11 @@ print(arr[(arr < 20) | (arr > 40)])
 
 # Must-Remember Points
 
-* ✅ Boolean indexing filters data based on a condition.
-* ✅ It returns only the elements where the condition is **True**.
-* ✅ Use comparison operators like `>`, `<`, `==`, `!=`, `>=`, and `<=`.
-* ✅ Use `&` for **AND** and `|` for **OR** when combining multiple conditions.
-* ✅ Enclose each condition in parentheses when using `&` or `|`.
+- ✅ Boolean indexing filters data based on a condition.
+- ✅ It returns only the elements where the condition is **True**.
+- ✅ Use comparison operators like `>`, `<`, `==`, `!=`, `>=`, and `<=`.
+- ✅ Use `&` for **AND** and `|` for **OR** when combining multiple conditions.
+- ✅ Enclose each condition in parentheses when using `&` or `|`.
 
 ---
 
@@ -1338,16 +1347,15 @@ b = np.array([4,5,6])
 | Element-wise Multiplication | `a * b`       | `[4 10 18]` |
 | Dot Product                 | `np.dot(a,b)` | `32`        |
 
-
 ---
 
 ## Key Interview Points
 
-* NumPy performs **element-wise operations** by default.
-* Operations are much faster than using Python loops because of **vectorization**.
-* Use `*` for **element-wise multiplication** and `np.dot()` or `@` for **matrix multiplication**.
-* Broadcasting lets you perform operations on arrays of compatible shapes without manually repeating data.
-* Aggregate functions like `sum()`, `mean()`, `max()`, and `min()` are heavily used in data analysis and machine learning.
+- NumPy performs **element-wise operations** by default.
+- Operations are much faster than using Python loops because of **vectorization**.
+- Use `*` for **element-wise multiplication** and `np.dot()` or `@` for **matrix multiplication**.
+- Broadcasting lets you perform operations on arrays of compatible shapes without manually repeating data.
+- Aggregate functions like `sum()`, `mean()`, `max()`, and `min()` are heavily used in data analysis and machine learning.
 
 # Deep Copy and Shallow Copy in NumPy
 
@@ -1394,9 +1402,9 @@ print(view_arr)
 
 ### Explanation
 
-* `view()` creates a **shallow copy**.
-* Both arrays point to the **same memory**.
-* Changing `view_arr` also changes `arr`.
+- `view()` creates a **shallow copy**.
+- Both arrays point to the **same memory**.
+- Changing `view_arr` also changes `arr`.
 
 ---
 
@@ -1436,9 +1444,9 @@ print(copy_arr)
 
 ### Explanation
 
-* `copy()` creates a **deep copy**.
-* Both arrays have **different memory locations**.
-* Changing `copy_arr` does **not** affect `arr`.
+- `copy()` creates a **deep copy**.
+- Both arrays have **different memory locations**.
+- Changing `copy_arr` does **not** affect `arr`.
 
 ---
 
@@ -1447,9 +1455,9 @@ print(copy_arr)
 | Feature                     | Shallow Copy (`view()`) | Deep Copy (`copy()`) |
 | --------------------------- | ----------------------- | -------------------- |
 | Memory                      | Shared                  | Separate             |
-| Changes affect original     | ✅ Yes                   | ❌ No                 |
-| Changes affect copied array | ✅ Yes                   | ❌ No                 |
-| Creates new memory          | ❌ No                    | ✅ Yes                |
+| Changes affect original     | ✅ Yes                  | ❌ No                |
+| Changes affect copied array | ✅ Yes                  | ❌ No                |
+| Creates new memory          | ❌ No                   | ✅ Yes               |
 | Function                    | `arr.view()`            | `arr.copy()`         |
 
 ---
@@ -1483,8 +1491,8 @@ False
 
 | Function     | Type         | Memory   | Original Changes? |
 | ------------ | ------------ | -------- | ----------------- |
-| `arr.view()` | Shallow Copy | Shared   | ✅ Yes             |
-| `arr.copy()` | Deep Copy    | Separate | ❌ No              |
+| `arr.view()` | Shallow Copy | Shared   | ✅ Yes            |
+| `arr.copy()` | Deep Copy    | Separate | ❌ No             |
 
 ---
 
@@ -1500,22 +1508,22 @@ False
 
 ## Key Points to Remember
 
-* **Shallow Copy (`view()`)**
+- **Shallow Copy (`view()`)**
 
-  * Shares the same memory.
-  * Changes in one array are reflected in the other.
-  * Faster because no new memory is allocated.
+  - Shares the same memory.
+  - Changes in one array are reflected in the other.
+  - Faster because no new memory is allocated.
 
-* **Deep Copy (`copy()`)**
+- **Deep Copy (`copy()`)**
 
-  * Allocates new memory.
-  * Changes are independent.
-  * Safer when you don't want the original data to be modified.
+  - Allocates new memory.
+  - Changes are independent.
+  - Safer when you don't want the original data to be modified.
 
 ### Easy Way to Remember
 
-* **`view()` = Same Memory = Changes Reflect**
-* **`copy()` = New Memory = Independent Changes**
+- **`view()` = Same Memory = Changes Reflect**
+- **`copy()` = New Memory = Independent Changes**
 
 # NumPy Array Manipulation
 
@@ -1754,9 +1762,9 @@ Output
 
 ### Key Points to Remember
 
-* **Reshape** changes the array's dimensions without changing the data.
-* **Flatten** converts a multi-dimensional array into a 1D array.
-* **Transpose** swaps rows and columns.
-* **Concatenate/Stack** combine arrays in different ways.
-* **Split** divides an array into smaller arrays.
-* **Append**, **Insert**, and **Delete** modify the array by adding or removing elements.
+- **Reshape** changes the array's dimensions without changing the data.
+- **Flatten** converts a multi-dimensional array into a 1D array.
+- **Transpose** swaps rows and columns.
+- **Concatenate/Stack** combine arrays in different ways.
+- **Split** divides an array into smaller arrays.
+- **Append**, **Insert**, and **Delete** modify the array by adding or removing elements.
