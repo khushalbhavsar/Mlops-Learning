@@ -1,69 +1,65 @@
-# What is Pandas?
+# Pandas Learning Notes
 
-**Pandas** is a powerful, open-source Python library used for **data manipulation, data analysis, and data cleaning**. It provides easy-to-use data structures and functions for working with structured data such as tables, spreadsheets, and CSV files.
+Pandas is an open-source Python library used for data manipulation, data analysis, and data cleaning. It is commonly used in data science, machine learning, artificial intelligence, data engineering, and MLOps.
 
-It is one of the most widely used libraries in **Data Science, Machine Learning, Artificial Intelligence, and MLOps**.
+The name **Pandas** comes from **Panel Data**, a term used in statistics and econometrics for multidimensional structured datasets.
 
----
+## Table of Contents
 
-# Why is it called Pandas?
+- [Introduction](#introduction)
+- [Installation and Import](#installation-and-import)
+- [Main Data Structures](#main-data-structures)
+- [Series](#series)
+- [DataFrame](#dataframe)
+- [Missing Data](#missing-data)
+- [Merging, Joining, and Concatenation](#merging-joining-and-concatenation)
+- [GroupBy and Aggregation](#groupby-and-aggregation)
+- [Pivot Tables](#pivot-tables)
+- [Common Operations](#common-operations)
+- [Quick Reference](#quick-reference)
+- [Interview Questions](#interview-questions)
 
-The name **Pandas** comes from **"Panel Data"**, a term used in statistics and econometrics for multidimensional structured datasets.
+## Introduction
 
----
+Pandas helps you:
 
-# Why Use Pandas?
+- Read data from CSV, Excel, JSON, SQL, and other formats.
+- Clean missing, duplicate, or incorrect data.
+- Filter, sort, and transform datasets.
+- Perform statistical analysis.
+- Merge, join, and reshape datasets.
+- Prepare data for machine learning models.
 
-Pandas helps you to:
+### Features
 
-* Read data from CSV, Excel, JSON, SQL, etc.
-* Clean missing or incorrect data.
-* Filter and sort data.
-* Perform statistical analysis.
-* Merge and join datasets.
-* Prepare data for Machine Learning models.
+| Feature | Purpose |
+| --- | --- |
+| Data manipulation | Add, remove, filter, sort, and transform data |
+| Missing value handling | Detect, remove, or fill missing data |
+| File support | Read and write CSV, Excel, JSON, SQL, and more |
+| Grouping and aggregation | Summarize data by categories |
+| Time-series support | Work with date and time based data |
+| NumPy integration | Efficient numerical operations |
 
----
+### Applications
 
-# Main Data Structures
+- Data cleaning
+- Data analysis
+- Data visualization with Matplotlib or Seaborn
+- Machine learning preprocessing
+- Financial analysis
+- Business intelligence
+- Data engineering
 
-Pandas has two primary data structures:
+## Installation and Import
 
-| Data Structure | Description                                             |
-| -------------- | ------------------------------------------------------- |
-| **Series**     | A one-dimensional labeled array (like a single column). |
-| **DataFrame**  | A two-dimensional labeled table with rows and columns.  |
-
-Example:
-
-```text
-Series
-
-0    10
-1    20
-2    30
-```
-
-```text
-DataFrame
-
-   Name   Age
-0  John    25
-1  Alice   30
-2  Bob     28
-```
-
----
-
-# Installing Pandas
+Install Pandas:
 
 ```bash
 pip install pandas
 ```
 
----
-
-# Importing Pandas
+Import Pandas:
 
 ```python
 import pandas as pd
@@ -71,9 +67,7 @@ import pandas as pd
 
 `pd` is the standard alias used for Pandas.
 
----
-
-# Simple Example
+### Simple Example
 
 ```python
 import pandas as pd
@@ -88,116 +82,65 @@ df = pd.DataFrame(data)
 print(df)
 ```
 
-### Output
+Output:
 
 ```text
-    Name   Age
-0   John    25
-1  Alice    30
-2    Bob    28
+    Name  Age
+0   John   25
+1  Alice   30
+2    Bob   28
 ```
 
----
+## Main Data Structures
 
-# Features of Pandas
+Pandas has two primary data structures:
 
-* ✅ Fast and efficient data manipulation
-* ✅ Easy handling of missing values
-* ✅ Powerful filtering and sorting
-* ✅ Read and write multiple file formats
-* ✅ Grouping and aggregation
-* ✅ Merge and join datasets
-* ✅ Time-series analysis
-* ✅ Built on top of NumPy
+| Data Structure | Description |
+| --- | --- |
+| `Series` | A one-dimensional labeled array, like a single column |
+| `DataFrame` | A two-dimensional labeled table with rows and columns |
 
----
+### Series Example
 
-# Applications of Pandas
+```text
+0    10
+1    20
+2    30
+dtype: int64
+```
 
-* Data Cleaning
-* Data Analysis
-* Data Visualization (with Matplotlib/Seaborn)
-* Machine Learning Data Preprocessing
-* Financial Analysis
-* Business Intelligence
-* Data Engineering
+### DataFrame Example
 
----
+```text
+    Name  Age
+0   John   25
+1  Alice   30
+2    Bob   28
+```
 
-# NumPy vs Pandas
+### NumPy vs Pandas
 
-| NumPy                             | Pandas                                              |
-| --------------------------------- | --------------------------------------------------- |
-| Works with arrays                 | Works with tables (DataFrames)                      |
-| Faster for numerical computations | Better for data analysis                            |
-| Homogeneous data (same data type) | Can store different data types in different columns |
-| Mainly numerical operations       | Data manipulation and analysis                      |
-| Foundation library                | Built on top of NumPy                               |
+| NumPy | Pandas |
+| --- | --- |
+| Works mainly with arrays | Works mainly with tables |
+| Best for numerical computation | Best for data analysis |
+| Usually stores one data type per array | Can store different data types in different columns |
+| Uses position-based access | Supports labels and position-based access |
+| Foundation library | Built on top of NumPy |
 
----
+## Series
 
-# Commonly Used Pandas Objects
+A **Series** is a one-dimensional labeled array that can store values of any data type, such as integers, floats, strings, or Python objects.
 
-| Object            | Purpose                     |
-| ----------------- | --------------------------- |
-| `pd.Series()`     | Create a Series             |
-| `pd.DataFrame()`  | Create a DataFrame          |
-| `pd.read_csv()`   | Read a CSV file             |
-| `pd.read_excel()` | Read an Excel file          |
-| `df.head()`       | View the first 5 rows       |
-| `df.tail()`       | View the last 5 rows        |
-| `df.info()`       | Display dataset information |
-| `df.describe()`   | Display statistical summary |
+Think of a Series as a single column of a table.
 
----
-
-# Interview Questions
-
-| Question                                         | Answer                                                      |
-| ------------------------------------------------ | ----------------------------------------------------------- |
-| What is Pandas?                                  | A Python library for data manipulation and analysis.        |
-| What are the two main data structures in Pandas? | Series and DataFrame.                                       |
-| Is Pandas built on NumPy?                        | Yes.                                                        |
-| Why is Pandas used?                              | To clean, analyze, manipulate, and prepare structured data. |
-| What is the standard alias for Pandas?           | `pd`                                                        |
-
----
-
-# Key Points to Remember
-
-* **Pandas** is a Python library for **data manipulation and analysis**.
-* It is built on top of **NumPy**.
-* The two main data structures are **Series** and **DataFrame**.
-* It is widely used in **Data Science**, **Machine Learning**, **Data Engineering**, and **MLOps**.
-* The standard import statement is:
+### Syntax
 
 ```python
-import pandas as pd
+pd.Series(data, index=None)
 ```
 
-* Pandas makes it easy to read, clean, transform, analyze, and export structured data.
-
-# What is a Series in Pandas?
-
-A **Series** is a **one-dimensional labeled array** in Pandas that can store data of any type, such as integers, floats, strings, or even Python objects.
-
-Think of a **Series** as **a single column of a table**.
-
----
-
-# Syntax
-
-```python
-import pandas as pd
-
-s = pd.Series(data)
-```
-
----
-
-# Creating a Series
-
-### Example 1: From a List
+### Create a Series from a List
 
 ```python
 import pandas as pd
@@ -207,7 +150,7 @@ s = pd.Series([10, 20, 30, 40])
 print(s)
 ```
 
-### Output
+Output:
 
 ```text
 0    10
@@ -217,25 +160,17 @@ print(s)
 dtype: int64
 ```
 
-### Explanation
-
-* **0, 1, 2, 3** → Index (labels)
-* **10, 20, 30, 40** → Data (values)
-* **dtype** → Data type of the values
-
----
-
-# Creating a Series with Custom Index
+### Create a Series with a Custom Index
 
 ```python
 import pandas as pd
 
-s = pd.Series([10,20,30], index=['A','B','C'])
+s = pd.Series([10, 20, 30], index=["A", "B", "C"])
 
 print(s)
 ```
 
-### Output
+Output:
 
 ```text
 A    10
@@ -244,21 +179,15 @@ C    30
 dtype: int64
 ```
 
-### Explanation
-
-Instead of the default index (`0,1,2`), we use custom labels (`A, B, C`).
-
----
-
-# Creating a Series from a Dictionary
+### Create a Series from a Dictionary
 
 ```python
 import pandas as pd
 
 data = {
-    "Math":90,
-    "Science":85,
-    "English":88
+    "Math": 90,
+    "Science": 85,
+    "English": 88
 }
 
 s = pd.Series(data)
@@ -266,7 +195,7 @@ s = pd.Series(data)
 print(s)
 ```
 
-### Output
+Output:
 
 ```text
 Math       90
@@ -275,162 +204,60 @@ English    88
 dtype: int64
 ```
 
-The dictionary keys become the **index**, and the dictionary values become the **Series values**.
+Dictionary keys become index labels, and dictionary values become Series values.
 
----
-
-# Accessing Elements
-
-### By Index Position
+### Access Series Values
 
 ```python
-print(s[0])
+print(s.iloc[0])      # Access by position
+print(s.loc["Math"])  # Access by label
 ```
 
-### By Label
+### Series Attributes
+
+| Attribute | Purpose |
+| --- | --- |
+| `s.index` | Returns index labels |
+| `s.values` | Returns values as a NumPy array |
+| `s.dtype` | Returns the data type |
+| `s.size` | Returns the number of elements |
+| `s.shape` | Returns the shape |
+
+### Common Series Methods
+
+| Method | Purpose |
+| --- | --- |
+| `s.head()` | First 5 values |
+| `s.tail()` | Last 5 values |
+| `s.sum()` | Sum of values |
+| `s.mean()` | Average value |
+| `s.max()` | Maximum value |
+| `s.min()` | Minimum value |
+| `s.sort_values()` | Sort by values |
+| `s.sort_index()` | Sort by index labels |
+
+### Series vs NumPy Array
+
+| NumPy Array | Pandas Series |
+| --- | --- |
+| Has no labels | Has index labels |
+| Uses positions only | Uses positions and labels |
+| Mainly numerical | Supports many data types |
+| Faster for pure numerical operations | Better for labeled analysis |
+
+## DataFrame
+
+A **DataFrame** is a two-dimensional labeled data structure that stores data in rows and columns, similar to an Excel spreadsheet or a SQL table.
+
+A DataFrame can store different data types in different columns.
+
+### Syntax
 
 ```python
-print(s["Math"])
+pd.DataFrame(data, index=None, columns=None)
 ```
 
----
-
-# Series Attributes
-
-| Attribute | Purpose                           |
-| --------- | --------------------------------- |
-| `index`   | Returns the index labels          |
-| `values`  | Returns the data as a NumPy array |
-| `dtype`   | Returns the data type             |
-| `size`    | Returns the number of elements    |
-| `shape`   | Returns the shape of the Series   |
-
-Example:
-
-```python
-print(s.index)
-print(s.values)
-print(s.dtype)
-print(s.size)
-print(s.shape)
-```
-
----
-
-# Common Series Methods
-
-| Method          | Purpose        |
-| --------------- | -------------- |
-| `head()`        | First 5 values |
-| `tail()`        | Last 5 values  |
-| `sum()`         | Sum of values  |
-| `mean()`        | Average        |
-| `max()`         | Maximum value  |
-| `min()`         | Minimum value  |
-| `sort_values()` | Sort by values |
-| `sort_index()`  | Sort by index  |
-
-Example:
-
-```python
-print(s.sum())
-print(s.mean())
-print(s.max())
-```
-
----
-
-# Series vs NumPy Array
-
-| NumPy Array                     | Pandas Series             |
-| ------------------------------- | ------------------------- |
-| No labels                       | Has index labels          |
-| Only numerical focus            | Can store many data types |
-| Faster for numerical operations | Better for data analysis  |
-| Uses positions only             | Uses positions and labels |
-
----
-
-# Real-World Example
-
-```python
-import pandas as pd
-
-marks = pd.Series(
-    [85,90,78],
-    index=["Rahul","Priya","Amit"]
-)
-
-print(marks)
-```
-
-Output
-
-```text
-Rahul    85
-Priya    90
-Amit     78
-dtype: int64
-```
-
-This represents the marks of three students.
-
----
-
-# Interview Questions
-
-| Question                                   | Answer                                                 |
-| ------------------------------------------ | ------------------------------------------------------ |
-| What is a Series?                          | A one-dimensional labeled array in Pandas.             |
-| Can a Series have custom indexes?          | Yes.                                                   |
-| What is the default index?                 | `0, 1, 2, ...`                                         |
-| Can a Series be created from a dictionary? | Yes.                                                   |
-| Difference between NumPy array and Series? | A Series has labels (indexes); a NumPy array does not. |
-
----
-
-# Key Points to Remember
-
-* **Series** is a **1D labeled array**.
-* It stores **values** along with **index labels**.
-* It can be created from:
-
-  * Lists
-  * Tuples
-  * Dictionaries
-  * NumPy arrays
-* Default index starts from **0**.
-* Common constructor:
-
-```python
-import pandas as pd
-
-s = pd.Series(data)
-```
-
-* A **Series** is like a **single column** of a DataFrame, while a **DataFrame** is a collection of multiple Series.
-
-# What is a DataFrame in Pandas?
-
-A **DataFrame** is a **two-dimensional labeled data structure** in Pandas that stores data in the form of **rows and columns**, similar to an Excel spreadsheet or a SQL table.
-
-A **DataFrame** can store **different data types** (integers, floats, strings, dates, etc.) in different columns.
-
----
-
-# Syntax
-
-```python
-import pandas as pd
-
-df = pd.DataFrame(data)
-```
-
----
-
-# Creating a DataFrame
-
-## Example 1: From a Dictionary
+### Create a DataFrame from a Dictionary
 
 ```python
 import pandas as pd
@@ -446,7 +273,7 @@ df = pd.DataFrame(data)
 print(df)
 ```
 
-### Output
+Output:
 
 ```text
     Name  Age      City
@@ -455,15 +282,7 @@ print(df)
 2    Bob   28     Paris
 ```
 
-### Explanation
-
-* **Rows** → Individual records (`0, 1, 2`)
-* **Columns** → `Name`, `Age`, `City`
-* Each **column** is a **Pandas Series**.
-
----
-
-# Creating a DataFrame with a Custom Index
+### Create a DataFrame with a Custom Index
 
 ```python
 import pandas as pd
@@ -478,7 +297,7 @@ df = pd.DataFrame(data, index=["A", "B"])
 print(df)
 ```
 
-### Output
+Output:
 
 ```text
     Name  Age
@@ -486,9 +305,7 @@ A   John   25
 B  Alice   30
 ```
 
----
-
-# Creating a DataFrame from a List of Lists
+### Create a DataFrame from a List of Lists
 
 ```python
 import pandas as pd
@@ -504,17 +321,15 @@ df = pd.DataFrame(data, columns=["Name", "Age"])
 print(df)
 ```
 
----
-
-# Creating a DataFrame from a List of Dictionaries
+### Create a DataFrame from a List of Dictionaries
 
 ```python
 import pandas as pd
 
 data = [
-    {"Name":"John","Age":25},
-    {"Name":"Alice","Age":30},
-    {"Name":"Bob","Age":28}
+    {"Name": "John", "Age": 25},
+    {"Name": "Alice", "Age": 30},
+    {"Name": "Bob", "Age": 28}
 ]
 
 df = pd.DataFrame(data)
@@ -522,176 +337,74 @@ df = pd.DataFrame(data)
 print(df)
 ```
 
----
+### Access DataFrame Data
 
-# Accessing Data
-
-### Access a Single Column
+Access one column:
 
 ```python
 print(df["Name"])
 ```
 
-Output
-
-```text
-0     John
-1    Alice
-2      Bob
-Name: Name, dtype: object
-```
-
-A single column is returned as a **Series**.
-
----
-
-### Access Multiple Columns
+Access multiple columns:
 
 ```python
-print(df[["Name","Age"]])
+print(df[["Name", "Age"]])
 ```
 
----
-
-# DataFrame Attributes
-
-| Attribute | Purpose                   |
-| --------- | ------------------------- |
-| `shape`   | Returns `(rows, columns)` |
-| `size`    | Total number of elements  |
-| `ndim`    | Number of dimensions      |
-| `columns` | Column names              |
-| `index`   | Row labels                |
-| `dtypes`  | Data type of each column  |
-| `values`  | Data as a NumPy array     |
-
-### Example
+Access rows and cells:
 
 ```python
-print(df.shape)
-print(df.columns)
-print(df.dtypes)
+print(df.loc[0])          # Row by label
+print(df.iloc[0])         # Row by position
+print(df.loc[0, "Name"])  # Single value by label
 ```
 
----
+### DataFrame Attributes
 
-# Common DataFrame Methods
+| Attribute | Purpose |
+| --- | --- |
+| `df.shape` | Returns `(rows, columns)` |
+| `df.size` | Returns the total number of elements |
+| `df.ndim` | Returns the number of dimensions |
+| `df.columns` | Returns column names |
+| `df.index` | Returns row labels |
+| `df.dtypes` | Returns data type of each column |
+| `df.values` | Returns data as a NumPy array |
 
-| Method          | Purpose                        |
-| --------------- | ------------------------------ |
-| `head()`        | First 5 rows                   |
-| `tail()`        | Last 5 rows                    |
-| `info()`        | Dataset information            |
-| `describe()`    | Statistical summary            |
-| `sort_values()` | Sort rows by a column          |
-| `sort_index()`  | Sort by index                  |
-| `drop()`        | Remove rows or columns         |
-| `rename()`      | Rename columns                 |
-| `copy()`        | Create a copy of the DataFrame |
+### Common DataFrame Methods
 
----
+| Method | Purpose |
+| --- | --- |
+| `df.head()` | First 5 rows |
+| `df.tail()` | Last 5 rows |
+| `df.info()` | Dataset information |
+| `df.describe()` | Statistical summary |
+| `df.sort_values()` | Sort rows by a column |
+| `df.sort_index()` | Sort by index labels |
+| `df.drop()` | Remove rows or columns |
+| `df.rename()` | Rename columns |
+| `df.copy()` | Create a copy |
 
-# Real-World Example
+### Series vs DataFrame
 
-```python
-import pandas as pd
+| Series | DataFrame |
+| --- | --- |
+| One-dimensional | Two-dimensional |
+| Like one column | Like a full table |
+| Has one index | Has row and column labels |
+| Created with `pd.Series()` | Created with `pd.DataFrame()` |
 
-students = {
-    "Name":["Rahul","Priya","Amit"],
-    "Marks":[85,90,78],
-    "Grade":["A","A+","B"]
-}
+## Missing Data
 
-df = pd.DataFrame(students)
+**Missing data** means values are not available or are empty in a dataset.
 
-print(df)
-```
+Pandas commonly represents missing values as:
 
-Output
+- `NaN`
+- `None`
+- `pd.NA`
 
-```text
-    Name  Marks Grade
-0  Rahul     85     A
-1  Priya     90    A+
-2   Amit     78     B
-```
-
-This DataFrame stores information about students.
-
----
-
-# Series vs DataFrame
-
-| Series                      | DataFrame                      |
-| --------------------------- | ------------------------------ |
-| One-dimensional             | Two-dimensional                |
-| Single column               | Multiple columns               |
-| Has one index               | Has row and column labels      |
-| Created using `pd.Series()` | Created using `pd.DataFrame()` |
-
----
-
-# Interview Questions
-
-| Question                                      | Answer                                     |
-| --------------------------------------------- | ------------------------------------------ |
-| What is a DataFrame?                          | A two-dimensional labeled table in Pandas. |
-| Can a DataFrame contain different data types? | Yes.                                       |
-| What is each column of a DataFrame?           | A Pandas Series.                           |
-| Which function creates a DataFrame?           | `pd.DataFrame()`                           |
-| What does `shape` return?                     | Number of rows and columns.                |
-
----
-
-# Key Points to Remember
-
-* **DataFrame** is a **2D labeled data structure** with **rows and columns**.
-* It is the **most commonly used** data structure in Pandas.
-* Each **column is a Series**.
-* It can store **different data types** in different columns.
-* Common constructor:
-
-```python
-import pandas as pd
-
-df = pd.DataFrame(data)
-```
-
-* Common attributes:
-
-  * `shape`
-  * `columns`
-  * `index`
-  * `dtypes`
-  * `values`
-* Common methods:
-
-  * `head()`
-  * `tail()`
-  * `info()`
-  * `describe()`
-
-### Easy Way to Remember
-
-* **Series = One Column**
-* **DataFrame = Multiple Columns (Table)**
-
-
-## What is Missing Data?
-
-**Missing data** refers to **values that are not available or are empty** in a dataset.
-
-In Pandas, missing values are usually represented as:
-
-* `NaN` (Not a Number)
-* `None`
-* `pd.NA` (newer missing value indicator)
-
-Missing data is common in real-world datasets due to incomplete data entry, sensor failures, or unavailable information.
-
----
-
-# Example
+### Example Dataset
 
 ```python
 import pandas as pd
@@ -708,7 +421,7 @@ df = pd.DataFrame(data)
 print(df)
 ```
 
-### Output
+Output:
 
 ```text
     Name   Age      City
@@ -718,39 +431,33 @@ print(df)
 3  David  30.0     Paris
 ```
 
----
-
-# Why Handle Missing Data?
+### Why Handle Missing Data?
 
 Missing values can:
 
-* Produce incorrect analysis.
-* Reduce machine learning model accuracy.
-* Cause errors during calculations.
-* Affect statistical results.
+- Produce incorrect analysis.
+- Reduce machine learning model accuracy.
+- Cause errors during calculations.
+- Affect statistical results.
 
----
+### Missing Data Functions
 
-# Common Functions for Missing Data
-
-| Function    | Purpose                   | Example        |
-| ----------- | ------------------------- | -------------- |
-| `isnull()`  | Detect missing values     | `df.isnull()`  |
+| Function | Purpose | Example |
+| --- | --- | --- |
+| `isnull()` | Detect missing values | `df.isnull()` |
 | `notnull()` | Detect non-missing values | `df.notnull()` |
-| `isna()`    | Same as `isnull()`        | `df.isna()`    |
-| `notna()`   | Same as `notnull()`       | `df.notna()`   |
-| `dropna()`  | Remove missing values     | `df.dropna()`  |
-| `fillna()`  | Replace missing values    | `df.fillna(0)` |
+| `isna()` | Same as `isnull()` | `df.isna()` |
+| `notna()` | Same as `notnull()` | `df.notna()` |
+| `dropna()` | Remove missing values | `df.dropna()` |
+| `fillna()` | Replace missing values | `df.fillna(0)` |
 
----
-
-# 1. Detect Missing Values
+### Detect Missing Values
 
 ```python
 print(df.isnull())
 ```
 
-### Output
+Output:
 
 ```text
     Name    Age   City
@@ -760,20 +467,13 @@ print(df.isnull())
 3  False  False  False
 ```
 
-**Explanation:**
-
-* `True` → Missing value
-* `False` → Value is present
-
----
-
-# 2. Count Missing Values
+### Count Missing Values
 
 ```python
 print(df.isnull().sum())
 ```
 
-### Output
+Output:
 
 ```text
 Name    0
@@ -782,15 +482,14 @@ City    1
 dtype: int64
 ```
 
----
-
-# 3. Remove Missing Values
+### Remove Missing Values
 
 ```python
-df.dropna()
+clean_df = df.dropna()
+print(clean_df)
 ```
 
-### Output
+Output:
 
 ```text
     Name   Age      City
@@ -798,153 +497,66 @@ df.dropna()
 3  David  30.0     Paris
 ```
 
-Rows containing missing values are removed.
+### Fill Missing Values
 
----
-
-# 4. Fill Missing Values
-
-### Fill with 0
+Fill all missing values with `0`:
 
 ```python
 df.fillna(0)
 ```
 
-### Output
-
-```text
-    Name   Age      City
-0   John  25.0  New York
-1  Alice   0.0    London
-2    Bob  28.0         0
-3  David  30.0     Paris
-```
-
----
-
-### Fill with Mean
+Fill a numeric column with its mean:
 
 ```python
 df["Age"] = df["Age"].fillna(df["Age"].mean())
 ```
 
-This replaces missing ages with the average age.
-
----
-
-### Fill with a Specific Value
+Fill a text column with a specific value:
 
 ```python
 df["City"] = df["City"].fillna("Unknown")
 ```
 
----
+### `dropna()` vs `fillna()`
 
-# Difference Between `dropna()` and `fillna()`
-
-| Function   | Purpose                                           |
-| ---------- | ------------------------------------------------- |
+| Function | Purpose |
+| --- | --- |
 | `dropna()` | Removes rows or columns containing missing values |
-| `fillna()` | Replaces missing values with a specified value    |
+| `fillna()` | Replaces missing values with a specified value |
 
----
+## Merging, Joining, and Concatenation
 
-# Common Parameters
+Pandas provides three common ways to combine datasets.
 
-| Function   | Parameter | Purpose               |
-| ---------- | --------- | --------------------- |
-| `dropna()` | `axis=0`  | Remove rows (default) |
-| `dropna()` | `axis=1`  | Remove columns        |
-| `fillna()` | `value`   | Replacement value     |
+| Method | Best Used When |
+| --- | --- |
+| `pd.merge()` | DataFrames share one or more common columns |
+| `df.join()` | DataFrames should be combined by index |
+| `pd.concat()` | DataFrames should be stacked by rows or columns |
 
----
+### Merge with `pd.merge()`
 
-# Interview Questions
-
-| Question                                   | Answer                                          |
-| ------------------------------------------ | ----------------------------------------------- |
-| What is missing data?                      | Data that is unavailable or empty in a dataset. |
-| How is missing data represented in Pandas? | `NaN`, `None`, or `pd.NA`.                      |
-| Which function detects missing values?     | `isnull()` or `isna()`.                         |
-| Which function removes missing values?     | `dropna()`.                                     |
-| Which function replaces missing values?    | `fillna()`.                                     |
-
----
-
-# Quick Cheat Sheet
-
-| Operation                | Function               |
-| ------------------------ | ---------------------- |
-| Check missing values     | `df.isnull()`          |
-| Count missing values     | `df.isnull().sum()`    |
-| Check non-missing values | `df.notnull()`         |
-| Remove missing rows      | `df.dropna()`          |
-| Fill with 0              | `df.fillna(0)`         |
-| Fill with mean           | `df.fillna(df.mean())` |
-
----
-
-# Key Points to Remember
-
-* **Missing data** means some values are unavailable.
-* Pandas represents missing values using **`NaN`**, **`None`**, or **`pd.NA`**.
-* Use:
-
-  * `isnull()` / `isna()` → Detect missing values.
-  * `notnull()` / `notna()` → Detect available values.
-  * `dropna()` → Remove missing data.
-  * `fillna()` → Replace missing data.
-* Handling missing values is an essential step in **data cleaning** before performing analysis or training machine learning models.
-
-# Merging, Joining, and Concatenation in Pandas
-
-**Merging**, **Joining**, and **Concatenation** are used to **combine two or more DataFrames** into a single DataFrame.
-
-The main difference is **how** they combine the data.
-
-| Method          | Combines Based On | Similar To           |
-| --------------- | ----------------- | -------------------- |
-| **Merge**       | Common column(s)  | SQL Join             |
-| **Join**        | Index (default)   | SQL Join using Index |
-| **Concatenate** | Rows or Columns   | Stacking tables      |
-
----
-
-# 1. Merging (`pd.merge()`)
-
-## What is Merge?
-
-**Merge** combines two DataFrames based on one or more **common columns**.
-
-It works like an **SQL JOIN**.
-
-### Syntax
-
-```python
-pd.merge(df1, df2, on="column_name")
-```
-
-### Example
+`merge()` combines DataFrames using common columns. It is similar to SQL joins.
 
 ```python
 import pandas as pd
 
-df1 = pd.DataFrame({
-    "ID":[1,2,3],
-    "Name":["John","Alice","Bob"]
+students = pd.DataFrame({
+    "ID": [1, 2, 3],
+    "Name": ["John", "Alice", "Bob"]
 })
 
-df2 = pd.DataFrame({
-    "ID":[1,2,3],
-    "Marks":[85,90,78]
+marks = pd.DataFrame({
+    "ID": [1, 2, 3],
+    "Marks": [85, 90, 78]
 })
 
-result = pd.merge(df1, df2, on="ID")
+result = pd.merge(students, marks, on="ID", how="inner")
 
 print(result)
 ```
 
-### Output
+Output:
 
 ```text
    ID   Name  Marks
@@ -953,218 +565,82 @@ print(result)
 2   3    Bob     78
 ```
 
-### Explanation
+Common merge types:
 
-Both DataFrames are combined using the common column **ID**.
+| Merge Type | Description |
+| --- | --- |
+| `inner` | Keeps matching rows only |
+| `left` | Keeps all rows from the left DataFrame |
+| `right` | Keeps all rows from the right DataFrame |
+| `outer` | Keeps all rows from both DataFrames |
 
----
+### Join with `join()`
 
-## Types of Merge
-
-| Merge Type | Description                          |
-| ---------- | ------------------------------------ |
-| `inner`    | Returns only matching rows (Default) |
-| `left`     | All rows from the left DataFrame     |
-| `right`    | All rows from the right DataFrame    |
-| `outer`    | All rows from both DataFrames        |
-
-Example
+`join()` combines DataFrames using index labels.
 
 ```python
-pd.merge(df1, df2, on="ID", how="left")
-```
+left = students.set_index("ID")
+right = marks.set_index("ID")
 
----
-
-# 2. Joining (`join()`)
-
-## What is Join?
-
-**Join** combines DataFrames using their **index** by default.
-
-### Syntax
-
-```python
-df1.join(df2)
-```
-
-### Example
-
-```python
-import pandas as pd
-
-df1 = pd.DataFrame({
-    "Name":["John","Alice","Bob"]
-})
-
-df2 = pd.DataFrame({
-    "Marks":[85,90,78]
-})
-
-result = df1.join(df2)
+result = left.join(right)
 
 print(result)
 ```
 
-### Output
+Output:
+
+```text
+     Name  Marks
+ID
+1    John     85
+2   Alice     90
+3     Bob     78
+```
+
+### Concatenate with `pd.concat()`
+
+`concat()` stacks DataFrames vertically or horizontally.
+
+Stack rows:
+
+```python
+df1 = pd.DataFrame({"Name": ["John"], "Marks": [85]})
+df2 = pd.DataFrame({"Name": ["Alice"], "Marks": [90]})
+
+result = pd.concat([df1, df2], axis=0, ignore_index=True)
+
+print(result)
+```
+
+Output:
 
 ```text
     Name  Marks
 0   John     85
 1  Alice     90
-2    Bob     78
 ```
 
-### Explanation
-
-The DataFrames are joined using the **row index**.
-
----
-
-# 3. Concatenation (`pd.concat()`)
-
-## What is Concatenation?
-
-**Concatenation** combines DataFrames by **stacking** them either:
-
-* Vertically (rows)
-* Horizontally (columns)
-
-### Syntax
+Stack columns:
 
 ```python
-pd.concat([df1, df2])
+result = pd.concat([df1, df2], axis=1)
 ```
 
----
+### Merge vs Join vs Concat
 
-## Vertical Concatenation (`axis=0`)
+| Function | Combines By | Common Use |
+| --- | --- | --- |
+| `pd.merge()` | Common columns | SQL-style joins |
+| `df.join()` | Index labels | Index-based joins |
+| `pd.concat()` | Axis | Stacking rows or columns |
 
-```python
-import pandas as pd
+## GroupBy and Aggregation
 
-df1 = pd.DataFrame({
-    "A":[1,2]
-})
+**GroupBy** groups rows that have the same value in one or more columns. **Aggregation** performs calculations on each group.
 
-df2 = pd.DataFrame({
-    "A":[3,4]
-})
+This is similar to the `GROUP BY` clause in SQL.
 
-result = pd.concat([df1,df2])
-
-print(result)
-```
-
-### Output
-
-```text
-   A
-0  1
-1  2
-0  3
-1  4
-```
-
----
-
-## Horizontal Concatenation (`axis=1`)
-
-```python
-result = pd.concat([df1,df2], axis=1)
-```
-
-### Output
-
-```text
-   A  A
-0  1  3
-1  2  4
-```
-
----
-
-# Difference Between Merge, Join, and Concat
-
-| Feature    | Merge         | Join             | Concat          |
-| ---------- | ------------- | ---------------- | --------------- |
-| Function   | `pd.merge()`  | `join()`         | `pd.concat()`   |
-| Based On   | Common column | Index (default)  | Rows or Columns |
-| Similar To | SQL JOIN      | SQL JOIN (Index) | Stack Tables    |
-| Axis       | Columns       | Index            | Rows/Columns    |
-
----
-
-# Most Common Parameters
-
-| Function   | Parameter | Purpose                                          |
-| ---------- | --------- | ------------------------------------------------ |
-| `merge()`  | `on`      | Common column                                    |
-| `merge()`  | `how`     | Type of join (`inner`, `left`, `right`, `outer`) |
-| `concat()` | `axis=0`  | Stack rows                                       |
-| `concat()` | `axis=1`  | Stack columns                                    |
-
----
-
-# Interview Questions
-
-| Question                               | Answer                                        |
-| -------------------------------------- | --------------------------------------------- |
-| What is Merge?                         | Combines DataFrames using common columns.     |
-| What is Join?                          | Combines DataFrames using indexes.            |
-| What is Concatenation?                 | Stacks DataFrames vertically or horizontally. |
-| Which function is similar to SQL JOIN? | `pd.merge()`                                  |
-| Which function stacks DataFrames?      | `pd.concat()`                                 |
-
----
-
-# Quick Cheat Sheet
-
-| Operation              | Function            |
-| ---------------------- | ------------------- |
-| Merge by common column | `pd.merge()`        |
-| Join by index          | `df.join()`         |
-| Stack rows             | `pd.concat(axis=0)` |
-| Stack columns          | `pd.concat(axis=1)` |
-
----
-
-# Easy Way to Remember
-
-| Function   | Memory Trick             |
-| ---------- | ------------------------ |
-| **Merge**  | **Match Columns**        |
-| **Join**   | **Join Indexes**         |
-| **Concat** | **Combine/Stack Tables** |
-
----
-
-# Key Points to Remember
-
-* **`pd.merge()`** → Use when two DataFrames have a **common column**.
-* **`join()`** → Use when DataFrames share the **same index**.
-* **`pd.concat()`** → Use to **stack DataFrames** vertically (`axis=0`) or horizontally (`axis=1`).
-* `merge()` is the most commonly used function in **Data Analysis**, **Machine Learning**, and **SQL-related interview questions**.
-
-# GroupBy and Aggregation in Pandas
-
-## What is GroupBy?
-
-**GroupBy** is a Pandas operation used to **group rows that have the same value in one or more columns** and then perform calculations (aggregations) on each group.
-
-It is similar to the **`GROUP BY`** clause in SQL.
-
----
-
-# Syntax
-
-```python
-df.groupby("column_name")
-```
-
----
-
-# Example Dataset
+### Example Dataset
 
 ```python
 import pandas as pd
@@ -1180,7 +656,7 @@ df = pd.DataFrame(data)
 print(df)
 ```
 
-### Output
+Output:
 
 ```text
   Department Employee  Salary
@@ -1191,234 +667,88 @@ print(df)
 4      Sales      Eva   55000
 ```
 
----
-
-# Group By Department
+### Basic Syntax
 
 ```python
 df.groupby("Department")
 ```
 
-This creates groups but does not display results until an aggregation function is applied.
+This creates groups. To display results, apply an aggregation function.
 
----
+### Common Aggregation Functions
 
-# What is Aggregation?
+| Function | Purpose |
+| --- | --- |
+| `sum()` | Sum of values |
+| `mean()` | Average |
+| `count()` | Count values |
+| `max()` | Maximum value |
+| `min()` | Minimum value |
+| `median()` | Median |
+| `std()` | Standard deviation |
+| `var()` | Variance |
 
-**Aggregation** means performing calculations on each group, such as:
+### GroupBy Examples
 
-* Sum
-* Mean
-* Count
-* Maximum
-* Minimum
-
----
-
-# Common Aggregation Functions
-
-| Function   | Purpose            |
-| ---------- | ------------------ |
-| `sum()`    | Sum of values      |
-| `mean()`   | Average            |
-| `count()`  | Count of values    |
-| `max()`    | Maximum value      |
-| `min()`    | Minimum value      |
-| `median()` | Median             |
-| `std()`    | Standard deviation |
-| `var()`    | Variance           |
-
----
-
-# Example 1: Sum
+Sum salaries by department:
 
 ```python
 df.groupby("Department")["Salary"].sum()
 ```
 
-### Output
+Output:
 
 ```text
 Department
 HR        85000
 IT       110000
 Sales     55000
+Name: Salary, dtype: int64
 ```
 
----
-
-# Example 2: Average Salary
+Average salary by department:
 
 ```python
 df.groupby("Department")["Salary"].mean()
 ```
 
-### Output
-
-```text
-Department
-HR       42500
-IT       55000
-Sales    55000
-```
-
----
-
-# Example 3: Maximum Salary
-
-```python
-df.groupby("Department")["Salary"].max()
-```
-
-### Output
-
-```text
-Department
-HR       45000
-IT       60000
-Sales    55000
-```
-
----
-
-# Example 4: Count Employees
+Count employees by department:
 
 ```python
 df.groupby("Department")["Employee"].count()
 ```
 
-### Output
-
-```text
-Department
-HR       2
-IT       2
-Sales    1
-```
-
----
-
-# Multiple Aggregations
-
-Use `agg()` to perform multiple calculations at once.
+Multiple aggregations:
 
 ```python
-df.groupby("Department")["Salary"].agg(["sum","mean","max","min"])
+df.groupby("Department")["Salary"].agg(["sum", "mean", "max", "min"])
 ```
 
-### Output
+Output:
 
 ```text
-             sum     mean    max    min
+               sum     mean    max    min
 Department
-HR         85000  42500.0  45000  40000
-IT        110000  55000.0  60000  50000
-Sales      55000  55000.0  55000  55000
+HR           85000  42500.0  45000  40000
+IT          110000  55000.0  60000  50000
+Sales        55000  55000.0  55000  55000
 ```
 
----
-
-# Group By Multiple Columns
+Group by multiple columns:
 
 ```python
-df.groupby(["Department","Employee"])["Salary"].sum()
+df.groupby(["Department", "Employee"])["Salary"].sum()
 ```
 
-This groups data using both **Department** and **Employee**.
+## Pivot Tables
 
----
+A **Pivot Table** summarizes, organizes, and analyzes data by grouping it into rows and columns and applying an aggregation function.
 
-# Difference Between GroupBy and Aggregation
+It is similar to Pivot Tables in Microsoft Excel.
 
-| GroupBy                   | Aggregation                        |
-| ------------------------- | ---------------------------------- |
-| Creates groups            | Performs calculations on groups    |
-| Similar to SQL `GROUP BY` | Similar to SQL aggregate functions |
-| Returns grouped object    | Returns summarized results         |
+### Syntax
 
----
-
-# Most Important GroupBy Functions
-
-| Function  | Example             |
-| --------- | ------------------- |
-| `sum()`   | `groupby().sum()`   |
-| `mean()`  | `groupby().mean()`  |
-| `count()` | `groupby().count()` |
-| `max()`   | `groupby().max()`   |
-| `min()`   | `groupby().min()`   |
-| `agg()`   | `groupby().agg()`   |
-
----
-
-# Interview Questions
-
-| Question                                       | Answer                                         |
-| ---------------------------------------------- | ---------------------------------------------- |
-| What is GroupBy?                               | Groups rows with the same values for analysis. |
-| What is Aggregation?                           | Performs calculations on grouped data.         |
-| Which function performs multiple aggregations? | `agg()`                                        |
-| Which SQL clause is similar to GroupBy?        | `GROUP BY`                                     |
-| Can GroupBy use multiple columns?              | Yes.                                           |
-
----
-
-# Quick Cheat Sheet
-
-| Operation             | Syntax                                                         |
-| --------------------- | -------------------------------------------------------------- |
-| Group by one column   | `df.groupby("Department")`                                     |
-| Sum                   | `df.groupby("Department")["Salary"].sum()`                     |
-| Mean                  | `df.groupby("Department")["Salary"].mean()`                    |
-| Count                 | `df.groupby("Department")["Employee"].count()`                 |
-| Maximum               | `df.groupby("Department")["Salary"].max()`                     |
-| Multiple aggregations | `df.groupby("Department")["Salary"].agg(["sum","mean","max"])` |
-
----
-
-# Key Points to Remember
-
-* **GroupBy** groups rows based on common values.
-* **Aggregation** performs calculations on those groups.
-* GroupBy is similar to SQL's **`GROUP BY`** clause.
-* Common aggregation functions:
-
-  * `sum()`
-  * `mean()`
-  * `count()`
-  * `max()`
-  * `min()`
-  * `agg()`
-* `agg()` is useful when you want multiple statistics in a single operation.
-
-### Easy Way to Remember
-
-* **GroupBy = Divide the data into groups**
-* **Aggregation = Calculate statistics for each group**
-
-
-## What is a Pivot Table?
-
-A **Pivot Table** is a powerful Pandas feature used to **summarize, organize, and analyze data** by grouping it into rows and columns and applying an aggregation function (such as `sum`, `mean`, or `count`).
-
-It is similar to **Pivot Tables in Microsoft Excel**.
-
----
-
-# Why Use Pivot Tables?
-
-Pivot tables help you:
-
-* Summarize large datasets.
-* Calculate totals, averages, counts, etc.
-* Compare data across categories.
-* Create reports for data analysis.
-
----
-
-# Syntax
-
-```python id="zyl3v2"
+```python
 pd.pivot_table(
     data,
     values="column_name",
@@ -1430,25 +760,23 @@ pd.pivot_table(
 
 ### Parameters
 
-| Parameter | Purpose                                             |
-| --------- | --------------------------------------------------- |
-| `data`    | Input DataFrame                                     |
-| `values`  | Column to aggregate                                 |
-| `index`   | Row labels                                          |
-| `columns` | Column labels                                       |
-| `aggfunc` | Aggregation function (`sum`, `mean`, `count`, etc.) |
+| Parameter | Purpose |
+| --- | --- |
+| `data` | Input DataFrame |
+| `values` | Column to aggregate |
+| `index` | Row labels |
+| `columns` | Column labels |
+| `aggfunc` | Aggregation function such as `sum`, `mean`, or `count` |
 
----
+### Example Dataset
 
-# Example Dataset
-
-```python id="p4y07k"
+```python
 import pandas as pd
 
 data = {
-    "Department": ["IT","IT","HR","HR","Sales","Sales"],
-    "Gender": ["Male","Female","Male","Female","Male","Female"],
-    "Salary": [50000,60000,40000,45000,55000,52000]
+    "Department": ["IT", "IT", "HR", "HR", "Sales", "Sales"],
+    "Gender": ["Male", "Female", "Male", "Female", "Male", "Female"],
+    "Salary": [50000, 60000, 40000, 45000, 55000, 52000]
 }
 
 df = pd.DataFrame(data)
@@ -1456,9 +784,9 @@ df = pd.DataFrame(data)
 print(df)
 ```
 
-### Output
+Output:
 
-```text id="01f4jw"
+```text
   Department  Gender  Salary
 0         IT    Male   50000
 1         IT  Female   60000
@@ -1468,11 +796,9 @@ print(df)
 5      Sales  Female   52000
 ```
 
----
+### Average Salary by Department
 
-# Example 1: Average Salary by Department
-
-```python id="c73pi7"
+```python
 pd.pivot_table(
     df,
     values="Salary",
@@ -1481,21 +807,19 @@ pd.pivot_table(
 )
 ```
 
-### Output
+Output:
 
-```text id="jifkgv"
-            Salary
+```text
+             Salary
 Department
-HR         42500
-IT         55000
-Sales      53500
+HR          42500.0
+IT          55000.0
+Sales       53500.0
 ```
 
----
+### Department vs Gender
 
-# Example 2: Department vs Gender
-
-```python id="xj6c3z"
+```python
 pd.pivot_table(
     df,
     values="Salary",
@@ -1505,9 +829,9 @@ pd.pivot_table(
 )
 ```
 
-### Output
+Output:
 
-```text id="c96sq5"
+```text
 Gender       Female   Male
 Department
 HR            45000  40000
@@ -1515,159 +839,44 @@ IT            60000  50000
 Sales         52000  55000
 ```
 
-### Explanation
+### GroupBy vs Pivot Table
 
-* **Rows** → Department
-* **Columns** → Gender
-* **Values** → Average Salary
+| GroupBy | Pivot Table |
+| --- | --- |
+| Groups data and returns grouped results | Summarizes data in a table format |
+| More flexible for custom operations | Easier for reports and comparisons |
+| Uses `groupby()` | Uses `pivot_table()` |
 
----
+## Common Operations
 
-# Example 3: Sum of Salary
+Operations in Pandas are actions performed on Series and DataFrames to manipulate, analyze, transform, and summarize data.
 
-```python id="k4w9ml"
-pd.pivot_table(
-    df,
-    values="Salary",
-    index="Department",
-    aggfunc="sum"
-)
-```
+### Operation Types
 
-### Output
+| Operation Type | Purpose |
+| --- | --- |
+| Arithmetic | Perform mathematical calculations |
+| Comparison | Compare values |
+| Statistical | Find summary statistics |
+| String | Work with text data |
+| Sorting | Sort rows or columns |
+| Filtering | Select rows by condition |
+| Aggregation | Calculate summary values |
+| Apply | Apply custom functions |
 
-```text id="1by3gt"
-            Salary
-Department
-HR          85000
-IT         110000
-Sales      107000
-```
+### Arithmetic Operations
 
----
-
-# Common Aggregation Functions
-
-| Function  | Purpose |
-| --------- | ------- |
-| `"sum"`   | Total   |
-| `"mean"`  | Average |
-| `"count"` | Count   |
-| `"max"`   | Maximum |
-| `"min"`   | Minimum |
-
----
-
-# Difference Between GroupBy and Pivot Table
-
-| GroupBy                             | Pivot Table                       |
-| ----------------------------------- | --------------------------------- |
-| Groups data                         | Summarizes data in a table format |
-| More flexible for custom operations | Easier for reports and summaries  |
-| Uses `groupby()`                    | Uses `pivot_table()`              |
-| Usually returns grouped results     | Returns a formatted summary table |
-
----
-
-# Most Important Parameters
-
-| Parameter | Example        |
-| --------- | -------------- |
-| `values`  | `"Salary"`     |
-| `index`   | `"Department"` |
-| `columns` | `"Gender"`     |
-| `aggfunc` | `"mean"`       |
-
----
-
-# Interview Questions
-
-| Question                                            | Answer                                                       |
-| --------------------------------------------------- | ------------------------------------------------------------ |
-| What is a Pivot Table?                              | A tool used to summarize and analyze data in a table format. |
-| Which function creates a Pivot Table?               | `pd.pivot_table()`                                           |
-| Which parameter specifies row labels?               | `index`                                                      |
-| Which parameter specifies column labels?            | `columns`                                                    |
-| Which parameter specifies the aggregation function? | `aggfunc`                                                    |
-
----
-
-# Quick Cheat Sheet
-
-| Operation          | Syntax             |
-| ------------------ | ------------------ |
-| Create Pivot Table | `pd.pivot_table()` |
-| Average            | `aggfunc="mean"`   |
-| Sum                | `aggfunc="sum"`    |
-| Count              | `aggfunc="count"`  |
-| Row labels         | `index="Column"`   |
-| Column labels      | `columns="Column"` |
-| Values             | `values="Column"`  |
-
----
-
-# Key Points to Remember
-
-* **Pivot Table** is used to **summarize and analyze large datasets**.
-* It is similar to **Excel Pivot Tables**.
-* It is created using **`pd.pivot_table()`**.
-* Main parameters:
-
-  * `values` → Data to summarize
-  * `index` → Row labels
-  * `columns` → Column labels
-  * `aggfunc` → Aggregation function
-* Common aggregation functions:
-
-  * `mean`
-  * `sum`
-  * `count`
-  * `max`
-  * `min`
-
-### Easy Way to Remember
-
-* **GroupBy** → **Group + Calculate**
-* **Pivot Table** → **Group + Calculate + Display as a Summary Table**
-
-# Operations in Pandas
-
-## What are Operations in Pandas?
-
-**Operations in Pandas** are actions performed on **Series** and **DataFrames** to manipulate, analyze, transform, and summarize data.
-
-These operations help in cleaning data, performing calculations, filtering records, sorting, grouping, and preparing data for Machine Learning.
-
----
-
-# Types of Operations in Pandas
-
-| Operation Type         | Purpose                           |
-| ---------------------- | --------------------------------- |
-| Arithmetic Operations  | Perform mathematical calculations |
-| Comparison Operations  | Compare values                    |
-| Statistical Operations | Find summary statistics           |
-| String Operations      | Work with text data               |
-| Sorting Operations     | Sort rows or columns              |
-| Filtering Operations   | Select specific rows              |
-| Aggregate Operations   | Calculate summary values          |
-| Apply Operations       | Apply custom functions            |
-
----
-
-# 1. Arithmetic Operations
-
-Arithmetic operations are performed **element-wise**.
+Arithmetic operations are performed element by element.
 
 ```python
 import pandas as pd
 
-s = pd.Series([10,20,30])
+s = pd.Series([10, 20, 30])
 
 print(s + 10)
 ```
 
-### Output
+Output:
 
 ```text
 0    20
@@ -1676,208 +885,156 @@ print(s + 10)
 dtype: int64
 ```
 
-### Common Arithmetic Operations
-
-| Operation      | Example   |
-| -------------- | --------- |
-| Addition       | `df + 10` |
-| Subtraction    | `df - 5`  |
-| Multiplication | `df * 2`  |
-| Division       | `df / 2`  |
-| Power          | `df ** 2` |
-
----
-
-# 2. Comparison Operations
-
-Used to compare values.
+### Comparison and Filtering
 
 ```python
 df["Marks"] > 80
 ```
 
-### Output
-
-```text
-0    False
-1     True
-2    False
-dtype: bool
+```python
+df[df["Marks"] > 80]
 ```
 
-### Comparison Operators
+Common comparison operators:
 
-| Operator              | Example |
-| --------------------- | ------- |
-| Greater than          | `>`     |
-| Less than             | `<`     |
-| Equal                 | `==`    |
-| Not Equal             | `!=`    |
-| Greater than or Equal | `>=`    |
-| Less than or Equal    | `<=`    |
+| Operator | Meaning |
+| --- | --- |
+| `>` | Greater than |
+| `<` | Less than |
+| `==` | Equal |
+| `!=` | Not equal |
+| `>=` | Greater than or equal |
+| `<=` | Less than or equal |
 
----
+### Statistical Operations
 
-# 3. Statistical Operations
+| Function | Purpose |
+| --- | --- |
+| `sum()` | Sum |
+| `mean()` | Average |
+| `median()` | Median |
+| `max()` | Maximum |
+| `min()` | Minimum |
+| `std()` | Standard deviation |
+| `var()` | Variance |
+| `count()` | Count non-missing values |
 
-Used to calculate summary statistics.
-
-| Function   | Purpose                  |
-| ---------- | ------------------------ |
-| `sum()`    | Sum                      |
-| `mean()`   | Average                  |
-| `median()` | Median                   |
-| `max()`    | Maximum                  |
-| `min()`    | Minimum                  |
-| `std()`    | Standard deviation       |
-| `var()`    | Variance                 |
-| `count()`  | Count non-missing values |
-
-Example
+Example:
 
 ```python
 df["Marks"].mean()
 ```
 
----
+### String Operations
 
-# 4. String Operations
-
-Used for text columns.
+Use the `.str` accessor for text columns.
 
 ```python
 df["Name"].str.upper()
 ```
 
-### Common String Methods
+| Method | Purpose |
+| --- | --- |
+| `str.upper()` | Convert to uppercase |
+| `str.lower()` | Convert to lowercase |
+| `str.title()` | Convert to title case |
+| `str.replace()` | Replace text |
+| `str.contains()` | Check for substring |
 
-| Method           | Purpose              |
-| ---------------- | -------------------- |
-| `str.upper()`    | Convert to uppercase |
-| `str.lower()`    | Convert to lowercase |
-| `str.title()`    | Title case           |
-| `str.replace()`  | Replace text         |
-| `str.contains()` | Check substring      |
-
----
-
-# 5. Sorting Operations
-
-Sort data by values or index.
+### Sorting
 
 ```python
 df.sort_values("Marks")
-```
-
-```python
 df.sort_index()
 ```
 
-### Functions
-
-| Function        | Purpose               |
-| --------------- | --------------------- |
-| `sort_values()` | Sort by column values |
-| `sort_index()`  | Sort by index         |
-
----
-
-# 6. Filtering Operations
-
-Select rows based on a condition.
+### Aggregation
 
 ```python
-df[df["Marks"] > 80]
+df["Marks"].agg(["sum", "mean", "max"])
 ```
 
-### Example
-
-```python
-df[df["Age"] >= 18]
-```
-
----
-
-# 7. Aggregate Operations
-
-Used to summarize data.
-
-```python
-df["Marks"].agg(["sum","mean","max"])
-```
-
-### Output
+Output:
 
 ```text
-sum      250
-mean    83.33
-max       95
+sum     250.00
+mean     83.33
+max      95.00
+Name: Marks, dtype: float64
 ```
 
----
-
-# 8. Apply Operations
-
-Apply a custom function to rows or columns.
+### Apply Custom Functions
 
 ```python
 df["Marks"].apply(lambda x: x + 5)
 ```
 
-### Example
+## Quick Reference
 
-Increase every student's marks by 5.
+### Common Pandas Objects and Functions
 
----
+| Object or Function | Purpose |
+| --- | --- |
+| `pd.Series()` | Create a Series |
+| `pd.DataFrame()` | Create a DataFrame |
+| `pd.read_csv()` | Read a CSV file |
+| `pd.read_excel()` | Read an Excel file |
+| `df.head()` | View the first 5 rows |
+| `df.tail()` | View the last 5 rows |
+| `df.info()` | Display dataset information |
+| `df.describe()` | Display statistical summary |
+| `df.isnull().sum()` | Count missing values |
+| `df.dropna()` | Remove missing values |
+| `df.fillna()` | Fill missing values |
+| `pd.merge()` | Merge DataFrames by columns |
+| `df.join()` | Join DataFrames by index |
+| `pd.concat()` | Stack DataFrames |
+| `df.groupby()` | Group rows for analysis |
+| `pd.pivot_table()` | Create a pivot table |
 
-# Commonly Used Operations
+### Common Operation Cheat Sheet
 
-| Function         | Purpose                 |
-| ---------------- | ----------------------- |
-| `head()`         | First 5 rows            |
-| `tail()`         | Last 5 rows             |
-| `info()`         | Dataset information     |
-| `describe()`     | Statistical summary     |
-| `value_counts()` | Count unique values     |
-| `unique()`       | Unique values           |
-| `nunique()`      | Number of unique values |
+| Category | Common Syntax |
+| --- | --- |
+| Arithmetic | `+`, `-`, `*`, `/`, `**` |
+| Comparison | `>`, `<`, `==`, `!=`, `>=`, `<=` |
+| Filtering | `df[condition]` |
+| Sorting | `df.sort_values("Column")` |
+| Aggregation | `df["Column"].agg(["sum", "mean"])` |
+| Grouping | `df.groupby("Column")["Value"].sum()` |
+| Missing values | `df.isnull()`, `df.dropna()`, `df.fillna()` |
+| Text columns | `df["Column"].str.upper()` |
 
----
+### Key Points
 
-# Interview Questions
+- Pandas is used for data manipulation and analysis.
+- Pandas is built on top of NumPy.
+- The two main data structures are Series and DataFrame.
+- A Series is like one labeled column.
+- A DataFrame is like a full table with rows and columns.
+- Missing data should be handled before analysis or model training.
+- Use `merge()`, `join()`, and `concat()` to combine datasets.
+- Use `groupby()` and `pivot_table()` to summarize data.
+- Use `apply()` when you need a custom operation.
 
-| Question                                  | Answer                                                                   |
-| ----------------------------------------- | ------------------------------------------------------------------------ |
-| What are Pandas operations?               | Operations used to manipulate and analyze data in Series and DataFrames. |
-| Which function calculates the average?    | `mean()`                                                                 |
-| Which function sorts data?                | `sort_values()`                                                          |
-| Which function applies a custom function? | `apply()`                                                                |
-| Which function returns unique values?     | `unique()`                                                               |
+## Interview Questions
 
----
-
-# Quick Cheat Sheet
-
-| Category    | Functions                                       |
-| ----------- | ----------------------------------------------- |
-| Arithmetic  | `+`, `-`, `*`, `/`, `**`                        |
-| Comparison  | `>`, `<`, `==`, `!=`, `>=`, `<=`                |
-| Statistics  | `sum()`, `mean()`, `median()`, `max()`, `min()` |
-| Strings     | `str.upper()`, `str.lower()`, `str.replace()`   |
-| Sorting     | `sort_values()`, `sort_index()`                 |
-| Filtering   | `df[condition]`                                 |
-| Aggregation | `agg()`                                         |
-| Apply       | `apply()`                                       |
-| Information | `head()`, `tail()`, `info()`, `describe()`      |
-
----
-
-# Key Points to Remember
-
-* **Operations in Pandas** are used to manipulate, analyze, and transform data.
-* Arithmetic and comparison operations work **element-wise**.
-* Statistical functions help summarize data.
-* String operations work on text columns using the **`.str`** accessor.
-* Filtering selects rows that satisfy a condition.
-* `apply()` lets you execute custom functions on Series or DataFrames.
-* These operations are fundamental for **data cleaning**, **exploratory data analysis (EDA)**, and **machine learning preprocessing**.
+| Question | Answer |
+| --- | --- |
+| What is Pandas? | A Python library for data manipulation and analysis. |
+| What are the two main Pandas data structures? | Series and DataFrame. |
+| Is Pandas built on NumPy? | Yes. |
+| What is a Series? | A one-dimensional labeled array. |
+| What is a DataFrame? | A two-dimensional labeled table with rows and columns. |
+| Can a DataFrame contain different data types? | Yes, different columns can store different data types. |
+| What is the standard Pandas alias? | `pd` |
+| Which function reads a CSV file? | `pd.read_csv()` |
+| Which function detects missing values? | `isnull()` or `isna()` |
+| Which function removes missing values? | `dropna()` |
+| Which function replaces missing values? | `fillna()` |
+| What does `shape` return? | The number of rows and columns. |
+| Which function is similar to SQL JOIN? | `pd.merge()` |
+| Which function stacks DataFrames? | `pd.concat()` |
+| Which function groups rows for analysis? | `groupby()` |
+| Which function creates a pivot table? | `pd.pivot_table()` |
+| Which function applies a custom function? | `apply()` |
