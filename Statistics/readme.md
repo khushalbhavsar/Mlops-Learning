@@ -2293,3 +2293,255 @@ Histograms are used in:
 * **Histogram → Continuous Data → Bars Touch**
 * **Bar Graph → Categorical Data → Bars Have Gaps**
 
+# What are Measures of Central Tendency?
+
+**Measures of Central Tendency** are statistical measures used to determine the **central or typical value** of a dataset. They summarize a large set of data into a **single representative value**, making it easier to understand and compare datasets.
+
+It answers the question:
+
+> **"What is the central or average value of this dataset?"**
+
+---
+
+# Simple Definition
+
+> **Measures of Central Tendency are statistical measures that represent the center or typical value of a dataset.**
+
+---
+
+# Why Do We Use Measures of Central Tendency?
+
+They help us to:
+
+* Summarize large datasets.
+* Find the central value.
+* Compare different datasets.
+* Understand the overall trend of data.
+* Prepare data for statistical analysis and machine learning.
+
+---
+
+# Types of Measures of Central Tendency
+
+There are **three main measures**:
+
+| Measure    | Meaning                         |
+| ---------- | ------------------------------- |
+| **Mean**   | Average value                   |
+| **Median** | Middle value after sorting      |
+| **Mode**   | Most frequently occurring value |
+
+---
+
+# Example Dataset
+
+Suppose the marks of 7 students are:
+
+```text
+40, 50, 60, 70, 80, 90, 100
+```
+
+---
+
+## 1. Mean (Average)
+
+The **Mean** is calculated by adding all values and dividing by the total number of observations.
+
+### Formula
+
+[
+\boxed{\text{Mean}=\frac{\sum X}{N}}
+]
+
+Where:
+
+* **ΣX** = Sum of all values
+* **N** = Number of observations
+
+### Calculation
+
+[
+\text{Mean}=\frac{40+50+60+70+80+90+100}{7}
+]
+
+[
+=\frac{490}{7}=70
+]
+
+**Mean = 70**
+
+---
+
+## 2. Median
+
+The **Median** is the **middle value** after arranging the data in ascending or descending order.
+
+Dataset:
+
+```text
+40, 50, 60, 70, 80, 90, 100
+```
+
+Middle value = **70**
+
+**Median = 70**
+
+---
+
+## 3. Mode
+
+The **Mode** is the value that appears **most frequently**.
+
+Example:
+
+```text
+10, 20, 20, 30, 40, 40, 40, 50
+```
+
+The value **40** appears **3 times**, more than any other value.
+
+**Mode = 40**
+
+---
+
+# Comparison Table
+
+| Measure | Definition            | Best Used For                           |
+| ------- | --------------------- | --------------------------------------- |
+| Mean    | Average of all values | Numerical data without extreme outliers |
+| Median  | Middle value          | Skewed data or data with outliers       |
+| Mode    | Most frequent value   | Categorical or repeated data            |
+
+---
+
+# Real-Life Example
+
+Suppose the monthly salaries of employees are:
+
+```text
+25000, 28000, 30000, 32000, 35000
+```
+
+* **Mean Salary** → Average salary
+* **Median Salary** → Middle salary
+* **Mode Salary** → Most common salary (if repeated)
+
+---
+
+# Characteristics
+
+| Mean                 | Median                        | Mode                                    |
+| -------------------- | ----------------------------- | --------------------------------------- |
+| Uses all values      | Uses only the middle value    | Uses the most frequent value            |
+| Affected by outliers | Not much affected by outliers | Not affected by outliers                |
+| Easy to calculate    | Requires sorted data          | May have one, more than one, or no mode |
+
+---
+
+# Mean vs Median vs Mode
+
+| Mean                    | Median               | Mode                      |
+| ----------------------- | -------------------- | ------------------------- |
+| Average                 | Middle               | Most frequent             |
+| Sensitive to outliers   | Robust to outliers   | Depends on frequency      |
+| Best for symmetric data | Best for skewed data | Best for categorical data |
+
+---
+
+# Applications
+
+Measures of Central Tendency are used in:
+
+* Student marks analysis
+* Salary analysis
+* Sales reports
+* Healthcare statistics
+* Business analytics
+* Financial analysis
+* Survey analysis
+
+---
+
+# Applications in Data Science
+
+Measures of Central Tendency are widely used in:
+
+* Exploratory Data Analysis (EDA)
+* Missing value imputation
+* Data preprocessing
+* Feature engineering
+* Data summarization
+* Machine Learning model preparation
+
+---
+
+# Python Example
+
+```python
+import statistics
+
+data = [40, 50, 60, 70, 80, 90, 100]
+
+print("Mean:", statistics.mean(data))
+print("Median:", statistics.median(data))
+print("Mode:", statistics.mode(data))
+```
+
+---
+
+# Pandas Example
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    "Marks": [40, 50, 60, 70, 80, 90, 100]
+})
+
+print(df["Marks"].mean())
+print(df["Marks"].median())
+print(df["Marks"].mode())
+```
+
+---
+
+# Interview Questions
+
+| Question                                         | Answer                                                                |
+| ------------------------------------------------ | --------------------------------------------------------------------- |
+| What is the Measure of Central Tendency?         | A statistical measure that represents the central value of a dataset. |
+| What are the three measures of central tendency? | Mean, Median, and Mode.                                               |
+| Which measure is affected by outliers?           | Mean.                                                                 |
+| Which measure is best for skewed data?           | Median.                                                               |
+| Which measure is useful for categorical data?    | Mode.                                                                 |
+
+---
+
+# Quick Cheat Sheet
+
+| Measure | Formula             | Best For                  |
+| ------- | ------------------- | ------------------------- |
+| Mean    | `ΣX / N`            | Average value             |
+| Median  | Middle value        | Skewed data               |
+| Mode    | Most frequent value | Categorical/repeated data |
+
+---
+
+# Key Points to Remember
+
+* **Measures of Central Tendency** summarize a dataset using **one representative value**.
+* There are **three main measures**:
+
+  * **Mean** → Average
+  * **Median** → Middle value
+  * **Mode** → Most frequent value
+* **Mean** is affected by extreme values (outliers).
+* **Median** is preferred when data contains outliers or is skewed.
+* **Mode** is useful for finding the most common category or value.
+* These measures are fundamental in **Statistics**, **Data Science**, **Machine Learning**, and **Business Analytics**.
+
+### Easy Way to Remember
+
+* **Mean = Average**
+* **Median = Middle**
+* **Mode = Most Frequent**
