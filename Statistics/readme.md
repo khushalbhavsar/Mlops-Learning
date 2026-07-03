@@ -1303,3 +1303,993 @@ Although **Ogives are not commonly used in Machine Learning**, they are useful i
   * Quartiles (Q1, Q2, Q3)
   * Percentiles
 * Ogives are an important tool in **Statistics** for analyzing grouped data and understanding cumulative distributions.
+
+# What is a Two-Way Table?
+
+A **Two-Way Table** (also called a **Contingency Table** or **Cross Tabulation**) is a table that shows the relationship between **two categorical variables**.
+
+It displays the frequency (count) of observations for every combination of the two variables.
+
+---
+
+# Simple Definition
+
+> **A Two-Way Table is a table that summarizes data based on two categorical variables and shows the frequency for each combination.**
+
+---
+
+# Why Do We Use a Two-Way Table?
+
+A two-way table helps us to:
+
+* Compare two categorical variables.
+* Find relationships between variables.
+* Calculate row totals and column totals.
+* Analyze survey data.
+* Prepare data for statistical analysis.
+
+---
+
+# Example Dataset
+
+Suppose a survey records students by **Department** and **Gender**.
+
+| Student | Department | Gender |
+| ------- | ---------- | ------ |
+| Rahul   | IT         | Male   |
+| Priya   | HR         | Female |
+| Amit    | IT         | Male   |
+| Neha    | Sales      | Female |
+| Rohit   | IT         | Male   |
+| Pooja   | HR         | Female |
+| Karan   | Sales      | Male   |
+| Riya    | IT         | Female |
+
+---
+
+# Two-Way Table
+
+| Department |  Male | Female | Total |
+| ---------- | ----: | -----: | ----: |
+| IT         |     3 |      1 |     4 |
+| HR         |     0 |      2 |     2 |
+| Sales      |     1 |      1 |     2 |
+| **Total**  | **4** |  **4** | **8** |
+
+---
+
+# Explanation
+
+* **IT Department** has **3 males** and **1 female**.
+* **HR Department** has **2 females**.
+* **Sales Department** has **1 male** and **1 female**.
+* Total students = **8**.
+
+This table helps compare **Department** and **Gender** at the same time.
+
+---
+
+# Components of a Two-Way Table
+
+| Component    | Description                    |
+| ------------ | ------------------------------ |
+| Rows         | First categorical variable     |
+| Columns      | Second categorical variable    |
+| Cell         | Frequency for a combination    |
+| Row Total    | Total frequency of each row    |
+| Column Total | Total frequency of each column |
+| Grand Total  | Total number of observations   |
+
+---
+
+# Characteristics of a Two-Way Table
+
+* Contains **two categorical variables**.
+* Shows the relationship between variables.
+* Includes row totals and column totals.
+* Easy to compare categories.
+
+---
+
+# One-Way Table vs Two-Way Table
+
+| One-Way Table                   | Two-Way Table                             |
+| ------------------------------- | ----------------------------------------- |
+| Uses one variable               | Uses two variables                        |
+| Shows frequency of one category | Shows relationship between two categories |
+| Simpler                         | More detailed                             |
+
+### One-Way Table
+
+| Department | Count |
+| ---------- | ----: |
+| IT         |     4 |
+| HR         |     2 |
+| Sales      |     2 |
+
+### Two-Way Table
+
+| Department | Male | Female |
+| ---------- | ---: | -----: |
+| IT         |    3 |      1 |
+| HR         |    0 |      2 |
+| Sales      |    1 |      1 |
+
+---
+
+# Creating a Two-Way Table in Pandas
+
+## Using `pd.crosstab()`
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    "Department": ["IT", "HR", "IT", "Sales", "IT", "HR", "Sales", "IT"],
+    "Gender": ["Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female"]
+})
+
+table = pd.crosstab(df["Department"], df["Gender"])
+
+print(table)
+```
+
+### Output
+
+```text
+Gender      Female  Male
+Department
+HR               2     0
+IT               1     3
+Sales            1     1
+```
+
+---
+
+## Using `groupby()`
+
+```python
+df.groupby(["Department", "Gender"]).size()
+```
+
+---
+
+## Using `pivot_table()`
+
+```python
+pd.pivot_table(
+    df,
+    index="Department",
+    columns="Gender",
+    aggfunc="size",
+    fill_value=0
+)
+```
+
+---
+
+# Applications
+
+Two-way tables are widely used in:
+
+* Student department vs gender analysis
+* Customer gender vs product purchase
+* Disease vs treatment analysis
+* Survey response analysis
+* Employee department vs designation
+* Election polling
+
+---
+
+# Applications in Data Science
+
+* Exploratory Data Analysis (EDA)
+* Feature relationship analysis
+* Customer segmentation
+* Business intelligence reports
+* Data visualization
+* Statistical analysis
+
+---
+
+# Interview Questions
+
+| Question                                       | Answer                                                                 |
+| ---------------------------------------------- | ---------------------------------------------------------------------- |
+| What is a Two-Way Table?                       | A table that shows the relationship between two categorical variables. |
+| What is another name for a Two-Way Table?      | Contingency Table or Cross Tabulation.                                 |
+| Which Pandas function creates a Two-Way Table? | `pd.crosstab()`                                                        |
+| Can `pivot_table()` create a Two-Way Table?    | Yes.                                                                   |
+| What does each cell represent?                 | The frequency (count) of a combination of two categories.              |
+
+---
+
+# Quick Cheat Sheet
+
+| Task                     | Pandas Function    |
+| ------------------------ | ------------------ |
+| Create a two-way table   | `pd.crosstab()`    |
+| Frequency using GroupBy  | `groupby().size()` |
+| Create using Pivot Table | `pd.pivot_table()` |
+
+---
+
+# Key Points to Remember
+
+* **Two-Way Table = Two Variables + Frequency**
+* It is also called a **Contingency Table** or **Cross Tabulation**.
+* It is used to study the **relationship between two categorical variables**.
+* Common Pandas functions:
+
+  * `pd.crosstab()`
+  * `groupby().size()`
+  * `pd.pivot_table()`
+* It is widely used in **Statistics**, **Data Science**, **Machine Learning**, **Business Analytics**, and **Survey Analysis**.
+
+### Easy Way to Remember
+
+* **One-Way Table = One Variable → Frequency**
+* **Two-Way Table = Two Variables → Relationship + Frequency**
+
+# What is a Relative Frequency Table?
+
+A **Relative Frequency Table** is a table that shows the **proportion or percentage** of each category instead of just the frequency (count).
+
+It tells us **what fraction or percentage of the total observations belongs to each category**.
+
+---
+
+# Simple Definition
+
+> **A Relative Frequency Table shows the proportion or percentage of each category out of the total number of observations.**
+
+---
+
+# Why Do We Use a Relative Frequency Table?
+
+A relative frequency table helps us to:
+
+* Convert counts into percentages.
+* Compare categories more easily.
+* Understand the distribution of data.
+* Create pie charts and probability distributions.
+* Analyze survey and statistical data.
+
+---
+
+# Formula
+
+## Relative Frequency
+
+[
+\boxed{\text{Relative Frequency}=\frac{\text{Frequency}}{\text{Total Frequency}}}
+]
+
+## Percentage
+
+[
+\boxed{\text{Percentage}=\frac{\text{Frequency}}{\text{Total Frequency}}\times100}
+]
+
+---
+
+# Example Dataset
+
+Suppose a survey asked 20 students about their favorite programming language.
+
+| Language |
+| -------- |
+| Python   |
+| Python   |
+| Java     |
+| Python   |
+| C++      |
+| Java     |
+| Python   |
+| C++      |
+| Python   |
+| Java     |
+| Python   |
+| C++      |
+| Python   |
+| Java     |
+| Python   |
+| Python   |
+| Java     |
+| Python   |
+| C++      |
+| Python   |
+
+---
+
+# Step 1: Frequency Table
+
+| Language  | Frequency |
+| --------- | --------: |
+| Python    |        10 |
+| Java      |         5 |
+| C++       |         5 |
+| **Total** |    **20** |
+
+---
+
+# Step 2: Relative Frequency Table
+
+| Language  | Frequency | Relative Frequency | Percentage |
+| --------- | --------: | -----------------: | ---------: |
+| Python    |        10 |               0.50 |        50% |
+| Java      |         5 |               0.25 |        25% |
+| C++       |         5 |               0.25 |        25% |
+| **Total** |    **20** |           **1.00** |   **100%** |
+
+---
+
+# Explanation
+
+* **Python** was chosen by **50%** of students.
+* **Java** was chosen by **25%** of students.
+* **C++** was chosen by **25%** of students.
+
+The sum of all **relative frequencies = 1.0**.
+
+The sum of all **percentages = 100%**.
+
+---
+
+# Components of a Relative Frequency Table
+
+| Component          | Description              |
+| ------------------ | ------------------------ |
+| Category           | Data category            |
+| Frequency          | Number of occurrences    |
+| Relative Frequency | Frequency ÷ Total        |
+| Percentage         | Relative Frequency × 100 |
+
+---
+
+# Characteristics
+
+* Based on a frequency table.
+* Shows proportions instead of raw counts.
+* Relative frequencies always sum to **1**.
+* Percentages always sum to **100%**.
+* Useful for comparing datasets of different sizes.
+
+---
+
+# Frequency Table vs Relative Frequency Table
+
+| Frequency Table                | Relative Frequency Table         |
+| ------------------------------ | -------------------------------- |
+| Shows counts                   | Shows proportions or percentages |
+| Total = Number of observations | Total = 1 (or 100%)              |
+| Easier to know exact counts    | Easier to compare categories     |
+
+### Frequency Table
+
+| Department | Frequency |
+| ---------- | --------: |
+| IT         |        40 |
+| HR         |        30 |
+| Sales      |        30 |
+
+### Relative Frequency Table
+
+| Department | Relative Frequency | Percentage |
+| ---------- | -----------------: | ---------: |
+| IT         |               0.40 |        40% |
+| HR         |               0.30 |        30% |
+| Sales      |               0.30 |        30% |
+
+---
+
+# Creating a Relative Frequency Table in Pandas
+
+## Method 1: Using `value_counts()`
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    "Department": ["IT", "HR", "IT", "Sales", "IT", "HR"]
+})
+
+df["Department"].value_counts(normalize=True)
+```
+
+### Output
+
+```text
+IT       0.50
+HR       0.33
+Sales    0.17
+```
+
+---
+
+## Method 2: Convert to Percentage
+
+```python
+df["Department"].value_counts(normalize=True) * 100
+```
+
+### Output
+
+```text
+IT       50.0
+HR       33.3
+Sales    16.7
+```
+
+---
+
+## Method 3: Create a Relative Frequency Table
+
+```python
+freq = df["Department"].value_counts()
+
+relative_freq = freq / freq.sum()
+
+table = pd.DataFrame({
+    "Frequency": freq,
+    "Relative Frequency": relative_freq,
+    "Percentage": relative_freq * 100
+})
+
+print(table)
+```
+
+---
+
+# Applications
+
+Relative frequency tables are used in:
+
+* Survey analysis
+* Market research
+* Election analysis
+* Customer behavior analysis
+* Probability calculations
+* Business reports
+
+---
+
+# Applications in Data Science
+
+* Exploratory Data Analysis (EDA)
+* Data visualization
+* Probability estimation
+* Class distribution analysis
+* Machine Learning preprocessing
+* Customer segmentation
+
+---
+
+# Interview Questions
+
+| Question                                               | Answer                                                            |
+| ------------------------------------------------------ | ----------------------------------------------------------------- |
+| What is a Relative Frequency Table?                    | A table that shows the proportion or percentage of each category. |
+| How is relative frequency calculated?                  | Frequency ÷ Total Frequency.                                      |
+| What is the sum of all relative frequencies?           | 1.0                                                               |
+| What is the sum of all percentages?                    | 100%                                                              |
+| Which Pandas function calculates relative frequencies? | `value_counts(normalize=True)`                                    |
+
+---
+
+# Quick Cheat Sheet
+
+| Task                 | Formula / Function                   |
+| -------------------- | ------------------------------------ |
+| Relative Frequency   | `Frequency / Total`                  |
+| Percentage           | `(Frequency / Total) × 100`          |
+| Pandas               | `value_counts(normalize=True)`       |
+| Percentage in Pandas | `value_counts(normalize=True) * 100` |
+
+---
+
+# Key Points to Remember
+
+* **Relative Frequency = Frequency ÷ Total Frequency**
+* It shows the **proportion** of each category.
+* **Percentage = Relative Frequency × 100**
+* The total of all:
+
+  * **Relative Frequencies = 1**
+  * **Percentages = 100%**
+* Relative frequency tables are widely used in **Statistics**, **Probability**, **Data Science**, **Machine Learning**, and **Business Analytics**.
+
+### Easy Way to Remember
+
+* **Frequency Table → Shows Counts**
+* **Relative Frequency Table → Shows Proportions (0–1) or Percentages (0–100%)**
+
+# What is Joint Distribution?
+
+A **Joint Distribution** is a statistical table that shows the **combined frequency or probability of two variables occurring together**.
+
+It helps us understand **how two variables are related** by displaying the frequency or probability for every possible combination of their values.
+
+---
+
+# Simple Definition
+
+> **A Joint Distribution shows the frequency or probability of two variables occurring together.**
+
+---
+
+# Why Do We Use Joint Distribution?
+
+Joint distribution helps us to:
+
+* Study the relationship between two variables.
+* Find joint probabilities.
+* Compare combinations of categories.
+* Analyze survey data.
+* Perform statistical and machine learning analysis.
+
+---
+
+# Example Dataset
+
+Suppose a survey of 100 students records their **Department** and **Gender**.
+
+| Student | Department | Gender |
+| ------- | ---------- | ------ |
+| Rahul   | IT         | Male   |
+| Priya   | HR         | Female |
+| Amit    | IT         | Male   |
+| Neha    | Sales      | Female |
+| Rohit   | IT         | Male   |
+| Pooja   | HR         | Female |
+| Karan   | Sales      | Male   |
+| Riya    | IT         | Female |
+
+---
+
+# Step 1: Joint Frequency Distribution
+
+| Department |  Male | Female | Total |
+| ---------- | ----: | -----: | ----: |
+| IT         |     3 |      1 |     4 |
+| HR         |     0 |      2 |     2 |
+| Sales      |     1 |      1 |     2 |
+| **Total**  | **4** |  **4** | **8** |
+
+This table shows the **joint frequency** of Department and Gender.
+
+Example:
+
+* **IT & Male = 3**
+* **HR & Female = 2**
+* **Sales & Male = 1**
+
+---
+
+# Step 2: Joint Probability Distribution
+
+Joint Probability Formula:
+
+[
+\boxed{\text{Joint Probability}=\frac{\text{Joint Frequency}}{\text{Total Observations}}}
+]
+
+Since the total number of students is **8**:
+
+| Department |        Male |      Female |
+| ---------- | ----------: | ----------: |
+| IT         | 3/8 = 0.375 | 1/8 = 0.125 |
+| HR         | 0/8 = 0.000 | 2/8 = 0.250 |
+| Sales      | 1/8 = 0.125 | 1/8 = 0.125 |
+
+---
+
+# Explanation
+
+The probability that a randomly selected student is:
+
+* **IT and Male** = **3/8 = 0.375**
+* **HR and Female** = **2/8 = 0.25**
+* **Sales and Female** = **1/8 = 0.125**
+
+The sum of all joint probabilities equals **1**.
+
+---
+
+# Components of a Joint Distribution
+
+| Component    | Description                    |
+| ------------ | ------------------------------ |
+| Rows         | First variable                 |
+| Columns      | Second variable                |
+| Cells        | Joint frequency or probability |
+| Row Total    | Marginal total for rows        |
+| Column Total | Marginal total for columns     |
+| Grand Total  | Total observations             |
+
+---
+
+# Joint Distribution vs Relative Frequency Table
+
+| Relative Frequency Table          | Joint Distribution                                    |
+| --------------------------------- | ----------------------------------------------------- |
+| One variable                      | Two variables                                         |
+| Shows proportions of one variable | Shows combined frequency/probability of two variables |
+| Simpler analysis                  | Relationship analysis                                 |
+
+---
+
+# Joint Distribution vs Two-Way Table
+
+| Two-Way Table     | Joint Distribution                 |
+| ----------------- | ---------------------------------- |
+| Shows frequencies | Shows frequencies or probabilities |
+| Used for counting | Used for statistical analysis      |
+| Counts only       | Counts and probabilities           |
+
+---
+
+# Creating a Joint Distribution in Pandas
+
+## Method 1: Joint Frequency Table
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    "Department": ["IT","HR","IT","Sales","IT","HR","Sales","IT"],
+    "Gender": ["Male","Female","Male","Female","Male","Female","Male","Female"]
+})
+
+joint_freq = pd.crosstab(df["Department"], df["Gender"])
+
+print(joint_freq)
+```
+
+### Output
+
+```text
+Gender      Female  Male
+Department
+HR               2     0
+IT               1     3
+Sales            1     1
+```
+
+---
+
+## Method 2: Joint Probability Table
+
+```python
+joint_prob = pd.crosstab(
+    df["Department"],
+    df["Gender"],
+    normalize=True
+)
+
+print(joint_prob)
+```
+
+### Output
+
+```text
+Gender      Female   Male
+Department
+HR          0.250   0.000
+IT          0.125   0.375
+Sales       0.125   0.125
+```
+
+---
+
+## Method 3: Percentage Table
+
+```python
+pd.crosstab(
+    df["Department"],
+    df["Gender"],
+    normalize=True
+) * 100
+```
+
+---
+
+# Applications
+
+Joint distributions are used in:
+
+* Survey analysis
+* Customer segmentation
+* Employee analysis
+* Medical research
+* Market research
+* Educational statistics
+
+---
+
+# Applications in Data Science
+
+* Exploratory Data Analysis (EDA)
+* Feature relationship analysis
+* Probability calculations
+* Machine Learning preprocessing
+* Classification problems
+* Statistical modeling
+
+---
+
+# Interview Questions
+
+| Question                                            | Answer                                                                            |
+| --------------------------------------------------- | --------------------------------------------------------------------------------- |
+| What is a Joint Distribution?                       | A table showing the frequency or probability of two variables occurring together. |
+| How is joint probability calculated?                | Joint Frequency ÷ Total Observations.                                             |
+| Which Pandas function is commonly used?             | `pd.crosstab()`                                                                   |
+| Can `normalize=True` calculate joint probabilities? | Yes.                                                                              |
+| What is the total of all joint probabilities?       | 1                                                                                 |
+
+---
+
+# Quick Cheat Sheet
+
+| Task                    | Pandas Function                     |
+| ----------------------- | ----------------------------------- |
+| Joint frequency table   | `pd.crosstab()`                     |
+| Joint probability table | `pd.crosstab(normalize=True)`       |
+| Joint percentage table  | `pd.crosstab(normalize=True) * 100` |
+
+---
+
+# Key Points to Remember
+
+* **Joint Distribution = Two Variables + Frequency/Probability**
+* It shows the **combined occurrence** of two variables.
+* **Joint Probability = Joint Frequency ÷ Total Observations**
+* The sum of all **joint probabilities = 1**.
+* In Pandas:
+
+  * `pd.crosstab()` → Joint frequency table.
+  * `pd.crosstab(normalize=True)` → Joint probability table.
+* Joint distributions are widely used in **Statistics**, **Probability**, **Data Science**, **Machine Learning**, and **Business Analytics**.
+
+### Easy Way to Remember
+
+* **Two-Way Table = Count combinations**
+* **Joint Distribution = Count or Probability of combinations**
+
+# What is a Histogram?
+
+A **Histogram** is a graphical representation of the **frequency distribution of continuous numerical data**. It uses **adjacent (touching) rectangular bars** to show how data is distributed across different intervals (called **class intervals** or **bins**).
+
+Unlike a **Bar Graph**, the bars in a histogram **touch each other** because the data is continuous.
+
+---
+
+# Simple Definition
+
+> **A Histogram is a graph that shows the frequency distribution of continuous numerical data using touching bars.**
+
+---
+
+# Why Do We Use a Histogram?
+
+A histogram helps us to:
+
+* Understand the distribution of data.
+* Identify the shape of the data.
+* Detect outliers.
+* Find the most frequent interval.
+* Analyze the spread of data.
+
+---
+
+# Example Dataset
+
+Suppose the marks of 40 students are grouped into intervals.
+
+| Marks | Frequency |
+| ----- | --------: |
+| 0–10  |         3 |
+| 10–20 |         5 |
+| 20–30 |         8 |
+| 30–40 |        12 |
+| 40–50 |         7 |
+| 50–60 |         5 |
+
+---
+
+# Histogram
+
+> **Note:** A true histogram has **touching bars** because the intervals are continuous. The chart above illustrates the frequency distribution using interval categories.
+
+---
+
+# How to Read the Histogram
+
+* The interval **30–40** has the highest frequency (**12**).
+* Very few students scored between **0–10**.
+* Most students scored between **20–50**.
+
+---
+
+# Components of a Histogram
+
+| Component  | Description                              |
+| ---------- | ---------------------------------------- |
+| X-axis     | Class intervals (Bins)                   |
+| Y-axis     | Frequency                                |
+| Bars       | Represent the frequency of each interval |
+| Bars Touch | Indicates continuous data                |
+
+---
+
+# Characteristics of a Histogram
+
+* Used for **continuous numerical data**.
+* Bars **touch each other**.
+* X-axis represents **class intervals (bins)**.
+* Y-axis represents **frequency**.
+* Shows the **distribution** of data.
+
+---
+
+# When to Use a Histogram
+
+Use a histogram for:
+
+* Student marks
+* Heights of people
+* Weights of people
+* Ages
+* Income distribution
+* Temperature readings
+* Salary distribution
+
+---
+
+# When Not to Use a Histogram
+
+Do **not** use a histogram for categorical data such as:
+
+* Department names
+* Product names
+* Countries
+* Cities
+
+For categorical data, use a **Bar Graph** instead.
+
+---
+
+# Histogram vs Bar Graph
+
+| Histogram                 | Bar Graph                  |
+| ------------------------- | -------------------------- |
+| Continuous numerical data | Categorical data           |
+| Bars touch each other     | Bars have gaps             |
+| X-axis contains intervals | X-axis contains categories |
+| Shows data distribution   | Compares categories        |
+
+### Example
+
+**Histogram**
+
+| Marks | Frequency |
+| ----- | --------: |
+| 0–10  |         5 |
+| 10–20 |         8 |
+
+**Bar Graph**
+
+| Department | Students |
+| ---------- | -------: |
+| IT         |       40 |
+| HR         |       30 |
+
+---
+
+# Histogram vs Frequency Table
+
+| Frequency Table             | Histogram                    |
+| --------------------------- | ---------------------------- |
+| Displays numbers in a table | Displays numbers graphically |
+| Easier for calculations     | Easier to visualize patterns |
+| No graphical view           | Shows distribution visually  |
+
+---
+
+# Python Example (Matplotlib)
+
+```python
+import matplotlib.pyplot as plt
+
+marks = [12,18,22,25,27,30,35,38,40,45,50,52]
+
+plt.hist(marks, bins=6)
+plt.title("Histogram of Marks")
+plt.xlabel("Marks")
+plt.ylabel("Frequency")
+plt.show()
+```
+
+---
+
+# Pandas Example
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.DataFrame({
+    "Marks":[12,18,22,25,27,30,35,38,40,45,50,52]
+})
+
+df["Marks"].plot(kind="hist", bins=6)
+
+plt.xlabel("Marks")
+plt.show()
+```
+
+---
+
+# Applications
+
+Histograms are used in:
+
+* Student marks analysis
+* Population age distribution
+* Salary distribution
+* Medical data analysis
+* Quality control
+* Weather analysis
+
+---
+
+# Applications in Data Science
+
+* Exploratory Data Analysis (EDA)
+* Detecting skewness
+* Detecting outliers
+* Understanding feature distributions
+* Data preprocessing
+* Machine Learning feature analysis
+
+---
+
+# Interview Questions
+
+| Question                                                    | Answer                                                                                                                 |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| What is a Histogram?                                        | A graph that shows the frequency distribution of continuous numerical data.                                            |
+| What type of data is used in a histogram?                   | Continuous numerical data.                                                                                             |
+| Do histogram bars touch each other?                         | Yes.                                                                                                                   |
+| What does the X-axis represent?                             | Class intervals (bins).                                                                                                |
+| What is the difference between a histogram and a bar graph? | Histogram is for continuous data with touching bars, while a bar graph is for categorical data with gaps between bars. |
+
+---
+
+# Quick Cheat Sheet
+
+| Feature   | Description                 |
+| --------- | --------------------------- |
+| Purpose   | Show frequency distribution |
+| Data Type | Continuous numerical data   |
+| X-axis    | Class intervals (bins)      |
+| Y-axis    | Frequency                   |
+| Bars      | Touch each other            |
+| Best For  | Distribution analysis       |
+
+---
+
+# Key Points to Remember
+
+* **Histogram = Distribution of Continuous Data**
+* It uses **touching bars** because the data is continuous.
+* The X-axis contains **class intervals (bins)**.
+* The Y-axis contains **frequencies**.
+* Histograms are widely used in **Statistics**, **Data Science**, **Machine Learning**, and **Business Analytics** to understand data distributions before building models.
+
+### Easy Way to Remember
+
+* **Histogram → Continuous Data → Bars Touch**
+* **Bar Graph → Categorical Data → Bars Have Gaps**
+
