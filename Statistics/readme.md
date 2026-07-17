@@ -1,171 +1,255 @@
 # What is Statistics?
 
-**Statistics** is the branch of mathematics that deals with **collecting, organizing, analyzing, interpreting, and presenting data** to draw meaningful conclusions and make informed decisions.
+**Statistics** is the branch of mathematics that deals with the **collection, organization, analysis, interpretation, and presentation of data** to draw meaningful conclusions and support decision-making.
 
-It helps us understand patterns, trends, and relationships in data.
+It helps transform **raw data into useful information**.
 
 ---
 
 # Simple Definition
 
-> **Statistics is the science of collecting, analyzing, interpreting, and presenting data.**
+> **Statistics is the science of collecting, organizing, analyzing, interpreting, and presenting data to make informed decisions.**
 
 ---
 
-# Why is Statistics Important?
+# Why Do We Use Statistics?
 
 Statistics helps us to:
 
-* Analyze large datasets
-* Find patterns and trends
-* Make predictions
-* Support decision-making
-* Build Machine Learning models
-* Perform data analysis
+* Collect and organize data.
+* Summarize large datasets.
+* Identify patterns and trends.
+* Make predictions.
+* Support decision-making.
+* Solve real-world problems using data.
 
 ---
 
 # Real-Life Example
 
-Suppose a class has the following marks:
+Suppose a teacher wants to know the performance of a class.
+
+### Raw Marks
 
 ```text
-70, 75, 80, 85, 90
+65, 72, 81, 75, 90, 68, 77, 84
 ```
 
-Using statistics, we can answer questions like:
+Using statistics, the teacher can calculate:
 
-* What is the **average** mark?
-* What is the **highest** mark?
-* What is the **lowest** mark?
-* How much do the marks vary?
+* Average (Mean)
+* Highest score
+* Lowest score
+* Median
+* Standard Deviation
+
+This helps the teacher understand the overall performance of the class.
+
+---
+
+# Statistics Process
+
+```text
+Collect Data
+      ↓
+Organize Data
+      ↓
+Present Data
+      ↓
+Analyze Data
+      ↓
+Interpret Results
+      ↓
+Make Decisions
+```
 
 ---
 
 # Types of Statistics
 
-## 1. Descriptive Statistics
+There are **two main types** of statistics.
 
-Descriptive statistics summarize and describe the main features of a dataset.
-
-Examples:
-
-* Mean (Average)
-* Median
-* Mode
-* Maximum
-* Minimum
-* Standard Deviation
-* Variance
-
-**Example**
-
-```text
-Marks = [70, 75, 80, 85, 90]
-
-Mean = 80
-Max = 90
-Min = 70
-```
+| Type                       | Purpose                                                  |
+| -------------------------- | -------------------------------------------------------- |
+| **Descriptive Statistics** | Summarizes and describes the data                        |
+| **Inferential Statistics** | Draws conclusions and makes predictions from sample data |
 
 ---
 
-## 2. Inferential Statistics
+# 1. Descriptive Statistics
 
-Inferential statistics use a **sample** to make predictions or conclusions about a larger **population**.
+Descriptive statistics summarize and organize data.
 
-Example:
+It answers questions like:
 
-* Survey **1,000 voters** to predict the result of an election involving **1 million voters**.
+* What is the average?
+* What is the highest value?
+* What is the lowest value?
+* How is the data distributed?
+
+### Common Measures
+
+| Measure            | Purpose                                      |
+| ------------------ | -------------------------------------------- |
+| Mean               | Average                                      |
+| Median             | Middle value                                 |
+| Mode               | Most frequent value                          |
+| Range              | Difference between highest and lowest values |
+| Variance           | Spread of data                               |
+| Standard Deviation | Average spread of data                       |
+
+### Example
+
+Dataset:
+
+```text
+10, 20, 30, 40, 50
+```
+
+Mean = **30**
+
+Median = **30**
+
+Range = **40**
+
+---
+
+# 2. Inferential Statistics
+
+Inferential statistics use a **sample** to make conclusions about a **population**.
+
+It answers questions like:
+
+* Will customers buy a product?
+* Who will win an election?
+* Will a patient respond to a treatment?
+
+### Example
+
+A company surveys **500 customers** out of **100,000 customers**.
+
+Using inferential statistics, the company predicts the preferences of all customers.
 
 ---
 
 # Population vs Sample
 
-| Population                        | Sample                                |
-| --------------------------------- | ------------------------------------- |
-| Entire group of data              | Small subset of the population        |
-| Example: All students in a school | 100 students selected from the school |
+| Population                         | Sample                         |
+| ---------------------------------- | ------------------------------ |
+| Entire group                       | Small part of the group        |
+| Example: All students in a college | Example: 100 selected students |
 
 ---
 
-# Common Statistical Terms
+# Important Statistical Terms
 
-| Term        | Meaning                                             |
-| ----------- | --------------------------------------------------- |
-| Data        | Collection of values                                |
-| Population  | Entire dataset                                      |
-| Sample      | Small part of the population                        |
-| Variable    | A characteristic being measured (e.g., age, salary) |
-| Observation | One record or one row of data                       |
-
----
-
-# Most Important Statistical Measures
-
-| Measure            | Purpose                                 |
-| ------------------ | --------------------------------------- |
-| Mean               | Average value                           |
-| Median             | Middle value                            |
-| Mode               | Most frequent value                     |
-| Maximum            | Largest value                           |
-| Minimum            | Smallest value                          |
-| Range              | Difference between max and min          |
-| Variance           | Measures how spread out the data is     |
-| Standard Deviation | Measures the average spread of the data |
-| Percentile         | Position of a value relative to others  |
-
----
-
-# Statistics in Pandas
-
-Pandas provides built-in statistical functions.
-
-```python
-import pandas as pd
-
-df["Marks"].mean()
-df["Marks"].median()
-df["Marks"].mode()
-df["Marks"].max()
-df["Marks"].min()
-df["Marks"].std()
-df["Marks"].var()
-df["Marks"].describe()
-```
+| Term        | Meaning                             |
+| ----------- | ----------------------------------- |
+| Data        | Collection of facts or observations |
+| Population  | Entire group under study            |
+| Sample      | Subset of the population            |
+| Variable    | Characteristic being measured       |
+| Observation | Single data value                   |
 
 ---
 
 # Applications of Statistics
 
-* Data Science
-* Machine Learning
-* Artificial Intelligence
+Statistics is used in:
+
 * Business Analytics
 * Healthcare
 * Finance
 * Marketing
-* Weather Forecasting
+* Education
+* Government
+* Sports
+* Manufacturing
+* Scientific Research
+
+---
+
+# Statistics in Data Science
+
+Statistics is one of the **foundations of Data Science**.
+
+```text
+Collect Data
+      ↓
+Clean Data
+      ↓
+Statistics
+      ↓
+Exploratory Data Analysis (EDA)
+      ↓
+Machine Learning
+      ↓
+Prediction
+```
+
+Statistics is used for:
+
+* Data Cleaning
+* Data Visualization
+* Feature Engineering
+* Hypothesis Testing
+* Probability
+* Machine Learning
+
+---
+
+# Python Example
+
+```python
+import pandas as pd
+
+data = [10,20,30,40,50]
+
+df = pd.DataFrame({"Marks": data})
+
+print("Mean:", df["Marks"].mean())
+print("Median:", df["Marks"].median())
+print("Standard Deviation:", df["Marks"].std())
+```
+
+---
+
+# Advantages of Statistics
+
+* Simplifies complex data.
+* Helps make informed decisions.
+* Identifies trends and patterns.
+* Supports forecasting.
+* Essential for research and data analysis.
+
+---
+
+# Limitations of Statistics
+
+* Results depend on data quality.
+* Incorrect interpretation can lead to wrong conclusions.
+* Cannot replace expert judgment.
+* Biased samples can produce misleading results.
 
 ---
 
 # Interview Questions
 
-| Question                                         | Answer                                                                          |
-| ------------------------------------------------ | ------------------------------------------------------------------------------- |
-| What is Statistics?                              | The science of collecting, analyzing, interpreting, and presenting data.        |
-| What are the two main types of Statistics?       | Descriptive Statistics and Inferential Statistics.                              |
-| What is Population?                              | The complete set of data.                                                       |
-| What is Sample?                                  | A subset of the population.                                                     |
-| Why is Statistics important in Machine Learning? | It helps analyze data, identify patterns, and build accurate predictive models. |
+| Question                                              | Answer                                                                                   |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| What is Statistics?                                   | The science of collecting, organizing, analyzing, interpreting, and presenting data.     |
+| What are the two types of Statistics?                 | Descriptive Statistics and Inferential Statistics.                                       |
+| What is the difference between Population and Sample? | Population is the entire group, while a Sample is a subset of that group.                |
+| Why is Statistics important in Data Science?          | It helps understand data, identify patterns, and build accurate machine learning models. |
+| Name three statistical measures.                      | Mean, Median, and Standard Deviation.                                                    |
 
 ---
 
 # Quick Cheat Sheet
 
-| Topic                  | Description                    |
+| Concept                | Description                    |
 | ---------------------- | ------------------------------ |
-| Statistics             | Study of data                  |
+| Statistics             | Science of analyzing data      |
 | Descriptive Statistics | Summarizes data                |
 | Inferential Statistics | Makes predictions from samples |
 | Population             | Entire dataset                 |
@@ -173,46 +257,58 @@ df["Marks"].describe()
 | Mean                   | Average                        |
 | Median                 | Middle value                   |
 | Mode                   | Most frequent value            |
-| Variance               | Spread of data                 |
-| Standard Deviation     | Average spread of data         |
 
 ---
 
 # Key Points to Remember
 
 * **Statistics** is the science of **collecting, organizing, analyzing, interpreting, and presenting data**.
-* It has **two main branches**:
+* It helps convert **raw data into meaningful information**.
+* There are **two main branches**:
 
-  * **Descriptive Statistics** → Summarizes data.
-  * **Inferential Statistics** → Draws conclusions from samples.
-* Statistics is a fundamental concept in **Data Science**, **Machine Learning**, **Artificial Intelligence**, and **Data Analysis**.
-* Common statistical measures include:
-
-  * Mean
-  * Median
-  * Mode
-  * Maximum
-  * Minimum
-  * Variance
-  * Standard Deviation
+  * **Descriptive Statistics** → Summarizes and describes data.
+  * **Inferential Statistics** → Makes predictions and conclusions using sample data.
+* Statistics is a fundamental part of **Data Science**, **Machine Learning**, **Business Analytics**, **Finance**, **Healthcare**, and **Scientific Research**.
 
 ### Easy Way to Remember
 
-**Statistics = Collect → Organize → Analyze → Interpret → Present Data**
+| Term                       | Remember As                   |
+| -------------------------- | ----------------------------- |
+| **Statistics**             | 📊 Study of data              |
+| **Descriptive Statistics** | 📋 Describe the data          |
+| **Inferential Statistics** | 🔮 Predict and make decisions |
+| **Population**             | 🌍 Entire group               |
+| **Sample**                 | 🧩 Small part of the group    |
 
-# One-Way Table (Frequency Table) in Statistics
+# What is a One-Way Table?
 
-## What is a One-Way Table?
+A **One-Way Table** (also called a **Frequency Table**) is a table that shows the **frequency (count)** of each category or value of **one variable**.
 
-A **One-Way Table** (also called a **Frequency Table**) is a statistical table that displays the **frequency (count)** of each unique value for **one categorical variable**.
-
-It is called a **One-Way Table** because it summarizes **only one variable (one column)**.
+It summarizes data by displaying **how many times each category appears** in a dataset.
 
 ---
 
-# Example Dataset
+# Simple Definition
 
-Suppose we have the following student departments:
+> **A One-Way Table is a table that displays the frequency (count) of each category for a single variable.**
+
+---
+
+# Why Do We Use a One-Way Table?
+
+A One-Way Table helps us to:
+
+* Organize raw data.
+* Count the frequency of each category.
+* Summarize large datasets.
+* Understand the distribution of one variable.
+* Prepare data for graphs such as bar graphs and pie charts.
+
+---
+
+# Example 1: Student Departments
+
+Suppose we have the following data:
 
 | Student | Department |
 | ------- | ---------- |
@@ -222,1190 +318,102 @@ Suppose we have the following student departments:
 | Neha    | Sales      |
 | Rohit   | IT         |
 | Pooja   | HR         |
+| Karan   | Sales      |
+| Riya    | IT         |
 
----
-
-# One-Way Table
+### One-Way Table
 
 | Department | Frequency |
 | ---------- | --------: |
-| IT         |         3 |
+| IT         |         4 |
 | HR         |         2 |
-| Sales      |         1 |
-| **Total**  |     **6** |
+| Sales      |         2 |
+| **Total**  |     **8** |
 
-### Explanation
+### Interpretation
 
-* **IT** appears **3** times.
+* **IT** appears **4** times.
 * **HR** appears **2** times.
-* **Sales** appears **1** time.
+* **Sales** appears **2** times.
 
-This table summarizes **only one variable**: **Department**.
+This table summarizes the data using **one variable (Department)**.
 
 ---
 
-# Creating a One-Way Table in Pandas
+# Example 2: Favorite Fruit
 
-## Using `value_counts()`
-
-```python
-import pandas as pd
-
-df = pd.DataFrame({
-    "Department": ["IT", "HR", "IT", "Sales", "IT", "HR"]
-})
-
-print(df["Department"].value_counts())
-```
-
-### Output
+Raw Data:
 
 ```text
-Department
-IT       3
-HR       2
-Sales    1
-Name: count, dtype: int64
+Apple, Banana, Apple, Mango, Apple,
+Banana, Apple, Mango, Banana, Apple
+```
+
+### One-Way Table
+
+| Fruit     | Frequency |
+| --------- | --------: |
+| Apple     |         5 |
+| Banana    |         3 |
+| Mango     |         2 |
+| **Total** |    **10** |
+
+This table shows how many people prefer each fruit.
+
+---
+
+# Components of a One-Way Table
+
+| Component  | Description                              |
+| ---------- | ---------------------------------------- |
+| Variable   | The single characteristic being analyzed |
+| Categories | Different values of the variable         |
+| Frequency  | Number of times each category appears    |
+| Total      | Total number of observations             |
+
+---
+
+# Characteristics of a One-Way Table
+
+* Contains **only one variable**.
+* Shows the **frequency** of each category.
+* Easy to understand and interpret.
+* Used for **categorical** or **discrete** data.
+* Often used before creating a **Bar Graph** or **Pie Chart**.
+
+---
+
+# How to Create a One-Way Table
+
+```text
+Collect Data
+      ↓
+Identify One Variable
+      ↓
+Count Each Category
+      ↓
+Arrange Categories and Frequencies
+      ↓
+Create the One-Way Table
 ```
 
 ---
 
-# Using `crosstab()`
+# One-Way Table vs Two-Way Table
 
-```python
-pd.crosstab(index=df["Department"], columns="Frequency")
-```
+| One-Way Table     | Two-Way Table                            |
+| ----------------- | ---------------------------------------- |
+| Uses one variable | Uses two variables                       |
+| Shows frequency   | Shows relationship between two variables |
+| Simple summary    | Comparative summary                      |
 
-### Output
+### One-Way Table
 
 | Department | Frequency |
 | ---------- | --------: |
+| IT         |         4 |
 | HR         |         2 |
-| IT         |         3 |
-| Sales      |         1 |
-
----
-
-# Using `groupby()`
-
-```python
-df.groupby("Department").size()
-```
-
-### Output
-
-```text
-Department
-HR       2
-IT       3
-Sales    1
-dtype: int64
-```
-
----
-
-# Real-World Example
-
-Suppose an e-commerce company wants to know how many orders came from each city.
-
-| City   | Orders |
-| ------ | ------ |
-| Pune   | 5      |
-| Mumbai | 3      |
-| Delhi  | 2      |
-
-This is a **One-Way Table** because it summarizes **only one variable (City)**.
-
----
-
-# One-Way Table vs Two-Way Table
-
-| One-Way Table                   | Two-Way Table                             |
-| ------------------------------- | ----------------------------------------- |
-| Uses one variable               | Uses two variables                        |
-| Shows frequency of one category | Shows relationship between two categories |
-| Example: Department count       | Example: Department × Gender              |
-
-### One-Way Table
-
-| Department | Count |
-| ---------- | ----: |
-| IT         |     3 |
-| HR         |     2 |
-| Sales      |     1 |
-
-### Two-Way Table
-
-| Department | Male | Female |
-| ---------- | ---: | -----: |
-| IT         |    2 |      1 |
-| HR         |    1 |      1 |
-| Sales      |    0 |      1 |
-
----
-
-# Applications
-
-* Count students by department.
-* Count employees by department.
-* Count products by category.
-* Count customers by city.
-* Count orders by payment method.
-
----
-
-# Interview Questions
-
-| Question                                  | Answer                                                      |
-| ----------------------------------------- | ----------------------------------------------------------- |
-| What is a One-Way Table?                  | A frequency table that summarizes one categorical variable. |
-| Why is it called a One-Way Table?         | Because it analyzes only one variable (one column).         |
-| Which Pandas function is commonly used?   | `value_counts()`                                            |
-| Can `groupby()` create a One-Way Table?   | Yes, using `groupby().size()`.                              |
-| What is another name for a One-Way Table? | Frequency Table.                                            |
-
----
-
-# Quick Cheat Sheet
-
-| Task                     | Pandas Function    |
-| ------------------------ | ------------------ |
-| Count category frequency | `value_counts()`   |
-| Frequency using GroupBy  | `groupby().size()` |
-| Frequency table          | `pd.crosstab()`    |
-
----
-
-# Key Points to Remember
-
-* **One-Way Table = Frequency Table**
-* It analyzes **only one categorical variable**.
-* It shows **how many times each category appears**.
-* Most commonly created in Pandas using:
-
-  * `value_counts()`
-  * `groupby().size()`
-  * `pd.crosstab()`
-
-### Easy Way to Remember
-
-* **One-Way Table = One Column → Count Frequency**
-* **Two-Way Table = Two Columns → Compare Relationship**
-
-# What is a Bar Graph?
-
-A **Bar Graph** is a graphical representation of **categorical data** using **rectangular bars**, where the height (or length) of each bar represents the **frequency (count)** of each category. It is used to compare different categories and quickly identify the most and least frequent values. The PDF explains that creating a bar graph starts by building a **frequency table** and then drawing bars whose heights correspond to those frequencies. 
-
----
-
-# Simple Definition
-
-> **A Bar Graph is a chart that uses rectangular bars to show the frequency or count of different categories.**
-
----
-
-# Why Do We Use a Bar Graph?
-
-A bar graph helps us:
-
-* Compare different categories.
-* Find the most frequent category.
-* Find the least frequent category.
-* Visualize categorical data clearly.
-
----
-
-# Example Dataset
-
-Suppose we surveyed people's favorite fruits.
-
-| Person | Fruit  |
-| ------ | ------ |
-| A      | Apple  |
-| B      | Banana |
-| C      | Apple  |
-| D      | Apple  |
-| E      | Banana |
-| F      | Banana |
-| G      | Apple  |
-| H      | Kiwi   |
-| I      | Kiwi   |
-| J      | Apple  |
-| K      | Mango  |
-| L      | Mango  |
-| M      | Apple  |
-| N      | Banana |
-
----
-
-# Step 1: Create a Frequency Table
-
-Count how many times each fruit appears.
-
-| Fruit  | Count |
-| ------ | ----: |
-| Apple  |     6 |
-| Banana |     4 |
-| Kiwi   |     2 |
-| Mango  |     2 |
-
-The PDF first converts the raw data into this frequency table before drawing the graph. 
-
----
-
-# Step 2: Draw the Bar Graph
-
-![alt text](<Favorite Fruits.png>)
-
----
-
-# How to Read the Graph
-
-* **Apple** has the highest count (**6**).
-* **Banana** has **4**.
-* **Kiwi** and **Mango** each have **2**.
-
-From the graph, it is easy to answer:
-
-* ✅ Most liked fruit → **Apple**
-* ✅ Least liked fruits → **Kiwi** and **Mango**
-
-The PDF highlights that these questions are difficult to answer from raw data but become easy once the data is visualized as a bar graph. 
-
----
-
-# Components of a Bar Graph
-
-| Component     | Description                                |
-| ------------- | ------------------------------------------ |
-| X-axis        | Categories (e.g., Fruit, Department, City) |
-| Y-axis        | Frequency or Count                         |
-| Bars          | Represent each category                    |
-| Height of Bar | Represents the value or count              |
-| Title         | Describes the graph                        |
-
----
-
-# Characteristics of a Bar Graph
-
-* Bars have **equal width**.
-* There is **space between bars**.
-* Used for **categorical (qualitative)** data.
-* Can be drawn vertically or horizontally.
-
----
-
-# When to Use a Bar Graph
-
-Use a bar graph when comparing **categories**, such as:
-
-* Favorite fruits
-* Number of students in each department
-* Sales by product
-* Employees by department
-* Population by country
-
----
-
-# When Not to Use a Bar Graph
-
-Do **not** use a bar graph when you want to show:
-
-* Trends over time → **Use a Line Graph**
-* Continuous numerical distributions → **Use a Histogram**
-* Percentage composition of a whole → **Use a Pie Chart**
-
----
-
-# Bar Graph vs Histogram
-
-| Bar Graph           | Histogram                 |
-| ------------------- | ------------------------- |
-| Categorical data    | Continuous numerical data |
-| Bars have gaps      | Bars touch each other     |
-| Compares categories | Shows data distribution   |
-| Example: Fruits     | Example: Student marks    |
-
----
-
-# Bar Graph in Python (Matplotlib)
-
-```python
-import matplotlib.pyplot as plt
-
-fruits = ["Apple", "Banana", "Kiwi", "Mango"]
-count = [6, 4, 2, 2]
-
-plt.bar(fruits, count)
-plt.title("Favorite Fruits")
-plt.xlabel("Fruit")
-plt.ylabel("Count")
-plt.show()
-```
-
----
-
-# Bar Graph in Pandas
-
-```python
-import pandas as pd
-
-df = pd.DataFrame({
-    "Fruit": ["Apple", "Banana", "Kiwi", "Mango"],
-    "Count": [6, 4, 2, 2]
-})
-
-df.plot(x="Fruit", y="Count", kind="bar")
-```
-
----
-
-# Applications in Data Science
-
-* Customer purchase analysis
-* Product sales comparison
-* Department-wise employee count
-* Country population comparison
-* Website traffic by source
-* Survey result visualization
-
----
-
-# Interview Questions
-
-| Question                                        | Answer                                                                                |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------- |
-| What is a Bar Graph?                            | A chart that uses rectangular bars to represent the frequency or count of categories. |
-| What type of data is used?                      | Categorical (qualitative) data.                                                       |
-| What does the height of a bar represent?        | Frequency, count, or value.                                                           |
-| Which graph is best for trends?                 | Line Graph.                                                                           |
-| Which graph is best for categorical comparison? | Bar Graph.                                                                            |
-
----
-
-# Quick Cheat Sheet
-
-| Feature   | Description                        |
-| --------- | ---------------------------------- |
-| Purpose   | Compare categories                 |
-| Data Type | Categorical                        |
-| X-axis    | Categories                         |
-| Y-axis    | Frequency/Count                    |
-| Bars      | Separated by gaps                  |
-| Best For  | Comparing values across categories |
-
----
-
-# Key Points to Remember
-
-* **Bar Graph = Compare Categories**
-* Create a **frequency table first**, then draw bars based on the counts.
-* The **taller the bar, the higher the frequency**.
-* Best used for **categorical data**, not continuous numerical data.
-* Widely used in **Statistics, Data Science, Business Analytics, and Machine Learning** for comparing groups.
-
-
-Favorite Fruits
-
-Bar graph created from the frequency table.
-
-fruit	count
-Apple	6
-Banana	4
-Kiwi	2
-Mango	2
-
-# What is a Pie Chart?
-
-A **Pie Chart** is a circular graph that represents data as **sectors (slices)** of a circle. Each slice represents a category, and its size is proportional to that category's value or percentage of the total. A pie chart is mainly used to show **how each category contributes to the whole**. 
-
----
-
-# Simple Definition
-
-> **A Pie Chart is a circular graph that shows the percentage or proportion of each category in a dataset.**
-
----
-
-# Why Do We Use a Pie Chart?
-
-A pie chart helps us:
-
-* Show percentage distribution.
-* Compare parts of a whole.
-* Identify the largest and smallest categories.
-* Visualize proportional data.
-
----
-
-# Example Dataset
-
-Suppose a class has 100 students.
-
-| Department | Students |
-| ---------- | -------: |
-| IT         |       40 |
-| HR         |       25 |
-| Sales      |       20 |
-| Finance    |       15 |
-| **Total**  |  **100** |
-
----
-
-# Percentage Calculation
-
-Formula:
-
-[
-\text{Percentage}=\frac{\text{Category Value}}{\text{Total}} \times 100
-]
-
-| Department | Students | Percentage |
-| ---------- | -------: | ---------: |
-| IT         |       40 |        40% |
-| HR         |       25 |        25% |
-| Sales      |       20 |        20% |
-| Finance    |       15 |        15% |
-
----
-
-# Pie Chart
-
-![alt text](<Students by Department.png>)
-
----
-
-# How to Read the Pie Chart
-
-* **IT** occupies the largest portion (**40%**).
-* **HR** represents **25%**.
-* **Sales** represents **20%**.
-* **Finance** represents **15%**.
-
-The entire circle represents **100%** of the data.
-
----
-
-# Formula for Central Angle
-
-To draw a pie chart manually, convert each category into an angle.
-
-[
-\boxed{\text{Angle}=\frac{\text{Category Value}}{\text{Total}} \times 360^\circ}
-]
-
-### Example
-
-For IT:
-
-[
-\frac{40}{100}\times360=144^\circ
-]
-
-| Department | Percentage |    Angle |
-| ---------- | ---------: | -------: |
-| IT         |        40% |     144° |
-| HR         |        25% |      90° |
-| Sales      |        20% |      72° |
-| Finance    |        15% |      54° |
-| **Total**  |   **100%** | **360°** |
-
----
-
-# Characteristics of a Pie Chart
-
-* Circular in shape.
-* Represents **100%** of the data.
-* Each slice shows one category.
-* Slice size is proportional to its value.
-* Best for displaying percentages.
-
----
-
-# When to Use a Pie Chart
-
-Use a pie chart when you want to show:
-
-* Market share of companies
-* Department-wise employee percentage
-* Product sales percentage
-* Budget allocation
-* Survey results
-* Election vote share
-
----
-
-# When Not to Use a Pie Chart
-
-Avoid pie charts when:
-
-* There are many categories (more than 5–6).
-* You need precise comparisons between values.
-* You want to show trends over time.
-
-Instead use:
-
-* **Bar Graph** → Category comparison
-* **Line Graph** → Trends over time
-* **Histogram** → Continuous data distribution
-
----
-
-# Pie Chart vs Bar Graph
-
-| Pie Chart                | Bar Graph                  |
-| ------------------------ | -------------------------- |
-| Shows parts of a whole   | Compares categories        |
-| Uses percentages         | Uses frequencies or values |
-| Circular graph           | Rectangular bars           |
-| Total always equals 100% | No requirement for total   |
-| Best for proportions     | Best for comparisons       |
-
----
-
-# Pie Chart in Python (Matplotlib)
-
-```python
-import matplotlib.pyplot as plt
-
-departments = ["IT", "HR", "Sales", "Finance"]
-students = [40, 25, 20, 15]
-
-plt.pie(students, labels=departments, autopct="%1.1f%%")
-plt.title("Students by Department")
-plt.show()
-```
-
----
-
-# Pie Chart in Pandas
-
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-
-df = pd.DataFrame({
-    "Department": ["IT", "HR", "Sales", "Finance"],
-    "Students": [40, 25, 20, 15]
-})
-
-df.plot(
-    kind="pie",
-    y="Students",
-    labels=df["Department"],
-    autopct="%1.1f%%",
-    legend=False
-)
-
-plt.show()
-```
-
----
-
-# Applications in Data Science
-
-* Customer segmentation
-* Product market share
-* Budget analysis
-* Website traffic sources
-* Survey response percentages
-* Population distribution
-
----
-
-# Interview Questions
-
-| Question                                        | Answer                                                                     |
-| ----------------------------------------------- | -------------------------------------------------------------------------- |
-| What is a Pie Chart?                            | A circular graph that shows the proportion or percentage of each category. |
-| What does the whole circle represent?           | 100% of the data (360°).                                                   |
-| Which formula is used to calculate the angle?   | `(Category Value / Total) × 360°`                                          |
-| When should a Pie Chart be used?                | To show parts of a whole or percentage distribution.                       |
-| Which graph is better for comparing categories? | Bar Graph.                                                                 |
-
----
-
-# Quick Cheat Sheet
-
-| Feature       | Description                  |
-| ------------- | ---------------------------- |
-| Purpose       | Show percentage distribution |
-| Shape         | Circle                       |
-| Total         | 100% (360°)                  |
-| Best For      | Parts of a whole             |
-| Formula       | `(Value / Total) × 100`      |
-| Angle Formula | `(Value / Total) × 360°`     |
-
----
-
-# Key Points to Remember
-
-* **Pie Chart = Parts of a Whole**
-* The **entire circle represents 100% (360°)**.
-* Each slice represents a **category's proportion**.
-* Best for showing **percentages**, not detailed comparisons.
-* Widely used in **Statistics, Data Science, Business Analytics, and Reporting** to visualize how a total is divided among categories.
-
-
-Students by Department
-
-Percentage distribution of students across departments.
-
-department	students
-IT	40
-HR	25
-Sales	20
-Finance	15
-
-# What is a Line Graph?
-
-A **Line Graph** is a graph that displays data points connected by **straight lines**. It is mainly used to show **changes or trends over time** or over an ordered sequence.
-
-Each point on the graph represents a value, and the line connecting the points helps visualize how the data increases, decreases, or remains constant.
-
----
-
-# Simple Definition
-
-> **A Line Graph is a graph that connects data points with straight lines to show trends or changes over time.**
-
----
-
-# Why Do We Use a Line Graph?
-
-A line graph helps us to:
-
-* Show trends over time.
-* Compare changes between different time periods.
-* Identify increasing or decreasing patterns.
-* Predict future trends based on past data.
-
----
-
-# Example Dataset
-
-Suppose a company records monthly sales.
-
-| Month | Sales |
-| ----- | ----: |
-| Jan   |   120 |
-| Feb   |   150 |
-| Mar   |   180 |
-| Apr   |   170 |
-| May   |   210 |
-| Jun   |   250 |
-
----
-
-# Line Graph
-
-![alt text](<Monthly Sales Trend.png>)
-
----
-
-# How to Read the Line Graph
-
-* Sales increased from **January (120)** to **March (180)**.
-* Sales decreased slightly in **April (170)**.
-* Sales increased again in **May (210)** and **June (250)**.
-
-This graph clearly shows the **sales trend over time**.
-
----
-
-# Components of a Line Graph
-
-| Component   | Description                                       |
-| ----------- | ------------------------------------------------- |
-| X-axis      | Time or ordered categories (Month, Year, Day)     |
-| Y-axis      | Numerical values (Sales, Population, Temperature) |
-| Data Points | Individual observations                           |
-| Line        | Connects the data points                          |
-| Title       | Describes the graph                               |
-
----
-
-# Characteristics of a Line Graph
-
-* Data points are connected by straight lines.
-* Best used for **continuous data**.
-* Shows increasing or decreasing trends.
-* X-axis usually represents **time**.
-* Easy to compare multiple datasets using multiple lines.
-
----
-
-# When to Use a Line Graph
-
-Use a line graph for:
-
-* Monthly sales
-* Daily temperature
-* Stock market prices
-* Population growth
-* Website traffic
-* Rainfall over months
-* Company revenue over years
-
----
-
-# When Not to Use a Line Graph
-
-Avoid using a line graph for:
-
-* Comparing unrelated categories (use a **Bar Graph**).
-* Showing percentage distribution (use a **Pie Chart**).
-* Showing frequency distribution of continuous data (use a **Histogram**).
-
----
-
-# Line Graph vs Bar Graph
-
-| Line Graph                     | Bar Graph                    |
-| ------------------------------ | ---------------------------- |
-| Shows trends over time         | Compares categories          |
-| Data points connected by lines | Data shown using bars        |
-| Best for continuous data       | Best for categorical data    |
-| X-axis usually represents time | X-axis represents categories |
-
----
-
-# Line Graph vs Pie Chart
-
-| Line Graph              | Pie Chart              |
-| ----------------------- | ---------------------- |
-| Shows changes over time | Shows parts of a whole |
-| Uses lines              | Uses slices            |
-| Continuous data         | Percentage data        |
-
----
-
-# Python Example (Matplotlib)
-
-```python
-import matplotlib.pyplot as plt
-
-months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
-sales = [120, 150, 180, 170, 210, 250]
-
-plt.plot(months, sales, marker="o")
-plt.title("Monthly Sales")
-plt.xlabel("Month")
-plt.ylabel("Sales")
-plt.show()
-```
-
----
-
-# Pandas Example
-
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-
-df = pd.DataFrame({
-    "Month": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-    "Sales": [120, 150, 180, 170, 210, 250]
-})
-
-df.plot(x="Month", y="Sales", kind="line", marker="o")
-plt.show()
-```
-
----
-
-# Applications in Data Science
-
-* Stock price analysis
-* Sales forecasting
-* Weather forecasting
-* Website traffic analysis
-* Population growth analysis
-* COVID-19 case trends
-* Machine learning model performance over epochs
-
----
-
-# Interview Questions
-
-| Question                                     | Answer                                                                          |
-| -------------------------------------------- | ------------------------------------------------------------------------------- |
-| What is a Line Graph?                        | A graph that connects data points with straight lines to show trends over time. |
-| Which type of data is best for a Line Graph? | Continuous or time-series data.                                                 |
-| What does the X-axis usually represent?      | Time or an ordered sequence.                                                    |
-| What does the Y-axis represent?              | Numerical values.                                                               |
-| Which graph is best for showing trends?      | Line Graph.                                                                     |
-
----
-
-# Quick Cheat Sheet
-
-| Feature   | Description                      |
-| --------- | -------------------------------- |
-| Purpose   | Show trends or changes over time |
-| Data Type | Continuous or time-series        |
-| X-axis    | Time (Month, Year, Day)          |
-| Y-axis    | Numerical values                 |
-| Best For  | Trend analysis and forecasting   |
-
----
-
-# Key Points to Remember
-
-* **Line Graph = Trend Over Time**
-* Data points are connected using **straight lines**.
-* Best used for **continuous or time-based data**.
-* Helps identify **increasing, decreasing, and stable trends**.
-* Widely used in **Statistics, Data Science, Business Analytics, Finance, and Machine Learning** to visualize trends and make predictions.
-
-
-Monthly Sales Trend
-
-Sales of a company over six months.
-
-month	sales
-Jan	120
-Feb	150
-Mar	180
-Apr	170
-May	210
-Jun	250
-
-
-# What is an Ogive?
-
-An **Ogive** (pronounced *Oh-jive*) is a **cumulative frequency graph**. It is created by plotting the **cumulative frequency** against the **class boundaries** and joining the points with straight lines.
-
-An ogive helps us understand **how data accumulates** across different class intervals.
-
----
-
-# Simple Definition
-
-> **An Ogive is a graph of cumulative frequencies used to show how frequencies accumulate over class intervals.**
-
----
-
-# Why Do We Use an Ogive?
-
-An ogive helps us to:
-
-* Find the cumulative frequency.
-* Determine the **Median**.
-* Find **Quartiles (Q1, Q2, Q3)**.
-* Find **Percentiles**.
-* Compare two distributions.
-* Understand how data accumulates.
-
----
-
-# Types of Ogive
-
-There are **two types** of ogive:
-
-| Type                | Description                                                         |
-| ------------------- | ------------------------------------------------------------------- |
-| **Less Than Ogive** | Uses cumulative frequencies up to the upper class boundary.         |
-| **More Than Ogive** | Uses cumulative frequencies from the lower class boundary downward. |
-
----
-
-# Example Dataset
-
-Suppose the marks of students are grouped as follows:
-
-| Marks | Frequency |
-| ----- | --------: |
-| 0–10  |         5 |
-| 10–20 |         8 |
-| 20–30 |        12 |
-| 30–40 |        10 |
-| 40–50 |         5 |
-
----
-
-# Step 1: Find Cumulative Frequency
-
-## Less Than Cumulative Frequency
-
-| Marks | Frequency | Cumulative Frequency |
-| ----- | --------: | -------------------: |
-| 0–10  |         5 |                    5 |
-| 10–20 |         8 |                   13 |
-| 20–30 |        12 |                   25 |
-| 30–40 |        10 |                   35 |
-| 40–50 |         5 |                   40 |
-
----
-
-# Step 2: Draw the Ogive
-
-Plot the points:
-
-```text
-(10,5)
-(20,13)
-(30,25)
-(40,35)
-(50,40)
-```
-
-Join these points with straight lines to obtain the **Less Than Ogive**.
-
----
-
-# How to Read an Ogive
-
-Suppose the graph shows:
-
-* At **30 marks**, cumulative frequency = **25**.
-
-This means:
-
-> **25 students scored less than or equal to 30 marks.**
-
----
-
-# Components of an Ogive
-
-| Component | Description                          |
-| --------- | ------------------------------------ |
-| X-axis    | Upper (or lower) class boundaries    |
-| Y-axis    | Cumulative Frequency                 |
-| Points    | Cumulative frequencies               |
-| Line      | Connects cumulative frequency points |
-
----
-
-# Characteristics of an Ogive
-
-* Uses **cumulative frequency**.
-* Points are joined by straight lines.
-* Always increases in a **Less Than Ogive**.
-* Used to determine median and quartiles.
-* Suitable for grouped continuous data.
-
----
-
-# Less Than vs More Than Ogive
-
-| Less Than Ogive                              | More Than Ogive                              |
-| -------------------------------------------- | -------------------------------------------- |
-| Uses upper class boundaries                  | Uses lower class boundaries                  |
-| Starts from the smallest value               | Starts from the largest cumulative frequency |
-| Graph rises upward                           | Graph slopes downward                        |
-| Used to find cumulative values below a point | Used to find cumulative values above a point |
-
----
-
-# Applications
-
-Ogives are used to:
-
-* Find the **Median**
-* Find **Quartiles**
-* Find **Percentiles**
-* Compare two datasets
-* Analyze exam results
-* Analyze income distribution
-* Analyze age distribution
-
----
-
-# Python Example (Matplotlib)
-
-```python
-import matplotlib.pyplot as plt
-
-upper_boundary = [10, 20, 30, 40, 50]
-cum_freq = [5, 13, 25, 35, 40]
-
-plt.plot(upper_boundary, cum_freq, marker="o")
-plt.title("Less Than Ogive")
-plt.xlabel("Marks")
-plt.ylabel("Cumulative Frequency")
-plt.grid(True)
-plt.show()
-```
-
----
-
-# Pandas Example
-
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-
-df = pd.DataFrame({
-    "Upper Boundary": [10,20,30,40,50],
-    "Cumulative Frequency": [5,13,25,35,40]
-})
-
-df.plot(
-    x="Upper Boundary",
-    y="Cumulative Frequency",
-    kind="line",
-    marker="o"
-)
-
-plt.show()
-```
-
----
-
-# Applications in Data Science
-
-Although **Ogives are not commonly used in Machine Learning**, they are useful in:
-
-* Exploratory Data Analysis (EDA)
-* Understanding cumulative distributions
-* Finding percentiles and quartiles
-* Data visualization
-* Statistical reporting
-
----
-
-# Interview Questions
-
-| Question                           | Answer                                                                  |
-| ---------------------------------- | ----------------------------------------------------------------------- |
-| What is an Ogive?                  | A graph of cumulative frequency.                                        |
-| How many types of Ogive are there? | Two: Less Than Ogive and More Than Ogive.                               |
-| What is plotted on the X-axis?     | Class boundaries (usually upper or lower).                              |
-| What is plotted on the Y-axis?     | Cumulative Frequency.                                                   |
-| What is an Ogive mainly used for?  | Finding the median, quartiles, percentiles, and cumulative frequencies. |
-
----
-
-# Quick Cheat Sheet
-
-| Feature    | Description                    |
-| ---------- | ------------------------------ |
-| Graph Type | Cumulative Frequency Graph     |
-| X-axis     | Class Boundaries               |
-| Y-axis     | Cumulative Frequency           |
-| Types      | Less Than, More Than           |
-| Best For   | Median, Quartiles, Percentiles |
-
----
-
-# Key Points to Remember
-
-* **Ogive = Cumulative Frequency Graph**
-* It is constructed using **cumulative frequencies**, not simple frequencies.
-* There are **two types**:
-
-  * **Less Than Ogive**
-  * **More Than Ogive**
-* It is widely used to determine:
-
-  * Median
-  * Quartiles (Q1, Q2, Q3)
-  * Percentiles
-* Ogives are an important tool in **Statistics** for analyzing grouped data and understanding cumulative distributions.
-
-# What is a Two-Way Table?
-
-A **Two-Way Table** (also called a **Contingency Table** or **Cross Tabulation**) is a table that shows the relationship between **two categorical variables**.
-
-It displays the frequency (count) of observations for every combination of the two variables.
-
----
-
-# Simple Definition
-
-> **A Two-Way Table is a table that summarizes data based on two categorical variables and shows the frequency for each combination.**
-
----
-
-# Why Do We Use a Two-Way Table?
-
-A two-way table helps us to:
-
-* Compare two categorical variables.
-* Find relationships between variables.
-* Calculate row totals and column totals.
-* Analyze survey data.
-* Prepare data for statistical analysis.
-
----
-
-# Example Dataset
-
-Suppose a survey records students by **Department** and **Gender**.
-
-| Student | Department | Gender |
-| ------- | ---------- | ------ |
-| Rahul   | IT         | Male   |
-| Priya   | HR         | Female |
-| Amit    | IT         | Male   |
-| Neha    | Sales      | Female |
-| Rohit   | IT         | Male   |
-| Pooja   | HR         | Female |
-| Karan   | Sales      | Male   |
-| Riya    | IT         | Female |
-
----
-
-# Two-Way Table
-
-| Department |  Male | Female | Total |
-| ---------- | ----: | -----: | ----: |
-| IT         |     3 |      1 |     4 |
-| HR         |     0 |      2 |     2 |
-| Sales      |     1 |      1 |     2 |
-| **Total**  | **4** |  **4** | **8** |
-
----
-
-# Explanation
-
-* **IT Department** has **3 males** and **1 female**.
-* **HR Department** has **2 females**.
-* **Sales Department** has **1 male** and **1 female**.
-* Total students = **8**.
-
-This table helps compare **Department** and **Gender** at the same time.
-
----
-
-# Components of a Two-Way Table
-
-| Component    | Description                    |
-| ------------ | ------------------------------ |
-| Rows         | First categorical variable     |
-| Columns      | Second categorical variable    |
-| Cell         | Frequency for a combination    |
-| Row Total    | Total frequency of each row    |
-| Column Total | Total frequency of each column |
-| Grand Total  | Total number of observations   |
-
----
-
-# Characteristics of a Two-Way Table
-
-* Contains **two categorical variables**.
-* Shows the relationship between variables.
-* Includes row totals and column totals.
-* Easy to compare categories.
-
----
-
-# One-Way Table vs Two-Way Table
-
-| One-Way Table                   | Two-Way Table                             |
-| ------------------------------- | ----------------------------------------- |
-| Uses one variable               | Uses two variables                        |
-| Shows frequency of one category | Shows relationship between two categories |
-| Simpler                         | More detailed                             |
-
-### One-Way Table
-
-| Department | Count |
-| ---------- | ----: |
-| IT         |     4 |
-| HR         |     2 |
-| Sales      |     2 |
+| Sales      |         2 |
 
 ### Two-Way Table
 
@@ -1417,19 +425,1340 @@ This table helps compare **Department** and **Gender** at the same time.
 
 ---
 
-# Creating a Two-Way Table in Pandas
+# Python Example (Pandas)
 
-## Using `pd.crosstab()`
+### Using `value_counts()`
 
 ```python
 import pandas as pd
 
 df = pd.DataFrame({
-    "Department": ["IT", "HR", "IT", "Sales", "IT", "HR", "Sales", "IT"],
-    "Gender": ["Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female"]
+    "Department": ["IT", "HR", "IT", "Sales", "IT", "HR", "Sales", "IT"]
 })
 
-table = pd.crosstab(df["Department"], df["Gender"])
+print(df["Department"].value_counts())
+```
+
+### Output
+
+```text
+IT       4
+HR       2
+Sales    2
+```
+
+---
+
+### Convert to a One-Way Table
+
+```python
+freq_table = df["Department"].value_counts().reset_index()
+freq_table.columns = ["Department", "Frequency"]
+
+print(freq_table)
+```
+
+---
+
+# Applications
+
+One-Way Tables are used in:
+
+* Survey analysis
+* Student performance analysis
+* Customer segmentation
+* Product sales analysis
+* Market research
+* Election results
+* Exploratory Data Analysis (EDA)
+
+---
+
+# Advantages
+
+* Easy to create and understand.
+* Organizes raw data effectively.
+* Summarizes large datasets.
+* Helps identify the most and least frequent categories.
+* Forms the basis for graphs and charts.
+
+---
+
+# Limitations
+
+* Analyzes only one variable.
+* Does not show relationships between variables.
+* Less useful for complex datasets involving multiple variables.
+
+---
+
+# Interview Questions
+
+| Question                                                | Answer                                         |
+| ------------------------------------------------------- | ---------------------------------------------- |
+| What is a One-Way Table?                                | A table showing the frequency of one variable. |
+| What is another name for a One-Way Table?               | Frequency Table.                               |
+| How many variables does a One-Way Table contain?        | One variable.                                  |
+| Which Pandas function creates a One-Way Table?          | `value_counts()`                               |
+| Which graphs are commonly created from a One-Way Table? | Bar Graph and Pie Chart.                       |
+
+---
+
+# Quick Cheat Sheet
+
+| Task                 | Pandas Function                |
+| -------------------- | ------------------------------ |
+| Count frequencies    | `value_counts()`               |
+| Get percentages      | `value_counts(normalize=True)` |
+| Convert to DataFrame | `value_counts().reset_index()` |
+
+---
+
+# Key Points to Remember
+
+* **One-Way Table = One Variable + Frequency (Count)**.
+* It is also called a **Frequency Table**.
+* It summarizes **one categorical or discrete variable**.
+* Each row represents a **category**, and the frequency column shows **how many times that category appears**.
+* It is commonly used before creating **Bar Graphs**, **Pie Charts**, and performing **Exploratory Data Analysis (EDA)**.
+
+### Easy Way to Remember
+
+| Table             | Meaning                                 |
+| ----------------- | --------------------------------------- |
+| **One-Way Table** | 📋 One Variable + Count                 |
+| **Two-Way Table** | 📊 Two Variables + Relationship + Count |
+
+
+# What is a Bar Graph?
+
+A **Bar Graph** (also called a **Bar Chart**) is a graphical representation of **categorical data** using **rectangular bars** of equal width. The **height (or length)** of each bar represents the **frequency (count)** or **value** of a category.
+
+It is one of the most commonly used graphs in **Statistics**, **Data Science**, **Machine Learning**, and **Business Analytics** because it makes comparisons between categories easy.
+
+---
+
+# Simple Definition
+
+> **A Bar Graph is a graph that uses rectangular bars to compare the frequency or value of different categories.**
+
+---
+
+# Why Do We Use a Bar Graph?
+
+A Bar Graph helps us to:
+
+* Compare different categories.
+* Display frequencies or values clearly.
+* Identify the highest and lowest values.
+* Summarize categorical data.
+* Present data in an easy-to-understand visual form.
+
+---
+
+# How is a Bar Graph Created?
+
+```text
+Raw Data
+    ↓
+Count each category
+    ↓
+Create a Frequency Table
+    ↓
+Draw X-axis and Y-axis
+    ↓
+Draw Bars According to Frequency
+    ↓
+Bar Graph
+```
+
+---
+
+# Example
+
+Suppose a survey records students' favorite programming language.
+
+### Step 1: Frequency Table
+
+| Programming Language | Number of Students |
+| -------------------- | -----------------: |
+| Python               |                 50 |
+| Java                 |                 30 |
+| C++                  |                 25 |
+| JavaScript           |                 40 |
+
+### Step 2: Bar Graph
+
+### Interpretation
+
+* **Python** is the most popular language.
+* **C++** is the least popular language.
+* The graph makes comparison much easier than reading the table.
+
+---
+
+# Components of a Bar Graph
+
+| Component     | Description                         |
+| ------------- | ----------------------------------- |
+| X-axis        | Displays the categories             |
+| Y-axis        | Displays the frequency or value     |
+| Bars          | Represent each category             |
+| Height of Bar | Represents the frequency or value   |
+| Title         | Describes what the graph represents |
+
+---
+
+# Characteristics of a Bar Graph
+
+* Used for **categorical (qualitative)** data.
+* Bars have **equal width**.
+* There is **equal spacing** between bars.
+* Height (or length) of each bar represents the value or frequency.
+* Can be drawn vertically or horizontally.
+
+---
+
+# Types of Bar Graphs
+
+## 1. Vertical Bar Graph
+
+Bars are drawn vertically.
+
+```text
+Frequency
+ ^
+ |         █
+ |         █
+ |    █    █
+ |    █    █
+ | █  █    █
+ +-------------------->
+   A   B    C
+```
+
+---
+
+## 2. Horizontal Bar Graph
+
+Bars are drawn horizontally.
+
+```text
+A  █████
+B  ████████
+C  ██████████
+```
+
+---
+
+## 3. Grouped Bar Graph
+
+Used to compare two or more datasets for the same categories.
+
+Example:
+
+| Department | Boys | Girls |
+| ---------- | ---: | ----: |
+| IT         |   30 |    25 |
+| CSE        |   35 |    40 |
+
+---
+
+## 4. Stacked Bar Graph
+
+Shows the total value while dividing each bar into different parts.
+
+Example:
+
+```text
+IT   ███▓▓
+CSE  █████▓▓▓
+```
+
+---
+
+# Bar Graph vs Histogram
+
+| Bar Graph                     | Histogram                          |
+| ----------------------------- | ---------------------------------- |
+| Used for categorical data     | Used for continuous numerical data |
+| Bars have spaces between them | Bars touch each other              |
+| Compares categories           | Shows the distribution of data     |
+
+---
+
+# Python Example (Matplotlib)
+
+```python
+import matplotlib.pyplot as plt
+
+languages = ["Python", "Java", "C++", "JavaScript"]
+students = [50, 30, 25, 40]
+
+plt.bar(languages, students)
+
+plt.title("Favorite Programming Language")
+plt.xlabel("Programming Language")
+plt.ylabel("Number of Students")
+
+plt.show()
+```
+
+---
+
+# Python Example (Seaborn)
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+languages = ["Python", "Java", "C++", "JavaScript"]
+students = [50, 30, 25, 40]
+
+sns.barplot(x=languages, y=students)
+
+plt.title("Favorite Programming Language")
+plt.show()
+```
+
+---
+
+# Applications
+
+Bar Graphs are used in:
+
+* Student performance analysis
+* Product sales comparison
+* Customer surveys
+* Population comparison
+* Election results
+* Business reports
+* Exploratory Data Analysis (EDA)
+
+---
+
+# Advantages
+
+* Easy to understand and interpret.
+* Makes category comparison simple.
+* Clearly shows the highest and lowest values.
+* Suitable for reports and presentations.
+
+---
+
+# Limitations
+
+* Not suitable for continuous numerical data.
+* Difficult to read if there are too many categories.
+* Does not show trends over time (use a Line Graph instead).
+
+---
+
+# Interview Questions
+
+| Question                                           | Answer                                                          |
+| -------------------------------------------------- | --------------------------------------------------------------- |
+| What is a Bar Graph?                               | A graph that uses rectangular bars to compare categorical data. |
+| Which type of data is represented by a Bar Graph?  | Categorical data.                                               |
+| Which graph is used for continuous numerical data? | Histogram.                                                      |
+| Which Matplotlib function creates a Bar Graph?     | `plt.bar()`                                                     |
+| Which Seaborn function creates a Bar Graph?        | `sns.barplot()`                                                 |
+
+---
+
+# Quick Cheat Sheet
+
+| Feature    | Description             |
+| ---------- | ----------------------- |
+| Purpose    | Compare categories      |
+| Data Type  | Categorical             |
+| Bars       | Equal width with spaces |
+| X-axis     | Categories              |
+| Y-axis     | Frequency or Value      |
+| Matplotlib | `plt.bar()`             |
+| Seaborn    | `sns.barplot()`         |
+
+---
+
+# Key Points to Remember
+
+* A **Bar Graph** compares **categorical data** using rectangular bars.
+* The **height (or length)** of each bar represents the **frequency or value**.
+* Bars are **equal in width** and **separated by spaces**.
+* Common types are:
+
+  * Vertical Bar Graph
+  * Horizontal Bar Graph
+  * Grouped Bar Graph
+  * Stacked Bar Graph
+* It is widely used in **Statistics**, **Data Science**, **Business Analytics**, and **Machine Learning** for comparing categories.
+
+### Easy Way to Remember
+
+| Graph          | Remember As                             |
+| -------------- | --------------------------------------- |
+| **Bar Graph**  | 📊 Compare categories                   |
+| **Histogram**  | 📶 Show distribution of continuous data |
+| **Pie Chart**  | 🥧 Show percentages                     |
+| **Line Graph** | 📈 Show trends over time                |
+
+# What is a Pie Chart?
+
+A **Pie Chart** is a circular graph that represents **parts of a whole**. It is divided into **slices (sectors)**, where each slice represents the **proportion or percentage** of a category relative to the total.
+
+The **entire pie represents 100%** of the data.
+
+---
+
+# Simple Definition
+
+> **A Pie Chart is a circular chart divided into slices, where each slice represents the percentage or proportion of a category out of the whole.**
+
+---
+
+# Why Do We Use a Pie Chart?
+
+A Pie Chart helps us to:
+
+* Show percentages or proportions.
+* Compare the contribution of different categories.
+* Visualize parts of a whole.
+* Identify the largest and smallest categories.
+* Present survey or categorical data clearly.
+
+---
+
+# How is a Pie Chart Created?
+
+```text
+Raw Data
+    ↓
+Count each category
+    ↓
+Create a Frequency Table
+    ↓
+Calculate Percentage of Each Category
+    ↓
+Draw Circular Sectors
+    ↓
+Pie Chart
+```
+
+---
+
+# Example
+
+Suppose a survey asks students about their favorite programming language.
+
+### Step 1: Frequency Table
+
+| Programming Language | Students |
+| -------------------- | -------: |
+| Python               |       50 |
+| Java                 |       30 |
+| C++                  |       10 |
+| JavaScript           |       10 |
+| **Total**            |  **100** |
+
+### Step 2: Percentage Table
+
+| Programming Language | Students | Percentage |
+| -------------------- | -------: | ---------: |
+| Python               |       50 |        50% |
+| Java                 |       30 |        30% |
+| C++                  |       10 |        10% |
+| JavaScript           |       10 |        10% |
+
+### Step 3: Pie Chart
+
+### Interpretation
+
+* **Python** occupies **50%** of the pie, making it the most preferred language.
+* **Java** accounts for **30%**.
+* **C++** and **JavaScript** each represent **10%**.
+
+---
+
+# Components of a Pie Chart
+
+| Component      | Description                           |
+| -------------- | ------------------------------------- |
+| Circle         | Represents the whole dataset (100%)   |
+| Slice (Sector) | Represents one category               |
+| Percentage     | Shows the proportion of each category |
+| Labels         | Identify each category                |
+| Legend         | Explains the slices (optional)        |
+| Title          | Describes the chart                   |
+
+---
+
+# Characteristics of a Pie Chart
+
+* Circular in shape.
+* Represents **parts of a whole**.
+* Total of all slices equals **100%**.
+* Each slice size is proportional to its value.
+* Best suited for a **small number of categories**.
+
+---
+
+# Formula for Percentage
+
+[
+\text{Percentage} = \frac{\text{Category Frequency}}{\text{Total Frequency}} \times 100
+]
+
+### Example
+
+If **Python = 50 students** and **Total = 100 students**,
+
+[
+\text{Percentage} = \frac{50}{100} \times 100 = 50%
+]
+
+---
+
+# Pie Chart vs Bar Graph
+
+| Pie Chart                         | Bar Graph                     |
+| --------------------------------- | ----------------------------- |
+| Shows percentage or proportion    | Shows frequency or value      |
+| Circular graph                    | Rectangular bars              |
+| Best for part-to-whole comparison | Best for comparing categories |
+| Total always equals 100%          | No such restriction           |
+
+---
+
+# Creating a Pie Chart in Python
+
+### Using Matplotlib
+
+```python
+import matplotlib.pyplot as plt
+
+languages = ["Python", "Java", "C++", "JavaScript"]
+students = [50, 30, 10, 10]
+
+plt.pie(students,
+        labels=languages,
+        autopct="%1.1f%%")
+
+plt.title("Favorite Programming Language")
+
+plt.show()
+```
+
+---
+
+### Using Plotly
+
+```python
+import plotly.express as px
+import pandas as pd
+
+df = pd.DataFrame({
+    "Language": ["Python", "Java", "C++", "JavaScript"],
+    "Students": [50, 30, 10, 10]
+})
+
+fig = px.pie(df,
+             names="Language",
+             values="Students")
+
+fig.show()
+```
+
+---
+
+# Applications
+
+Pie Charts are commonly used in:
+
+* Survey analysis
+* Market share analysis
+* Election results
+* Budget allocation
+* Customer segmentation
+* Product sales distribution
+* Business reports
+
+---
+
+# Advantages
+
+* Easy to understand.
+* Clearly shows percentages.
+* Highlights the largest and smallest categories.
+* Good for presentations and reports.
+
+---
+
+# Limitations
+
+* Not suitable for many categories.
+* Difficult to compare slices with similar sizes.
+* Not suitable for showing trends over time.
+* Less effective than bar graphs for precise comparisons.
+
+---
+
+# Interview Questions
+
+| Question                                               | Answer                                                          |
+| ------------------------------------------------------ | --------------------------------------------------------------- |
+| What is a Pie Chart?                                   | A circular chart that represents parts of a whole using slices. |
+| What does the whole pie represent?                     | 100% of the data.                                               |
+| Which type of data is best represented by a Pie Chart? | Categorical data showing proportions or percentages.            |
+| Which Matplotlib function creates a Pie Chart?         | `plt.pie()`                                                     |
+| When should you use a Pie Chart?                       | To show the percentage contribution of categories to a whole.   |
+
+---
+
+# Quick Cheat Sheet
+
+| Feature    | Description                     |
+| ---------- | ------------------------------- |
+| Purpose    | Show proportions or percentages |
+| Data Type  | Categorical                     |
+| Shape      | Circular                        |
+| Total      | 100%                            |
+| Best For   | Part-to-whole comparison        |
+| Matplotlib | `plt.pie()`                     |
+| Plotly     | `px.pie()`                      |
+
+---
+
+# Key Points to Remember
+
+* A **Pie Chart** is a **circular graph** divided into slices.
+* Each slice represents the **percentage or proportion** of a category.
+* The **entire pie always represents 100%**.
+* Pie Charts are best for **showing parts of a whole**.
+* They work best when there are **few categories (typically 3–6)**.
+* Common Python functions:
+
+  * **Matplotlib:** `plt.pie()`
+  * **Plotly:** `px.pie()`
+
+---
+
+# Easy Way to Remember
+
+| Graph          | Remember As                              |
+| -------------- | ---------------------------------------- |
+| **Pie Chart**  | 🥧 Shows percentages of a whole          |
+| **Bar Graph**  | 📊 Compares categories                   |
+| **Line Graph** | 📈 Shows trends over time                |
+| **Histogram**  | 📶 Shows distribution of continuous data |
+
+# What is a Line Graph?
+
+A **Line Graph** (also called a **Line Chart**) is a graph that displays data using **points connected by straight lines**. It is mainly used to show **changes or trends over time** or across an ordered sequence.
+
+Each point represents a data value, and the connecting lines make it easy to observe increases, decreases, or patterns.
+
+---
+
+# Simple Definition
+
+> **A Line Graph is a graph that connects data points with straight lines to show changes or trends over time.**
+
+---
+
+# Why Do We Use a Line Graph?
+
+A Line Graph helps us to:
+
+* Show trends over time.
+* Compare changes in data.
+* Identify increases and decreases.
+* Predict future trends.
+* Analyze continuous data.
+
+---
+
+# How is a Line Graph Created?
+
+```text
+Collect Data
+      ↓
+Arrange Data in Order
+      ↓
+Draw X-axis and Y-axis
+      ↓
+Plot Data Points
+      ↓
+Connect Points with Lines
+      ↓
+Line Graph
+```
+
+---
+
+# Example
+
+Suppose a company records monthly sales.
+
+### Step 1: Data Table
+
+| Month    | Sales |
+| -------- | ----: |
+| January  |   100 |
+| February |   120 |
+| March    |   140 |
+| April    |   130 |
+| May      |   160 |
+| June     |   180 |
+
+### Step 2: Line Graph
+
+### Interpretation
+
+* Sales increased from **January to March**.
+* Sales decreased slightly in **April**.
+* Sales increased again in **May** and **June**.
+* The graph clearly shows the **overall upward trend**.
+
+---
+
+# Components of a Line Graph
+
+| Component   | Description                            |
+| ----------- | -------------------------------------- |
+| X-axis      | Represents time or ordered categories  |
+| Y-axis      | Represents numerical values            |
+| Data Points | Individual observations                |
+| Line        | Connects data points to show the trend |
+| Title       | Describes the graph                    |
+
+---
+
+# Characteristics of a Line Graph
+
+* Uses **points connected by straight lines**.
+* Best for **continuous or time-series data**.
+* Clearly shows increasing or decreasing trends.
+* Easy to compare multiple datasets using multiple lines.
+
+---
+
+# Types of Line Graphs
+
+## 1. Simple Line Graph
+
+Shows the trend of **one dataset**.
+
+Example:
+
+```text
+Sales
+ ^
+ |                 ●
+ |              ●
+ |           ●
+ |      ●
+ |   ●
+ +------------------------>
+   Jan Feb Mar Apr May
+```
+
+---
+
+## 2. Multiple Line Graph
+
+Compares **two or more datasets** on the same graph.
+
+Example:
+
+* Sales of Product A
+* Sales of Product B
+
+Both are shown using different lines.
+
+---
+
+# Line Graph vs Bar Graph
+
+| Line Graph                   | Bar Graph                                 |
+| ---------------------------- | ----------------------------------------- |
+| Shows trends over time       | Compares categories                       |
+| Uses connected points        | Uses rectangular bars                     |
+| Best for continuous data     | Best for categorical data                 |
+| Highlights changes over time | Highlights differences between categories |
+
+---
+
+# Creating a Line Graph in Python
+
+### Using Matplotlib
+
+```python
+import matplotlib.pyplot as plt
+
+months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+sales = [100, 120, 140, 130, 160, 180]
+
+plt.plot(months, sales, marker="o")
+
+plt.title("Monthly Sales")
+plt.xlabel("Month")
+plt.ylabel("Sales")
+
+plt.show()
+```
+
+---
+
+### Using Seaborn
+
+```python
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.DataFrame({
+    "Month": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "Sales": [100, 120, 140, 130, 160, 180]
+})
+
+sns.lineplot(data=df, x="Month", y="Sales")
+
+plt.title("Monthly Sales")
+plt.show()
+```
+
+---
+
+# Applications
+
+Line Graphs are widely used in:
+
+* Stock market analysis
+* Weather forecasting
+* Sales analysis
+* Population growth
+* Temperature changes
+* Website traffic analysis
+* Business reports
+* Data Science and Machine Learning
+
+---
+
+# Advantages
+
+* Clearly shows trends over time.
+* Easy to identify increases and decreases.
+* Useful for forecasting future values.
+* Suitable for comparing multiple datasets.
+
+---
+
+# Limitations
+
+* Not suitable for categorical comparisons.
+* Can become cluttered with too many lines.
+* Less effective when data points are unordered.
+
+---
+
+# Interview Questions
+
+| Question                                                | Answer                                                                          |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| What is a Line Graph?                                   | A graph that connects data points with straight lines to show trends over time. |
+| Which type of data is best represented by a Line Graph? | Continuous or time-series data.                                                 |
+| Which Matplotlib function creates a Line Graph?         | `plt.plot()`                                                                    |
+| Which Seaborn function creates a Line Graph?            | `sns.lineplot()`                                                                |
+| When should you use a Line Graph?                       | To show trends or changes over time.                                            |
+
+---
+
+# Quick Cheat Sheet
+
+| Feature    | Description                |
+| ---------- | -------------------------- |
+| Purpose    | Show trends over time      |
+| Data Type  | Continuous or time-series  |
+| Shape      | Connected data points      |
+| X-axis     | Time or ordered categories |
+| Y-axis     | Numerical values           |
+| Matplotlib | `plt.plot()`               |
+| Seaborn    | `sns.lineplot()`           |
+
+---
+
+# Key Points to Remember
+
+* A **Line Graph** uses **points connected by straight lines**.
+* It is mainly used to **show trends or changes over time**.
+* The **X-axis** usually represents **time or an ordered sequence**.
+* The **Y-axis** represents **numerical values**.
+* It is ideal for analyzing **continuous data** and **time-series data**.
+* Common Python functions:
+
+  * **Matplotlib:** `plt.plot()`
+  * **Seaborn:** `sns.lineplot()`
+
+---
+
+# Easy Way to Remember
+
+| Graph          | Remember As                                  |
+| -------------- | -------------------------------------------- |
+| **Line Graph** | 📈 Shows trends and changes over time        |
+| **Bar Graph**  | 📊 Compares categories                       |
+| **Pie Chart**  | 🥧 Shows percentage of a whole               |
+| **Histogram**  | 📶 Shows the distribution of continuous data |
+
+# What is an Ogive?
+
+An **Ogive** (pronounced **"Oh-jive"**) is a graph that represents the **cumulative frequency** of a dataset. It is also known as a **Cumulative Frequency Curve**.
+
+Instead of showing the frequency of each class, an ogive shows the **running total (cumulative frequency)** of observations.
+
+---
+
+# Simple Definition
+
+> **An Ogive is a graph of cumulative frequencies that shows the running total of observations up to each class interval.**
+
+---
+
+# Why Do We Use an Ogive?
+
+An Ogive helps us to:
+
+* Find the cumulative frequency.
+* Determine the **Median**.
+* Find **Quartiles (Q1, Q2, Q3)**.
+* Find **Percentiles**.
+* Compare two cumulative frequency distributions.
+* Understand how data accumulates over class intervals.
+
+---
+
+# Types of Ogives
+
+There are **two types** of Ogives.
+
+| Type                | Description                                                                |
+| ------------------- | -------------------------------------------------------------------------- |
+| **Less Than Ogive** | Shows cumulative frequency less than or equal to the upper class limit.    |
+| **More Than Ogive** | Shows cumulative frequency greater than or equal to the lower class limit. |
+
+---
+
+# Example Data
+
+Suppose the marks of 40 students are grouped as follows:
+
+| Marks     | Frequency |
+| --------- | --------: |
+| 0–10      |         3 |
+| 10–20     |         5 |
+| 20–30     |         8 |
+| 30–40     |        10 |
+| 40–50     |         7 |
+| 50–60     |         5 |
+| 60–70     |         2 |
+| **Total** |    **40** |
+
+---
+
+# 1. Less Than Ogive
+
+## Step 1: Calculate Cumulative Frequency
+
+| Marks (Less Than) | Frequency | Cumulative Frequency |
+| ----------------: | --------: | -------------------: |
+|               <10 |         3 |                    3 |
+|               <20 |         5 |                    8 |
+|               <30 |         8 |                   16 |
+|               <40 |        10 |                   26 |
+|               <50 |         7 |                   33 |
+|               <60 |         5 |                   38 |
+|               <70 |         2 |                   40 |
+
+### Interpretation
+
+* Less than 10 marks → **3 students**
+* Less than 20 marks → **8 students**
+* Less than 30 marks → **16 students**
+* Less than 70 marks → **40 students**
+
+---
+
+# 2. More Than Ogive
+
+## Step 1: Calculate Cumulative Frequency
+
+| Marks (More Than) | Cumulative Frequency |
+| ----------------: | -------------------: |
+|                >0 |                   40 |
+|               >10 |                   37 |
+|               >20 |                   32 |
+|               >30 |                   24 |
+|               >40 |                   14 |
+|               >50 |                    7 |
+|               >60 |                    2 |
+
+### Interpretation
+
+* More than 30 marks → **24 students**
+* More than 50 marks → **7 students**
+
+---
+
+# How to Draw an Ogive
+
+```text
+Create Frequency Distribution
+            ↓
+Calculate Cumulative Frequency
+            ↓
+Draw X-axis (Class Boundaries)
+            ↓
+Draw Y-axis (Cumulative Frequency)
+            ↓
+Plot the Points
+            ↓
+Join the Points with a Smooth Curve
+            ↓
+Ogive
+```
+
+---
+
+# Shape of an Ogive
+
+### Less Than Ogive
+
+```text
+Cumulative Frequency
+ ^
+ |                           ●
+ |                      ●
+ |                 ●
+ |            ●
+ |       ●
+ |   ●
+ +---------------------------------->
+    10 20 30 40 50 60 70
+          Marks
+```
+
+The curve **increases continuously** because cumulative frequency always increases.
+
+---
+
+### More Than Ogive
+
+```text
+Cumulative Frequency
+ ^
+ |●
+ |   ●
+ |      ●
+ |          ●
+ |              ●
+ |                  ●
+ +---------------------------------->
+   0 10 20 30 40 50 60
+        Marks
+```
+
+The curve **decreases continuously** because cumulative frequency becomes smaller.
+
+---
+
+# Uses of an Ogive
+
+Ogives are used to find:
+
+* Median
+* Quartiles (Q1, Q2, Q3)
+* Percentiles
+* Deciles
+* Cumulative frequencies
+* Comparison of cumulative distributions
+
+---
+
+# Less Than Ogive vs More Than Ogive
+
+| Less Than Ogive                | More Than Ogive                 |
+| ------------------------------ | ------------------------------- |
+| Uses upper class limits        | Uses lower class limits         |
+| Increasing curve               | Decreasing curve                |
+| Starts from the smallest value | Starts from the total frequency |
+| Ends at the total frequency    | Ends near zero                  |
+
+---
+
+# Ogive vs Histogram
+
+| Ogive                             | Histogram                               |
+| --------------------------------- | --------------------------------------- |
+| Shows cumulative frequency        | Shows frequency                         |
+| Smooth curve                      | Rectangular bars                        |
+| Used to find median and quartiles | Used to show data distribution          |
+| Displays running totals           | Displays frequencies of class intervals |
+
+---
+
+# Creating an Ogive in Python
+
+```python
+import matplotlib.pyplot as plt
+
+marks = [10, 20, 30, 40, 50, 60, 70]
+cum_freq = [3, 8, 16, 26, 33, 38, 40]
+
+plt.plot(marks, cum_freq, marker="o")
+
+plt.title("Less Than Ogive")
+plt.xlabel("Marks")
+plt.ylabel("Cumulative Frequency")
+
+plt.grid(True)
+plt.show()
+```
+
+---
+
+# Applications
+
+Ogives are widely used in:
+
+* Statistics
+* Education
+* Business Analytics
+* Quality Control
+* Survey Analysis
+* Medical Research
+* Data Science
+
+---
+
+# Advantages
+
+* Shows cumulative distribution clearly.
+* Helps determine median and quartiles graphically.
+* Useful for comparing datasets.
+* Easy to identify cumulative trends.
+
+---
+
+# Limitations
+
+* Does not show the frequency of each class directly.
+* Less effective for comparing many datasets on one graph.
+* Requires cumulative frequency calculations before plotting.
+
+---
+
+# Interview Questions
+
+| Question                            | Answer                                                                       |
+| ----------------------------------- | ---------------------------------------------------------------------------- |
+| What is an Ogive?                   | A graph of cumulative frequencies, also called a cumulative frequency curve. |
+| How many types of Ogives are there? | Two: Less Than Ogive and More Than Ogive.                                    |
+| What is a Less Than Ogive?          | A graph showing cumulative frequencies up to the upper class limits.         |
+| What is a More Than Ogive?          | A graph showing cumulative frequencies from the lower class limits downward. |
+| What can we find using an Ogive?    | Median, Quartiles, Percentiles, and cumulative frequencies.                  |
+
+---
+
+# Quick Cheat Sheet
+
+| Feature    | Description                      |
+| ---------- | -------------------------------- |
+| Purpose    | Show cumulative frequency        |
+| Graph Type | Line (smooth curve)              |
+| X-axis     | Class boundaries or class limits |
+| Y-axis     | Cumulative frequency             |
+| Types      | Less Than Ogive, More Than Ogive |
+| Used For   | Median, Quartiles, Percentiles   |
+
+---
+
+# Key Points to Remember
+
+* **Ogive** is a **Cumulative Frequency Curve**.
+* It shows the **running total (cumulative frequency)** rather than individual frequencies.
+* There are **two types**:
+
+  * **Less Than Ogive** → Increasing curve.
+  * **More Than Ogive** → Decreasing curve.
+* Ogives are commonly used to determine:
+
+  * **Median**
+  * **Quartiles (Q1, Q2, Q3)**
+  * **Percentiles**
+  * **Deciles**
+* An Ogive is created by plotting **cumulative frequencies** and joining the points with a smooth line.
+
+---
+
+# Easy Way to Remember
+
+| Graph          | Remember As                   |
+| -------------- | ----------------------------- |
+| **Ogive**      | 📈 Cumulative Frequency Curve |
+| **Histogram**  | 📊 Frequency Distribution     |
+| **Bar Graph**  | 📋 Compare Categories         |
+| **Line Graph** | 📈 Show Trends Over Time      |
+
+# What is a Two-Way Table?
+
+A **Two-Way Table** (also called a **Contingency Table** or **Cross Tabulation**) is a table that shows the **relationship between two categorical variables**. It displays the **frequency (count)** of observations for every combination of the two variables.
+
+It helps compare how one variable is distributed across the categories of another variable.
+
+---
+
+# Simple Definition
+
+> **A Two-Way Table is a table that displays the frequency of observations based on two categorical variables.**
+
+---
+
+# Why Do We Use a Two-Way Table?
+
+A Two-Way Table helps us to:
+
+* Compare two categorical variables.
+* Study the relationship between variables.
+* Calculate row totals and column totals.
+* Analyze survey data.
+* Perform statistical analysis.
+* Prepare data for probability and hypothesis testing.
+
+---
+
+# How is a Two-Way Table Created?
+
+```text
+Collect Data
+      ↓
+Choose Two Variables
+      ↓
+Count Each Combination
+      ↓
+Arrange Counts in Rows and Columns
+      ↓
+Calculate Row & Column Totals
+      ↓
+Two-Way Table
+```
+
+---
+
+# Example
+
+Suppose a survey records the **Gender** and **Preferred Programming Language** of students.
+
+### Raw Data
+
+| Student | Gender | Language |
+| ------- | ------ | -------- |
+| A       | Male   | Python   |
+| B       | Female | Java     |
+| C       | Male   | Python   |
+| D       | Female | Python   |
+| E       | Male   | Java     |
+| F       | Female | Java     |
+| G       | Male   | Python   |
+| H       | Female | Python   |
+
+---
+
+# Two-Way Table
+
+| Gender    | Python |  Java | Total |
+| --------- | -----: | ----: | ----: |
+| Male      |      3 |     1 |     4 |
+| Female    |      2 |     2 |     4 |
+| **Total** |  **5** | **3** | **8** |
+
+---
+
+# Interpretation
+
+* Total **Male students** = **4**
+* Total **Female students** = **4**
+* Total students who prefer **Python** = **5**
+* Total students who prefer **Java** = **3**
+* Most **Male students** prefer **Python**.
+* Female students are equally divided between **Python** and **Java**.
+
+---
+
+# Components of a Two-Way Table
+
+| Component       | Description                                |
+| --------------- | ------------------------------------------ |
+| Row Variable    | First categorical variable                 |
+| Column Variable | Second categorical variable                |
+| Cell Frequency  | Number of observations in each combination |
+| Row Total       | Sum of each row                            |
+| Column Total    | Sum of each column                         |
+| Grand Total     | Total number of observations               |
+
+---
+
+# Characteristics of a Two-Way Table
+
+* Contains **two categorical variables**.
+* Displays frequencies for each combination.
+* Includes row totals and column totals.
+* Helps compare categories.
+* Easy to interpret relationships.
+
+---
+
+# Example 2: Department and Gender
+
+| Department |   Male | Female |   Total |
+| ---------- | -----: | -----: | ------: |
+| IT         |     30 |     20 |      50 |
+| CSE        |     25 |     35 |      60 |
+| ECE        |     20 |     15 |      35 |
+| **Total**  | **75** | **70** | **145** |
+
+### Interpretation
+
+* IT has **50** students.
+* CSE has the highest number of students (**60**).
+* Total male students = **75**.
+* Total female students = **70**.
+
+---
+
+# One-Way Table vs Two-Way Table
+
+| One-Way Table                   | Two-Way Table                            |
+| ------------------------------- | ---------------------------------------- |
+| Uses one variable               | Uses two variables                       |
+| Shows frequency of one variable | Shows relationship between two variables |
+| Simple frequency table          | Cross-tabulation table                   |
+| No row or column totals         | Includes row totals and column totals    |
+
+---
+
+# Creating a Two-Way Table in Pandas
+
+### Using `pd.crosstab()`
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    "Gender": ["Male","Female","Male","Female","Male","Female","Male","Female"],
+    "Language": ["Python","Java","Python","Python","Java","Java","Python","Python"]
+})
+
+table = pd.crosstab(df["Gender"], df["Language"])
 
 print(table)
 ```
@@ -1437,135 +1766,142 @@ print(table)
 ### Output
 
 ```text
-Gender      Female  Male
-Department
-HR               2     0
-IT               1     3
-Sales            1     1
+Language  Java  Python
+Gender
+Female      2      2
+Male        1      3
 ```
 
 ---
 
-## Using `groupby()`
+### Add Row and Column Totals
 
 ```python
-df.groupby(["Department", "Gender"]).size()
+pd.crosstab(df["Gender"], df["Language"], margins=True)
 ```
 
----
+### Output
 
-## Using `pivot_table()`
-
-```python
-pd.pivot_table(
-    df,
-    index="Department",
-    columns="Gender",
-    aggfunc="size",
-    fill_value=0
-)
+```text
+Language  Java  Python  All
+Gender
+Female      2      2      4
+Male        1      3      4
+All         3      5      8
 ```
 
 ---
 
 # Applications
 
-Two-way tables are widely used in:
+Two-Way Tables are used in:
 
-* Student department vs gender analysis
-* Customer gender vs product purchase
-* Disease vs treatment analysis
-* Survey response analysis
-* Employee department vs designation
-* Election polling
+* Survey analysis
+* Market research
+* Customer segmentation
+* Educational statistics
+* Medical research
+* Election analysis
+* Exploratory Data Analysis (EDA)
 
 ---
 
-# Applications in Data Science
+# Advantages
 
-* Exploratory Data Analysis (EDA)
-* Feature relationship analysis
-* Customer segmentation
-* Business intelligence reports
-* Data visualization
-* Statistical analysis
+* Shows the relationship between two variables.
+* Easy to compare categories.
+* Includes row and column totals.
+* Useful for probability and statistical tests.
+* Helps summarize large datasets.
+
+---
+
+# Limitations
+
+* Limited to two variables.
+* Large tables can become difficult to interpret.
+* Does not measure the strength of the relationship (additional statistical tests are needed).
 
 ---
 
 # Interview Questions
 
-| Question                                       | Answer                                                                 |
-| ---------------------------------------------- | ---------------------------------------------------------------------- |
-| What is a Two-Way Table?                       | A table that shows the relationship between two categorical variables. |
-| What is another name for a Two-Way Table?      | Contingency Table or Cross Tabulation.                                 |
-| Which Pandas function creates a Two-Way Table? | `pd.crosstab()`                                                        |
-| Can `pivot_table()` create a Two-Way Table?    | Yes.                                                                   |
-| What does each cell represent?                 | The frequency (count) of a combination of two categories.              |
+| Question                                         | Answer                                                                       |
+| ------------------------------------------------ | ---------------------------------------------------------------------------- |
+| What is a Two-Way Table?                         | A table showing the frequency of observations for two categorical variables. |
+| What is another name for a Two-Way Table?        | Contingency Table or Cross Tabulation.                                       |
+| How many variables does a Two-Way Table contain? | Two variables.                                                               |
+| Which Pandas function creates a Two-Way Table?   | `pd.crosstab()`                                                              |
+| What is the purpose of row and column totals?    | To summarize the total frequencies for each category.                        |
 
 ---
 
 # Quick Cheat Sheet
 
-| Task                     | Pandas Function    |
-| ------------------------ | ------------------ |
-| Create a two-way table   | `pd.crosstab()`    |
-| Frequency using GroupBy  | `groupby().size()` |
-| Create using Pivot Table | `pd.pivot_table()` |
+| Task                     | Pandas Function  |
+| ------------------------ | ---------------- |
+| Create Two-Way Table     | `pd.crosstab()`  |
+| Add Row & Column Totals  | `margins=True`   |
+| Normalize to Percentages | `normalize=True` |
 
 ---
 
 # Key Points to Remember
 
-* **Two-Way Table = Two Variables + Frequency**
+* **Two-Way Table = Two Variables + Frequency**.
 * It is also called a **Contingency Table** or **Cross Tabulation**.
-* It is used to study the **relationship between two categorical variables**.
-* Common Pandas functions:
+* Used to study the **relationship between two categorical variables**.
+* Each cell shows the **frequency** for a combination of categories.
+* Includes **row totals**, **column totals**, and a **grand total**.
+* Common Pandas function:
 
   * `pd.crosstab()`
-  * `groupby().size()`
-  * `pd.pivot_table()`
-* It is widely used in **Statistics**, **Data Science**, **Machine Learning**, **Business Analytics**, and **Survey Analysis**.
 
-### Easy Way to Remember
+---
 
-* **One-Way Table = One Variable → Frequency**
-* **Two-Way Table = Two Variables → Relationship + Frequency**
+# Easy Way to Remember
+
+| Table                | Remember As                                 |
+| -------------------- | ------------------------------------------- |
+| **One-Way Table**    | 📋 One Variable + Frequency                 |
+| **Two-Way Table**    | 📊 Two Variables + Relationship + Frequency |
+| **Cross Tabulation** | 🔄 Compare two categorical variables        |
 
 # What is a Relative Frequency Table?
 
-A **Relative Frequency Table** is a table that shows the **proportion or percentage** of each category instead of just the frequency (count).
+A **Relative Frequency Table** is a table that shows the **proportion or percentage** of observations in each category instead of just the frequency (count).
 
-It tells us **what fraction or percentage of the total observations belongs to each category**.
+It tells us **how much of the total data each category represents**.
 
 ---
 
 # Simple Definition
 
-> **A Relative Frequency Table shows the proportion or percentage of each category out of the total number of observations.**
+> **A Relative Frequency Table is a table that shows the proportion or percentage of each category relative to the total number of observations.**
 
 ---
 
 # Why Do We Use a Relative Frequency Table?
 
-A relative frequency table helps us to:
+A Relative Frequency Table helps us to:
 
-* Convert counts into percentages.
-* Compare categories more easily.
-* Understand the distribution of data.
-* Create pie charts and probability distributions.
-* Analyze survey and statistical data.
+* Compare categories using percentages.
+* Understand the proportion of each category.
+* Analyze data regardless of sample size.
+* Prepare data for Pie Charts and Probability.
+* Compare different datasets easily.
 
 ---
 
 # Formula
 
-## Relative Frequency
+### Relative Frequency
 
 [
 \boxed{\text{Relative Frequency}=\frac{\text{Frequency}}{\text{Total Frequency}}}
 ]
 
-## Percentage
+### Percentage
 
 [
 \boxed{\text{Percentage}=\frac{\text{Frequency}}{\text{Total Frequency}}\times100}
@@ -1573,64 +1909,80 @@ A relative frequency table helps us to:
 
 ---
 
-# Example Dataset
+# How is a Relative Frequency Table Created?
 
-Suppose a survey asked 20 students about their favorite programming language.
-
-| Language |
-| -------- |
-| Python   |
-| Python   |
-| Java     |
-| Python   |
-| C++      |
-| Java     |
-| Python   |
-| C++      |
-| Python   |
-| Java     |
-| Python   |
-| C++      |
-| Python   |
-| Java     |
-| Python   |
-| Python   |
-| Java     |
-| Python   |
-| C++      |
-| Python   |
+```text
+Collect Data
+      ↓
+Create Frequency Table
+      ↓
+Find Total Frequency
+      ↓
+Divide Each Frequency by Total
+      ↓
+(Optional) Multiply by 100
+      ↓
+Relative Frequency Table
+```
 
 ---
 
-# Step 1: Frequency Table
+# Example
 
-| Language  | Frequency |
-| --------- | --------: |
-| Python    |        10 |
-| Java      |         5 |
-| C++       |         5 |
-| **Total** |    **20** |
+Suppose a survey asks students about their favorite programming language.
 
----
+### Step 1: Frequency Table
 
-# Step 2: Relative Frequency Table
-
-| Language  | Frequency | Relative Frequency | Percentage |
-| --------- | --------: | -----------------: | ---------: |
-| Python    |        10 |               0.50 |        50% |
-| Java      |         5 |               0.25 |        25% |
-| C++       |         5 |               0.25 |        25% |
-| **Total** |    **20** |           **1.00** |   **100%** |
+| Language   | Frequency |
+| ---------- | --------: |
+| Python     |        50 |
+| Java       |        30 |
+| C++        |        15 |
+| JavaScript |         5 |
+| **Total**  |   **100** |
 
 ---
 
-# Explanation
+### Step 2: Calculate Relative Frequency
 
-* **Python** was chosen by **50%** of students.
-* **Java** was chosen by **25%** of students.
-* **C++** was chosen by **25%** of students.
+[
+\text{Python}=\frac{50}{100}=0.50
+]
 
-The sum of all **relative frequencies = 1.0**.
+[
+\text{Java}=\frac{30}{100}=0.30
+]
+
+[
+\text{C++}=\frac{15}{100}=0.15
+]
+
+[
+\text{JavaScript}=\frac{5}{100}=0.05
+]
+
+---
+
+### Relative Frequency Table
+
+| Language   | Frequency | Relative Frequency | Percentage |
+| ---------- | --------: | -----------------: | ---------: |
+| Python     |        50 |               0.50 |        50% |
+| Java       |        30 |               0.30 |        30% |
+| C++        |        15 |               0.15 |        15% |
+| JavaScript |         5 |               0.05 |         5% |
+| **Total**  |   **100** |           **1.00** |   **100%** |
+
+---
+
+# Interpretation
+
+* **50%** of students prefer **Python**.
+* **30%** prefer **Java**.
+* **15%** prefer **C++**.
+* **5%** prefer **JavaScript**.
+
+The sum of all **relative frequencies = 1.00**.
 
 The sum of all **percentages = 100%**.
 
@@ -1638,20 +1990,21 @@ The sum of all **percentages = 100%**.
 
 # Components of a Relative Frequency Table
 
-| Component          | Description              |
-| ------------------ | ------------------------ |
-| Category           | Data category            |
-| Frequency          | Number of occurrences    |
-| Relative Frequency | Frequency ÷ Total        |
-| Percentage         | Relative Frequency × 100 |
+| Component          | Description                |
+| ------------------ | -------------------------- |
+| Category           | Different groups or values |
+| Frequency          | Number of observations     |
+| Relative Frequency | Proportion of the total    |
+| Percentage         | Relative frequency × 100   |
+| Total              | Total observations         |
 
 ---
 
-# Characteristics
+# Characteristics of a Relative Frequency Table
 
-* Based on a frequency table.
-* Shows proportions instead of raw counts.
-* Relative frequencies always sum to **1**.
+* Based on a **Frequency Table**.
+* Shows **proportions instead of counts**.
+* Relative frequencies always sum to **1.00**.
 * Percentages always sum to **100%**.
 * Useful for comparing datasets of different sizes.
 
@@ -1662,118 +2015,105 @@ The sum of all **percentages = 100%**.
 | Frequency Table                | Relative Frequency Table         |
 | ------------------------------ | -------------------------------- |
 | Shows counts                   | Shows proportions or percentages |
-| Total = Number of observations | Total = 1 (or 100%)              |
-| Easier to know exact counts    | Easier to compare categories     |
+| Total = Number of observations | Total = 1.00 or 100%             |
+| Used to count data             | Used to compare data             |
 
-### Frequency Table
+### Example
 
-| Department | Frequency |
-| ---------- | --------: |
-| IT         |        40 |
-| HR         |        30 |
-| Sales      |        30 |
-
-### Relative Frequency Table
-
-| Department | Relative Frequency | Percentage |
-| ---------- | -----------------: | ---------: |
-| IT         |               0.40 |        40% |
-| HR         |               0.30 |        30% |
-| Sales      |               0.30 |        30% |
+| Fruit  | Frequency | Relative Frequency |
+| ------ | --------: | -----------------: |
+| Apple  |        20 |               0.40 |
+| Banana |        15 |               0.30 |
+| Mango  |        10 |               0.20 |
+| Orange |         5 |               0.10 |
 
 ---
 
 # Creating a Relative Frequency Table in Pandas
 
-## Method 1: Using `value_counts()`
+### Using `value_counts(normalize=True)`
 
 ```python
 import pandas as pd
 
 df = pd.DataFrame({
-    "Department": ["IT", "HR", "IT", "Sales", "IT", "HR"]
+    "Language": [
+        "Python","Java","Python","C++",
+        "Python","Java","Python","Java"
+    ]
 })
 
-df["Department"].value_counts(normalize=True)
+print(df["Language"].value_counts(normalize=True))
 ```
 
 ### Output
 
 ```text
-IT       0.50
-HR       0.33
-Sales    0.17
+Python    0.50
+Java      0.375
+C++       0.125
 ```
 
 ---
 
-## Method 2: Convert to Percentage
+### Convert to Percentage
 
 ```python
-df["Department"].value_counts(normalize=True) * 100
+(df["Language"].value_counts(normalize=True) * 100).round(2)
 ```
 
 ### Output
 
 ```text
-IT       50.0
-HR       33.3
-Sales    16.7
-```
-
----
-
-## Method 3: Create a Relative Frequency Table
-
-```python
-freq = df["Department"].value_counts()
-
-relative_freq = freq / freq.sum()
-
-table = pd.DataFrame({
-    "Frequency": freq,
-    "Relative Frequency": relative_freq,
-    "Percentage": relative_freq * 100
-})
-
-print(table)
+Python    50.00
+Java      37.50
+C++       12.50
 ```
 
 ---
 
 # Applications
 
-Relative frequency tables are used in:
+Relative Frequency Tables are used in:
 
+* Statistics
+* Probability
 * Survey analysis
 * Market research
-* Election analysis
-* Customer behavior analysis
-* Probability calculations
-* Business reports
+* Business analytics
+* Data Science
+* Machine Learning
+* Exploratory Data Analysis (EDA)
 
 ---
 
-# Applications in Data Science
+# Advantages
 
-* Exploratory Data Analysis (EDA)
-* Data visualization
-* Probability estimation
-* Class distribution analysis
-* Machine Learning preprocessing
-* Customer segmentation
+* Easy to compare categories.
+* Independent of sample size.
+* Shows percentages clearly.
+* Useful for Pie Charts and Probability.
+* Helps compare multiple datasets.
+
+---
+
+# Limitations
+
+* Does not show the actual number of observations.
+* May hide small differences in counts.
+* Requires the total frequency to calculate proportions.
 
 ---
 
 # Interview Questions
 
-| Question                                               | Answer                                                            |
-| ------------------------------------------------------ | ----------------------------------------------------------------- |
-| What is a Relative Frequency Table?                    | A table that shows the proportion or percentage of each category. |
-| How is relative frequency calculated?                  | Frequency ÷ Total Frequency.                                      |
-| What is the sum of all relative frequencies?           | 1.0                                                               |
-| What is the sum of all percentages?                    | 100%                                                              |
-| Which Pandas function calculates relative frequencies? | `value_counts(normalize=True)`                                    |
+| Question                                               | Answer                                                                               |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| What is a Relative Frequency Table?                    | A table showing the proportion or percentage of each category relative to the total. |
+| How is relative frequency calculated?                  | Frequency ÷ Total Frequency.                                                         |
+| What is the sum of all relative frequencies?           | 1.00                                                                                 |
+| What is the sum of all percentages?                    | 100%                                                                                 |
+| Which Pandas function calculates relative frequencies? | `value_counts(normalize=True)`                                                       |
 
 ---
 
@@ -1781,8 +2121,8 @@ Relative frequency tables are used in:
 
 | Task                 | Formula / Function                   |
 | -------------------- | ------------------------------------ |
-| Relative Frequency   | `Frequency / Total`                  |
-| Percentage           | `(Frequency / Total) × 100`          |
+| Relative Frequency   | `Frequency ÷ Total`                  |
+| Percentage           | `(Frequency ÷ Total) × 100`          |
 | Pandas               | `value_counts(normalize=True)`       |
 | Percentage in Pandas | `value_counts(normalize=True) * 100` |
 
@@ -1790,158 +2130,175 @@ Relative frequency tables are used in:
 
 # Key Points to Remember
 
-* **Relative Frequency = Frequency ÷ Total Frequency**
-* It shows the **proportion** of each category.
-* **Percentage = Relative Frequency × 100**
-* The total of all:
+* A **Relative Frequency Table** shows the **proportion or percentage** of each category.
+* It is created by dividing each **frequency by the total number of observations**.
+* The **sum of all relative frequencies = 1.00**.
+* The **sum of all percentages = 100%**.
+* It is widely used in **Statistics**, **Probability**, **Data Science**, **Machine Learning**, and **Business Analytics**.
 
-  * **Relative Frequencies = 1**
-  * **Percentages = 100%**
-* Relative frequency tables are widely used in **Statistics**, **Probability**, **Data Science**, **Machine Learning**, and **Business Analytics**.
+---
 
-### Easy Way to Remember
+# Easy Way to Remember
 
-* **Frequency Table → Shows Counts**
-* **Relative Frequency Table → Shows Proportions (0–1) or Percentages (0–100%)**
+| Table                        | Remember As                                                |
+| ---------------------------- | ---------------------------------------------------------- |
+| **Frequency Table**          | 📋 Shows the **count** of each category                    |
+| **Relative Frequency Table** | 📊 Shows the **proportion or percentage** of each category |
+| **Percentage**               | 💯 Relative Frequency × 100                                |
+
 
 # What is Joint Distribution?
 
-A **Joint Distribution** is a statistical table that shows the **combined frequency or probability of two variables occurring together**.
+A **Joint Distribution** is a statistical table or distribution that shows the **probability or frequency of two variables occurring together**.
 
-It helps us understand **how two variables are related** by displaying the frequency or probability for every possible combination of their values.
+It helps us understand the **relationship between two variables** by showing how often each combination of values occurs.
 
 ---
 
 # Simple Definition
 
-> **A Joint Distribution shows the frequency or probability of two variables occurring together.**
+> **Joint Distribution is the distribution of two variables together, showing the frequency or probability of every possible combination of their values.**
 
 ---
 
 # Why Do We Use Joint Distribution?
 
-Joint distribution helps us to:
+Joint Distribution helps us to:
 
 * Study the relationship between two variables.
-* Find joint probabilities.
-* Compare combinations of categories.
+* Calculate joint probabilities.
+* Compare two categorical variables.
 * Analyze survey data.
-* Perform statistical and machine learning analysis.
+* Find conditional and marginal probabilities.
+* Perform statistical analysis.
 
 ---
 
-# Example Dataset
+# Example
 
-Suppose a survey of 100 students records their **Department** and **Gender**.
+Suppose a survey records the **Gender** and **Preferred Programming Language** of 100 students.
 
-| Student | Department | Gender |
-| ------- | ---------- | ------ |
-| Rahul   | IT         | Male   |
-| Priya   | HR         | Female |
-| Amit    | IT         | Male   |
-| Neha    | Sales      | Female |
-| Rohit   | IT         | Male   |
-| Pooja   | HR         | Female |
-| Karan   | Sales      | Male   |
-| Riya    | IT         | Female |
+### Joint Distribution Table
+
+| Gender    | Python |   Java |    C++ |   Total |
+| --------- | -----: | -----: | -----: | ------: |
+| Male      |     30 |     15 |      5 |      50 |
+| Female    |     20 |     20 |     10 |      50 |
+| **Total** | **50** | **35** | **15** | **100** |
 
 ---
 
-# Step 1: Joint Frequency Distribution
+# Interpretation
 
-| Department |  Male | Female | Total |
-| ---------- | ----: | -----: | ----: |
-| IT         |     3 |      1 |     4 |
-| HR         |     0 |      2 |     2 |
-| Sales      |     1 |      1 |     2 |
-| **Total**  | **4** |  **4** | **8** |
+* **30 Male students** prefer **Python**.
+* **20 Female students** prefer **Python**.
+* **15 Male students** prefer **Java**.
+* Total students = **100**.
 
-This table shows the **joint frequency** of Department and Gender.
+Each cell represents the **joint frequency** of two variables.
 
 Example:
 
-* **IT & Male = 3**
-* **HR & Female = 2**
-* **Sales & Male = 1**
+* (Male, Python) = **30**
+* (Female, Java) = **20**
 
 ---
 
-# Step 2: Joint Probability Distribution
+# Joint Probability Distribution
 
-Joint Probability Formula:
+To convert the frequency table into a **Joint Probability Distribution**, divide each frequency by the total number of observations.
+
+### Formula
 
 [
 \boxed{\text{Joint Probability}=\frac{\text{Joint Frequency}}{\text{Total Observations}}}
 ]
 
-Since the total number of students is **8**:
+---
 
-| Department |        Male |      Female |
-| ---------- | ----------: | ----------: |
-| IT         | 3/8 = 0.375 | 1/8 = 0.125 |
-| HR         | 0/8 = 0.000 | 2/8 = 0.250 |
-| Sales      | 1/8 = 0.125 | 1/8 = 0.125 |
+### Example
+
+For **Male and Python**:
+
+[
+P(\text{Male and Python})=\frac{30}{100}=0.30
+]
+
+For **Female and Java**:
+
+[
+P(\text{Female and Java})=\frac{20}{100}=0.20
+]
 
 ---
 
-# Explanation
+# Joint Probability Table
 
-The probability that a randomly selected student is:
-
-* **IT and Male** = **3/8 = 0.375**
-* **HR and Female** = **2/8 = 0.25**
-* **Sales and Female** = **1/8 = 0.125**
-
-The sum of all joint probabilities equals **1**.
+| Gender    |   Python |     Java |      C++ |    Total |
+| --------- | -------: | -------: | -------: | -------: |
+| Male      |     0.30 |     0.15 |     0.05 |     0.50 |
+| Female    |     0.20 |     0.20 |     0.10 |     0.50 |
+| **Total** | **0.50** | **0.35** | **0.15** | **1.00** |
 
 ---
 
 # Components of a Joint Distribution
 
-| Component    | Description                    |
-| ------------ | ------------------------------ |
-| Rows         | First variable                 |
-| Columns      | Second variable                |
-| Cells        | Joint frequency or probability |
-| Row Total    | Marginal total for rows        |
-| Column Total | Marginal total for columns     |
-| Grand Total  | Total observations             |
+| Component         | Description                      |
+| ----------------- | -------------------------------- |
+| Variable 1        | First variable (e.g., Gender)    |
+| Variable 2        | Second variable (e.g., Language) |
+| Joint Frequency   | Count of each combination        |
+| Joint Probability | Probability of each combination  |
+| Marginal Totals   | Row and column totals            |
+
+---
+
+# Characteristics of Joint Distribution
+
+* Involves **two variables**.
+* Shows every possible combination of values.
+* Can be represented using **frequencies** or **probabilities**.
+* The sum of all joint probabilities is **1**.
+* Used to analyze relationships between variables.
 
 ---
 
 # Joint Distribution vs Relative Frequency Table
 
-| Relative Frequency Table          | Joint Distribution                                    |
-| --------------------------------- | ----------------------------------------------------- |
-| One variable                      | Two variables                                         |
-| Shows proportions of one variable | Shows combined frequency/probability of two variables |
-| Simpler analysis                  | Relationship analysis                                 |
+| Joint Distribution              | Relative Frequency Table         |
+| ------------------------------- | -------------------------------- |
+| Uses two variables              | Usually uses one variable        |
+| Shows combinations of variables | Shows proportion of one variable |
+| Used for joint probability      | Used for relative frequency      |
 
 ---
 
 # Joint Distribution vs Two-Way Table
 
-| Two-Way Table     | Joint Distribution                 |
-| ----------------- | ---------------------------------- |
-| Shows frequencies | Shows frequencies or probabilities |
-| Used for counting | Used for statistical analysis      |
-| Counts only       | Counts and probabilities           |
+| Two-Way Table       | Joint Distribution                 |
+| ------------------- | ---------------------------------- |
+| Shows frequencies   | Shows frequencies or probabilities |
+| Count-based         | Count or probability based         |
+| Used for comparison | Used for probability analysis      |
 
 ---
 
 # Creating a Joint Distribution in Pandas
 
-## Method 1: Joint Frequency Table
+### Joint Frequency Table
 
 ```python
 import pandas as pd
 
 df = pd.DataFrame({
-    "Department": ["IT","HR","IT","Sales","IT","HR","Sales","IT"],
-    "Gender": ["Male","Female","Male","Female","Male","Female","Male","Female"]
+    "Gender": ["Male","Female","Male","Female",
+               "Male","Female","Male","Female"],
+    "Language": ["Python","Java","Python","Python",
+                 "Java","Java","Python","C++"]
 })
 
-joint_freq = pd.crosstab(df["Department"], df["Gender"])
+joint_freq = pd.crosstab(df["Gender"], df["Language"])
 
 print(joint_freq)
 ```
@@ -1949,21 +2306,20 @@ print(joint_freq)
 ### Output
 
 ```text
-Gender      Female  Male
-Department
-HR               2     0
-IT               1     3
-Sales            1     1
+Language  C++  Java  Python
+Gender
+Female      1     2       1
+Male        0     1       3
 ```
 
 ---
 
-## Method 2: Joint Probability Table
+### Joint Probability Table
 
 ```python
 joint_prob = pd.crosstab(
-    df["Department"],
     df["Gender"],
+    df["Language"],
     normalize=True
 )
 
@@ -1973,351 +2329,440 @@ print(joint_prob)
 ### Output
 
 ```text
-Gender      Female   Male
-Department
-HR          0.250   0.000
-IT          0.125   0.375
-Sales       0.125   0.125
-```
-
----
-
-## Method 3: Percentage Table
-
-```python
-pd.crosstab(
-    df["Department"],
-    df["Gender"],
-    normalize=True
-) * 100
+Language    C++   Java  Python
+Gender
+Female    0.125  0.25   0.125
+Male      0.000  0.125  0.375
 ```
 
 ---
 
 # Applications
 
-Joint distributions are used in:
+Joint Distribution is used in:
 
+* Statistics
+* Probability
 * Survey analysis
-* Customer segmentation
-* Employee analysis
-* Medical research
 * Market research
-* Educational statistics
+* Medical research
+* Data Science
+* Machine Learning
+* Risk analysis
 
 ---
 
-# Applications in Data Science
+# Advantages
 
-* Exploratory Data Analysis (EDA)
-* Feature relationship analysis
-* Probability calculations
-* Machine Learning preprocessing
-* Classification problems
-* Statistical modeling
+* Shows the relationship between two variables.
+* Helps calculate joint probabilities.
+* Useful for probability and statistical analysis.
+* Easy to compare combinations of categories.
+
+---
+
+# Limitations
+
+* Limited to two variables (for simple joint distributions).
+* Large datasets can produce large tables.
+* Interpretation becomes difficult with many categories.
 
 ---
 
 # Interview Questions
 
-| Question                                            | Answer                                                                            |
-| --------------------------------------------------- | --------------------------------------------------------------------------------- |
-| What is a Joint Distribution?                       | A table showing the frequency or probability of two variables occurring together. |
-| How is joint probability calculated?                | Joint Frequency ÷ Total Observations.                                             |
-| Which Pandas function is commonly used?             | `pd.crosstab()`                                                                   |
-| Can `normalize=True` calculate joint probabilities? | Yes.                                                                              |
-| What is the total of all joint probabilities?       | 1                                                                                 |
+| Question                                               | Answer                                                                                     |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| What is Joint Distribution?                            | The distribution showing the frequency or probability of two variables occurring together. |
+| How is joint probability calculated?                   | Joint Frequency ÷ Total Observations.                                                      |
+| What is the sum of all joint probabilities?            | 1.00                                                                                       |
+| Which Pandas function creates a joint frequency table? | `pd.crosstab()`                                                                            |
+| Which parameter creates a joint probability table?     | `normalize=True`                                                                           |
 
 ---
 
 # Quick Cheat Sheet
 
-| Task                    | Pandas Function                     |
-| ----------------------- | ----------------------------------- |
-| Joint frequency table   | `pd.crosstab()`                     |
-| Joint probability table | `pd.crosstab(normalize=True)`       |
-| Joint percentage table  | `pd.crosstab(normalize=True) * 100` |
+| Concept                     | Description                            |
+| --------------------------- | -------------------------------------- |
+| Joint Distribution          | Distribution of two variables together |
+| Joint Frequency             | Count of each combination              |
+| Joint Probability           | Joint Frequency ÷ Total                |
+| Total Probability           | 1.00                                   |
+| Pandas Function             | `pd.crosstab()`                        |
+| Joint Probability in Pandas | `pd.crosstab(..., normalize=True)`     |
 
 ---
 
 # Key Points to Remember
 
-* **Joint Distribution = Two Variables + Frequency/Probability**
-* It shows the **combined occurrence** of two variables.
-* **Joint Probability = Joint Frequency ÷ Total Observations**
-* The sum of all **joint probabilities = 1**.
-* In Pandas:
+* **Joint Distribution** shows the **frequency or probability of two variables occurring together**.
+* It helps analyze the **relationship between two variables**.
+* Each cell represents a **joint frequency** or **joint probability**.
+* **Joint Probability = Joint Frequency ÷ Total Observations**.
+* The **sum of all joint probabilities is always 1**.
+* Commonly created in Pandas using:
 
-  * `pd.crosstab()` → Joint frequency table.
-  * `pd.crosstab(normalize=True)` → Joint probability table.
-* Joint distributions are widely used in **Statistics**, **Probability**, **Data Science**, **Machine Learning**, and **Business Analytics**.
+  * `pd.crosstab()` for frequencies.
+  * `pd.crosstab(..., normalize=True)` for probabilities.
 
-### Easy Way to Remember
+---
 
-* **Two-Way Table = Count combinations**
-* **Joint Distribution = Count or Probability of combinations**
+# Easy Way to Remember
+
+| Term                   | Remember As                                     |
+| ---------------------- | ----------------------------------------------- |
+| **Joint Distribution** | 📊 Two Variables Together                       |
+| **Joint Frequency**    | 🔢 Count of each combination                    |
+| **Joint Probability**  | 🎯 Probability of two events occurring together |
+| **Two-Way Table**      | 📋 Frequency table for two variables            |
+
 
 # What is a Histogram?
 
-A **Histogram** is a graphical representation of the **frequency distribution of continuous numerical data**. It uses **adjacent (touching) rectangular bars** to show how data is distributed across different intervals (called **class intervals** or **bins**).
+A **Histogram** is a graphical representation of the **frequency distribution of continuous numerical data**. It uses **adjacent rectangular bars** (with **no gaps between them**) to show how many data values fall within different intervals called **class intervals** or **bins**.
 
-Unlike a **Bar Graph**, the bars in a histogram **touch each other** because the data is continuous.
+It helps us understand the **distribution, shape, spread, and pattern** of numerical data.
 
 ---
 
 # Simple Definition
 
-> **A Histogram is a graph that shows the frequency distribution of continuous numerical data using touching bars.**
+> **A Histogram is a graph that shows the frequency distribution of continuous numerical data using adjacent bars.**
 
 ---
 
 # Why Do We Use a Histogram?
 
-A histogram helps us to:
+A Histogram helps us to:
 
 * Understand the distribution of data.
 * Identify the shape of the data.
 * Detect outliers.
-* Find the most frequent interval.
-* Analyze the spread of data.
+* Find the range of data.
+* Observe skewness.
+* Compare different datasets.
 
 ---
 
-# Example Dataset
+# How is a Histogram Created?
 
-Suppose the marks of 40 students are grouped into intervals.
+```text
+Collect Numerical Data
+        ↓
+Divide Data into Class Intervals (Bins)
+        ↓
+Count Frequency in Each Interval
+        ↓
+Draw X-axis (Class Intervals)
+        ↓
+Draw Y-axis (Frequency)
+        ↓
+Draw Adjacent Bars (No Gaps)
+        ↓
+Histogram
+```
+
+---
+
+# Example
+
+Suppose the marks of 30 students are grouped into class intervals.
+
+### Frequency Distribution Table
 
 | Marks | Frequency |
 | ----- | --------: |
-| 0–10  |         3 |
-| 10–20 |         5 |
-| 20–30 |         8 |
-| 30–40 |        12 |
-| 40–50 |         7 |
-| 50–60 |         5 |
+| 0–10  |         2 |
+| 10–20 |         4 |
+| 20–30 |         6 |
+| 30–40 |         8 |
+| 40–50 |         5 |
+| 50–60 |         3 |
+| 60–70 |         2 |
 
 ---
 
-# Histogram
+### Histogram
 
-> **Note:** A true histogram has **touching bars** because the intervals are continuous. The chart above illustrates the frequency distribution using interval categories.
+```text
+Frequency
+ 8 |            █
+ 7 |            █
+ 6 |         █  █
+ 5 |         █  █  █
+ 4 |      █  █  █  █
+ 3 |      █  █  █  █  █
+ 2 |   █  █  █  █  █  █  █
+ 1 |   █  █  █  █  █  █  █
+   +----------------------------------->
+     0-10 10-20 20-30 30-40 40-50 50-60 60-70
+             Marks (Class Intervals)
+```
 
----
+### Interpretation
 
-# How to Read the Histogram
-
-* The interval **30–40** has the highest frequency (**12**).
-* Very few students scored between **0–10**.
-* Most students scored between **20–50**.
+* The highest frequency is in the **30–40** interval.
+* Most students scored between **20 and 50**.
+* Very few students scored below **10** or above **60**.
 
 ---
 
 # Components of a Histogram
 
-| Component  | Description                              |
-| ---------- | ---------------------------------------- |
-| X-axis     | Class intervals (Bins)                   |
-| Y-axis     | Frequency                                |
-| Bars       | Represent the frequency of each interval |
-| Bars Touch | Indicates continuous data                |
+| Component  | Description                 |
+| ---------- | --------------------------- |
+| X-axis     | Class intervals (Bins)      |
+| Y-axis     | Frequency                   |
+| Bars       | Represent frequencies       |
+| Bar Height | Indicates frequency         |
+| Bins       | Intervals of numerical data |
 
 ---
 
 # Characteristics of a Histogram
 
 * Used for **continuous numerical data**.
-* Bars **touch each other**.
-* X-axis represents **class intervals (bins)**.
-* Y-axis represents **frequency**.
-* Shows the **distribution** of data.
-
----
-
-# When to Use a Histogram
-
-Use a histogram for:
-
-* Student marks
-* Heights of people
-* Weights of people
-* Ages
-* Income distribution
-* Temperature readings
-* Salary distribution
-
----
-
-# When Not to Use a Histogram
-
-Do **not** use a histogram for categorical data such as:
-
-* Department names
-* Product names
-* Countries
-* Cities
-
-For categorical data, use a **Bar Graph** instead.
+* Bars **touch each other** (no gaps).
+* Displays the frequency distribution.
+* Width of each bar represents the class interval.
+* Height represents the frequency.
 
 ---
 
 # Histogram vs Bar Graph
 
-| Histogram                 | Bar Graph                  |
-| ------------------------- | -------------------------- |
-| Continuous numerical data | Categorical data           |
-| Bars touch each other     | Bars have gaps             |
-| X-axis contains intervals | X-axis contains categories |
-| Shows data distribution   | Compares categories        |
-
-### Example
-
-**Histogram**
-
-| Marks | Frequency |
-| ----- | --------: |
-| 0–10  |         5 |
-| 10–20 |         8 |
-
-**Bar Graph**
-
-| Department | Students |
-| ---------- | -------: |
-| IT         |       40 |
-| HR         |       30 |
+| Histogram                          | Bar Graph                     |
+| ---------------------------------- | ----------------------------- |
+| Used for continuous numerical data | Used for categorical data     |
+| Bars touch each other              | Bars have spaces between them |
+| X-axis shows class intervals       | X-axis shows categories       |
+| Shows data distribution            | Compares categories           |
 
 ---
 
-# Histogram vs Frequency Table
+# Shape of a Histogram
 
-| Frequency Table             | Histogram                    |
-| --------------------------- | ---------------------------- |
-| Displays numbers in a table | Displays numbers graphically |
-| Easier for calculations     | Easier to visualize patterns |
-| No graphical view           | Shows distribution visually  |
+## 1. Symmetric Distribution (Normal Distribution)
+
+```text
+      █
+    ████
+  ███████
+██████████
+  ███████
+    ████
+      █
+```
+
+* Left and right sides are nearly equal.
+* Mean ≈ Median ≈ Mode.
 
 ---
 
-# Python Example (Matplotlib)
+## 2. Right-Skewed Distribution
+
+```text
+████████
+██████
+████
+██
+█
+```
+
+* Long tail on the **right**.
+* Most values are small.
+
+---
+
+## 3. Left-Skewed Distribution
+
+```text
+      █
+     ██
+   ████
+ ██████
+████████
+```
+
+* Long tail on the **left**.
+* Most values are large.
+
+---
+
+## 4. Uniform Distribution
+
+```text
+████
+████
+████
+████
+████
+```
+
+* Frequencies are approximately equal.
+
+---
+
+# Creating a Histogram in Python
+
+### Using Matplotlib
 
 ```python
 import matplotlib.pyplot as plt
 
-marks = [12,18,22,25,27,30,35,38,40,45,50,52]
+marks = [45,50,55,60,65,70,75,80,85,90,
+         50,55,60,65,70,75,80,85,90,95]
 
-plt.hist(marks, bins=6)
+plt.hist(marks, bins=5)
+
 plt.title("Histogram of Marks")
 plt.xlabel("Marks")
 plt.ylabel("Frequency")
+
 plt.show()
 ```
 
 ---
 
-# Pandas Example
+### Using Seaborn
 
 ```python
-import pandas as pd
+import seaborn as sns
 import matplotlib.pyplot as plt
 
-df = pd.DataFrame({
-    "Marks":[12,18,22,25,27,30,35,38,40,45,50,52]
-})
+marks = [45,50,55,60,65,70,75,80,85,90,
+         50,55,60,65,70,75,80,85,90,95]
 
-df["Marks"].plot(kind="hist", bins=6)
+sns.histplot(marks, bins=5)
 
-plt.xlabel("Marks")
+plt.title("Histogram of Marks")
 plt.show()
 ```
+
+---
+
+### Histogram with Density Curve
+
+```python
+sns.histplot(marks, bins=5, kde=True)
+```
+
+This displays both the **Histogram** and the **Density Curve**.
 
 ---
 
 # Applications
 
-Histograms are used in:
+Histograms are widely used in:
 
-* Student marks analysis
-* Population age distribution
-* Salary distribution
-* Medical data analysis
-* Quality control
-* Weather analysis
+* Statistics
+* Data Science
+* Machine Learning
+* Quality Control
+* Business Analytics
+* Medical Research
+* Finance
+* Manufacturing
 
 ---
 
-# Applications in Data Science
+# Advantages
 
-* Exploratory Data Analysis (EDA)
-* Detecting skewness
-* Detecting outliers
-* Understanding feature distributions
-* Data preprocessing
-* Machine Learning feature analysis
+* Easy to understand data distribution.
+* Helps detect outliers.
+* Shows skewness and spread.
+* Useful for identifying patterns.
+* Supports Exploratory Data Analysis (EDA).
+
+---
+
+# Limitations
+
+* Not suitable for categorical data.
+* Different bin sizes may change the appearance.
+* Exact values cannot be determined from the graph.
 
 ---
 
 # Interview Questions
 
-| Question                                                    | Answer                                                                                                                 |
-| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| What is a Histogram?                                        | A graph that shows the frequency distribution of continuous numerical data.                                            |
-| What type of data is used in a histogram?                   | Continuous numerical data.                                                                                             |
-| Do histogram bars touch each other?                         | Yes.                                                                                                                   |
-| What does the X-axis represent?                             | Class intervals (bins).                                                                                                |
-| What is the difference between a histogram and a bar graph? | Histogram is for continuous data with touching bars, while a bar graph is for categorical data with gaps between bars. |
+| Question                                       | Answer                                                                   |
+| ---------------------------------------------- | ------------------------------------------------------------------------ |
+| What is a Histogram?                           | A graph showing the frequency distribution of continuous numerical data. |
+| Which type of data is used in a Histogram?     | Continuous numerical data.                                               |
+| Why do Histogram bars touch each other?        | Because the class intervals are continuous.                              |
+| Which Matplotlib function creates a Histogram? | `plt.hist()`                                                             |
+| Which Seaborn function creates a Histogram?    | `sns.histplot()`                                                         |
 
 ---
 
 # Quick Cheat Sheet
 
-| Feature   | Description                 |
-| --------- | --------------------------- |
-| Purpose   | Show frequency distribution |
-| Data Type | Continuous numerical data   |
-| X-axis    | Class intervals (bins)      |
-| Y-axis    | Frequency                   |
-| Bars      | Touch each other            |
-| Best For  | Distribution analysis       |
+| Feature    | Description                 |
+| ---------- | --------------------------- |
+| Purpose    | Show frequency distribution |
+| Data Type  | Continuous numerical data   |
+| X-axis     | Class intervals (Bins)      |
+| Y-axis     | Frequency                   |
+| Bars       | Touch each other            |
+| Matplotlib | `plt.hist()`                |
+| Seaborn    | `sns.histplot()`            |
 
 ---
 
 # Key Points to Remember
 
-* **Histogram = Distribution of Continuous Data**
-* It uses **touching bars** because the data is continuous.
-* The X-axis contains **class intervals (bins)**.
-* The Y-axis contains **frequencies**.
-* Histograms are widely used in **Statistics**, **Data Science**, **Machine Learning**, and **Business Analytics** to understand data distributions before building models.
+* A **Histogram** represents the **frequency distribution of continuous numerical data**.
+* The **X-axis** shows **class intervals (bins)**.
+* The **Y-axis** shows the **frequency**.
+* **Bars touch each other**, indicating continuous data.
+* It helps identify:
 
-### Easy Way to Remember
+  * Distribution shape
+  * Skewness
+  * Outliers
+  * Spread
+  * Central tendency
+* Common Python functions:
 
-* **Histogram → Continuous Data → Bars Touch**
-* **Bar Graph → Categorical Data → Bars Have Gaps**
+  * **Matplotlib:** `plt.hist()`
+  * **Seaborn:** `sns.histplot()`
 
-# What are Measures of Central Tendency?
+---
 
-**Measures of Central Tendency** are statistical measures used to determine the **central or typical value** of a dataset. They summarize a large set of data into a **single representative value**, making it easier to understand and compare datasets.
+# Easy Way to Remember
 
-It answers the question:
+| Graph          | Remember As                                            |
+| -------------- | ------------------------------------------------------ |
+| **Histogram**  | 📶 Shows the distribution of continuous numerical data |
+| **Bar Graph**  | 📊 Compares categorical data                           |
+| **Line Graph** | 📈 Shows trends over time                              |
+| **Pie Chart**  | 🥧 Shows percentages of a whole                        |
 
-> **"What is the central or average value of this dataset?"**
+# What is Measures of Central Tendency?
+
+**Measures of Central Tendency** are statistical measures that identify the **central or typical value** of a dataset. They describe the point around which the data values are concentrated.
+
+These measures help summarize a large dataset using a **single representative value**.
 
 ---
 
 # Simple Definition
 
-> **Measures of Central Tendency are statistical measures that represent the center or typical value of a dataset.**
+> **Measures of Central Tendency are statistical measures used to find the central or average value of a dataset.**
 
 ---
 
 # Why Do We Use Measures of Central Tendency?
 
-They help us to:
+Measures of Central Tendency help us to:
 
 * Summarize large datasets.
-* Find the central value.
+* Find the typical or central value.
 * Compare different datasets.
-* Understand the overall trend of data.
-* Prepare data for statistical analysis and machine learning.
+* Understand the overall distribution of data.
+* Support statistical analysis and decision-making.
 
 ---
 
@@ -2325,27 +2770,34 @@ They help us to:
 
 There are **three main measures**:
 
-| Measure    | Meaning                         |
-| ---------- | ------------------------------- |
-| **Mean**   | Average value                   |
-| **Median** | Middle value after sorting      |
-| **Mode**   | Most frequently occurring value |
+| Measure    | Meaning                               |
+| ---------- | ------------------------------------- |
+| **Mean**   | Arithmetic average of all values      |
+| **Median** | Middle value after arranging the data |
+| **Mode**   | Most frequently occurring value       |
 
 ---
 
-# Example Dataset
-
-Suppose the marks of 7 students are:
+# Overview
 
 ```text
-40, 50, 60, 70, 80, 90, 100
+Measures of Central Tendency
+            │
+   ┌────────┼────────┐
+   │        │        │
+ Mean     Median    Mode
+Average   Middle   Most Frequent
 ```
 
 ---
 
-## 1. Mean (Average)
+# 1. Mean
 
-The **Mean** is calculated by adding all values and dividing by the total number of observations.
+## What is Mean?
+
+The **Mean** is the **sum of all observations divided by the total number of observations**.
+
+It is the most commonly used measure of central tendency.
 
 ### Formula
 
@@ -2355,96 +2807,159 @@ The **Mean** is calculated by adding all values and dividing by the total number
 
 Where:
 
-* **ΣX** = Sum of all values
-* **N** = Number of observations
-
-### Calculation
-
-[
-\text{Mean}=\frac{40+50+60+70+80+90+100}{7}
-]
-
-[
-=\frac{490}{7}=70
-]
-
-**Mean = 70**
+* **ΣX** = Sum of all observations
+* **N** = Total number of observations
 
 ---
 
-## 2. Median
-
-The **Median** is the **middle value** after arranging the data in ascending or descending order.
+### Example
 
 Dataset:
 
 ```text
-40, 50, 60, 70, 80, 90, 100
+10, 20, 30, 40, 50
 ```
 
-Middle value = **70**
+Calculation:
 
-**Median = 70**
+[
+\text{Mean}=\frac{10+20+30+40+50}{5}
+=\frac{150}{5}=30
+]
+
+**Mean = 30**
 
 ---
 
-## 3. Mode
+# 2. Median
 
-The **Mode** is the value that appears **most frequently**.
+## What is Median?
 
-Example:
+The **Median** is the **middle value** of a dataset after arranging the data in ascending or descending order.
+
+### Steps
+
+1. Arrange the data.
+2. Find the middle value.
+
+---
+
+### Example 1 (Odd Number of Values)
+
+Dataset:
 
 ```text
-10, 20, 20, 30, 40, 40, 40, 50
+5, 10, 15, 20, 25
 ```
 
-The value **40** appears **3 times**, more than any other value.
+Middle value = **15**
 
-**Mode = 40**
-
----
-
-# Comparison Table
-
-| Measure | Definition            | Best Used For                           |
-| ------- | --------------------- | --------------------------------------- |
-| Mean    | Average of all values | Numerical data without extreme outliers |
-| Median  | Middle value          | Skewed data or data with outliers       |
-| Mode    | Most frequent value   | Categorical or repeated data            |
+**Median = 15**
 
 ---
 
-# Real-Life Example
+### Example 2 (Even Number of Values)
 
-Suppose the monthly salaries of employees are:
+Dataset:
 
 ```text
-25000, 28000, 30000, 32000, 35000
+10, 20, 30, 40
 ```
 
-* **Mean Salary** → Average salary
-* **Median Salary** → Middle salary
-* **Mode Salary** → Most common salary (if repeated)
+Middle two values = **20** and **30**
+
+[
+\text{Median}=\frac{20+30}{2}=25
+]
+
+**Median = 25**
 
 ---
 
-# Characteristics
+# 3. Mode
 
-| Mean                 | Median                        | Mode                                    |
-| -------------------- | ----------------------------- | --------------------------------------- |
-| Uses all values      | Uses only the middle value    | Uses the most frequent value            |
-| Affected by outliers | Not much affected by outliers | Not affected by outliers                |
-| Easy to calculate    | Requires sorted data          | May have one, more than one, or no mode |
+## What is Mode?
+
+The **Mode** is the value that appears **most frequently** in a dataset.
 
 ---
 
-# Mean vs Median vs Mode
+### Example
 
-| Mean                    | Median               | Mode                      |
-| ----------------------- | -------------------- | ------------------------- |
-| Average                 | Middle               | Most frequent             |
-| Sensitive to outliers   | Robust to outliers   | Depends on frequency      |
-| Best for symmetric data | Best for skewed data | Best for categorical data |
+Dataset:
+
+```text
+2, 3, 3, 4, 5, 5, 5, 6
+```
+
+The number **5** appears **3 times**, which is more than any other value.
+
+**Mode = 5**
+
+---
+
+# Types of Mode
+
+| Type           | Description         |
+| -------------- | ------------------- |
+| **Unimodal**   | One mode            |
+| **Bimodal**    | Two modes           |
+| **Multimodal** | More than two modes |
+| **No Mode**    | No value repeats    |
+
+---
+
+# Example Comparison
+
+Dataset:
+
+```text
+10, 20, 20, 30, 40
+```
+
+| Measure | Value |
+| ------- | ----: |
+| Mean    |    24 |
+| Median  |    20 |
+| Mode    |    20 |
+
+---
+
+# Comparison of Mean, Median and Mode
+
+| Feature                       | Mean    | Median       | Mode                |
+| ----------------------------- | ------- | ------------ | ------------------- |
+| Definition                    | Average | Middle value | Most frequent value |
+| Uses All Values               | ✅ Yes   | ❌ No         | ❌ No                |
+| Affected by Outliers          | ✅ Yes   | ❌ No         | ❌ No                |
+| Suitable for Numerical Data   | ✅ Yes   | ✅ Yes        | ✅ Yes               |
+| Suitable for Categorical Data | ❌ No    | ❌ No         | ✅ Yes               |
+
+---
+
+# When to Use Which Measure?
+
+| Situation                 | Best Measure |
+| ------------------------- | ------------ |
+| Normally distributed data | Mean         |
+| Data with outliers        | Median       |
+| Most common category      | Mode         |
+| Categorical data          | Mode         |
+
+---
+
+# Python Example
+
+```python
+import numpy as np
+from scipy import stats
+
+data = [10, 20, 20, 30, 40]
+
+print("Mean:", np.mean(data))
+print("Median:", np.median(data))
+print("Mode:", stats.mode(data, keepdims=True))
+```
 
 ---
 
@@ -2452,178 +2967,189 @@ Suppose the monthly salaries of employees are:
 
 Measures of Central Tendency are used in:
 
-* Student marks analysis
-* Salary analysis
-* Sales reports
-* Healthcare statistics
-* Business analytics
-* Financial analysis
-* Survey analysis
+* Statistics
+* Data Science
+* Machine Learning
+* Business Analytics
+* Economics
+* Finance
+* Healthcare
+* Education
+* Market Research
 
 ---
 
-# Applications in Data Science
+# Advantages
 
-Measures of Central Tendency are widely used in:
+### Mean
 
-* Exploratory Data Analysis (EDA)
-* Missing value imputation
-* Data preprocessing
-* Feature engineering
-* Data summarization
-* Machine Learning model preparation
+* Easy to calculate.
+* Uses all observations.
+* Widely used in statistics.
 
----
+### Median
 
-# Python Example
+* Not affected by outliers.
+* Suitable for skewed data.
 
-```python
-import statistics
+### Mode
 
-data = [40, 50, 60, 70, 80, 90, 100]
-
-print("Mean:", statistics.mean(data))
-print("Median:", statistics.median(data))
-print("Mode:", statistics.mode(data))
-```
+* Easy to identify.
+* Can be used for categorical data.
 
 ---
 
-# Pandas Example
+# Limitations
 
-```python
-import pandas as pd
+### Mean
 
-df = pd.DataFrame({
-    "Marks": [40, 50, 60, 70, 80, 90, 100]
-})
+* Highly affected by extreme values (outliers).
 
-print(df["Marks"].mean())
-print(df["Marks"].median())
-print(df["Marks"].mode())
-```
+### Median
+
+* Does not use all observations.
+
+### Mode
+
+* May not exist or may have multiple values.
 
 ---
 
 # Interview Questions
 
-| Question                                         | Answer                                                                |
-| ------------------------------------------------ | --------------------------------------------------------------------- |
-| What is the Measure of Central Tendency?         | A statistical measure that represents the central value of a dataset. |
-| What are the three measures of central tendency? | Mean, Median, and Mode.                                               |
-| Which measure is affected by outliers?           | Mean.                                                                 |
-| Which measure is best for skewed data?           | Median.                                                               |
-| Which measure is useful for categorical data?    | Mode.                                                                 |
+| Question                                         | Answer                                                                        |
+| ------------------------------------------------ | ----------------------------------------------------------------------------- |
+| What are Measures of Central Tendency?           | Statistical measures that identify the central or typical value of a dataset. |
+| What are the three measures of central tendency? | Mean, Median, and Mode.                                                       |
+| Which measure is affected by outliers?           | Mean.                                                                         |
+| Which measure is best for skewed data?           | Median.                                                                       |
+| Which measure can be used for categorical data?  | Mode.                                                                         |
 
 ---
 
 # Quick Cheat Sheet
 
-| Measure | Formula             | Best For                  |
-| ------- | ------------------- | ------------------------- |
-| Mean    | `ΣX / N`            | Average value             |
-| Median  | Middle value        | Skewed data               |
-| Mode    | Most frequent value | Categorical/repeated data |
+| Measure | Formula / Meaning               |
+| ------- | ------------------------------- |
+| Mean    | ΣX ÷ N                          |
+| Median  | Middle value after sorting      |
+| Mode    | Most frequently occurring value |
 
 ---
 
 # Key Points to Remember
 
-* **Measures of Central Tendency** summarize a dataset using **one representative value**.
-* There are **three main measures**:
+* **Measures of Central Tendency** describe the **center of a dataset**.
+* The three main measures are:
 
-  * **Mean** → Average
-  * **Median** → Middle value
-  * **Mode** → Most frequent value
-* **Mean** is affected by extreme values (outliers).
-* **Median** is preferred when data contains outliers or is skewed.
-* **Mode** is useful for finding the most common category or value.
-* These measures are fundamental in **Statistics**, **Data Science**, **Machine Learning**, and **Business Analytics**.
+  * **Mean** → Average of all values.
+  * **Median** → Middle value after sorting.
+  * **Mode** → Most frequently occurring value.
+* **Mean** is affected by outliers.
+* **Median** is preferred for skewed distributions or data with outliers.
+* **Mode** is useful for identifying the most common value and is the only measure applicable to categorical data.
 
-### Easy Way to Remember
+---
 
-* **Mean = Average**
-* **Median = Middle**
-* **Mode = Most Frequent**
+# Easy Way to Remember
+
+| Measure              | Remember As                             |
+| -------------------- | --------------------------------------- |
+| **Mean**             | ➗ Average of all values                 |
+| **Median**           | 📍 Middle value                         |
+| **Mode**             | ⭐ Most frequent value                   |
+| **Central Tendency** | 🎯 Center or typical value of a dataset |
 
 # What is Measure of Spread?
 
-A **Measure of Spread** (also called a **Measure of Dispersion**) is a statistical measure that describes **how spread out or scattered the data values are around the central value (Mean or Median)**.
+**Measures of Spread** (also called **Measures of Dispersion**) are statistical measures that describe **how spread out or scattered the data values are around the central value**.
 
-It tells us whether the data values are **close together** or **widely spread apart**.
+While measures of central tendency (Mean, Median, Mode) tell us the **center** of the data, measures of spread tell us **how much the data varies**.
 
 ---
 
 # Simple Definition
 
-> **A Measure of Spread is a statistical measure that describes how much the data values are spread or dispersed from the center of the dataset.**
+> **Measures of Spread are statistical measures that describe how far the data values are spread from the center of the dataset.**
 
 ---
 
 # Why Do We Use Measures of Spread?
 
-Measures of spread help us to:
+Measures of Spread help us to:
 
-* Understand the variability in data.
-* Compare two datasets.
+* Understand the variability of data.
+* Compare the consistency of different datasets.
 * Detect outliers.
-* Measure consistency.
+* Measure data dispersion.
 * Analyze data distribution.
-* Improve machine learning model performance.
+* Support statistical and machine learning analysis.
 
 ---
 
 # Example
 
-### Dataset A
+Consider two classes with the following marks.
+
+### Class A
 
 ```text
-50, 50, 50, 50, 50
+48, 49, 50, 51, 52
 ```
 
-Mean = **50**
-
-All values are the same.
-
-Spread = **0 (Very Low)**
-
----
-
-### Dataset B
+### Class B
 
 ```text
 20, 35, 50, 65, 80
 ```
 
-Mean = **50**
+Both classes have the **same Mean = 50**.
 
-Values are widely spread.
+However,
 
-Spread = **High**
+* **Class A** marks are close to the mean.
+* **Class B** marks are spread far from the mean.
 
-Although both datasets have the **same mean**, Dataset B has much greater variability.
+Therefore, **Class B has a larger spread (dispersion)**.
 
 ---
 
 # Types of Measures of Spread
 
-| Measure                       | Description                                                |
-| ----------------------------- | ---------------------------------------------------------- |
-| **Range**                     | Difference between the highest and lowest values           |
-| **Variance**                  | Average squared distance from the mean                     |
-| **Standard Deviation**        | Square root of variance                                    |
-| **Interquartile Range (IQR)** | Difference between the third and first quartiles (Q3 − Q1) |
+There are **five main measures of spread**.
+
+| Measure                           | Purpose                                         |
+| --------------------------------- | ----------------------------------------------- |
+| **Range**                         | Difference between the highest and lowest value |
+| **Interquartile Range (IQR)**     | Spread of the middle 50% of the data            |
+| **Variance**                      | Average squared deviation from the mean         |
+| **Standard Deviation**            | Average distance from the mean                  |
+| **Coefficient of Variation (CV)** | Relative measure of spread                      |
+
+---
+
+# Overview
+
+```text
+Measures of Spread
+        │
+ ┌──────┼───────────────┐
+ │      │               │
+Range  IQR      Variance & Standard Deviation
+```
 
 ---
 
 # 1. Range
 
-The **Range** is the difference between the maximum and minimum values.
+## What is Range?
+
+The **Range** is the difference between the **maximum** and **minimum** values in a dataset.
 
 ### Formula
 
 [
-\boxed{\text{Range} = \text{Maximum Value} - \text{Minimum Value}}
+\boxed{\text{Range}=\text{Maximum Value}-\text{Minimum Value}}
 ]
 
 ### Example
@@ -2634,51 +3160,28 @@ Dataset:
 10, 20, 30, 40, 50
 ```
 
-Range:
+Maximum = **50**
 
-```text
-50 − 10 = 40
-```
-
----
-
-# 2. Variance
-
-Variance measures how far each data value is from the mean.
-
-### Formula (Population)
+Minimum = **10**
 
 [
-\boxed{\sigma^2=\frac{\sum (x-\mu)^2}{N}}
+\text{Range}=50-10=40
 ]
 
-Where:
-
-* **x** = Data value
-* **μ** = Population mean
-* **N** = Number of observations
-
-A **larger variance** means the data is more spread out.
+**Range = 40**
 
 ---
 
-# 3. Standard Deviation
+# 2. Interquartile Range (IQR)
 
-Standard deviation is the **square root of the variance**.
-
-### Formula
-
-[
-\boxed{\sigma=\sqrt{\text{Variance}}}
-]
-
-It is the most commonly used measure of spread because it is expressed in the **same units as the data**.
-
----
-
-# 4. Interquartile Range (IQR)
+## What is IQR?
 
 The **Interquartile Range (IQR)** measures the spread of the **middle 50%** of the data.
+
+It is the difference between:
+
+* **Q3 (Third Quartile)**
+* **Q1 (First Quartile)**
 
 ### Formula
 
@@ -2686,355 +3189,433 @@ The **Interquartile Range (IQR)** measures the spread of the **middle 50%** of t
 \boxed{\text{IQR}=Q_3-Q_1}
 ]
 
-Where:
+### Example
 
-* **Q1** = First Quartile (25th percentile)
-* **Q3** = Third Quartile (75th percentile)
+Dataset:
 
-IQR is useful for detecting **outliers**.
+```text
+10, 20, 30, 40, 50, 60, 70
+```
+
+* Q1 = 20
+* Q3 = 60
+
+[
+IQR=60-20=40
+]
+
+**IQR = 40**
+
+---
+
+# 3. Variance
+
+## What is Variance?
+
+**Variance** measures the **average squared difference** between each data value and the mean.
+
+A larger variance indicates that the data is more spread out.
+
+### Formula (Population)
+
+[
+\boxed{\sigma^2=\frac{\sum (x-\mu)^2}{N}}
+]
+
+---
+
+# 4. Standard Deviation
+
+## What is Standard Deviation?
+
+The **Standard Deviation (SD)** measures the **average distance of data values from the mean**.
+
+It is the **square root of the variance**.
+
+### Formula
+
+[
+\boxed{\text{Standard Deviation}=\sqrt{\text{Variance}}}
+]
+
+### Interpretation
+
+* **Small SD** → Data is close to the mean.
+* **Large SD** → Data is widely spread.
+
+---
+
+# 5. Coefficient of Variation (CV)
+
+## What is Coefficient of Variation?
+
+The **Coefficient of Variation (CV)** measures the spread **relative to the mean**.
+
+It is useful for comparing datasets with different units or different means.
+
+### Formula
+
+[
+\boxed{\text{CV}=\frac{\text{Standard Deviation}}{\text{Mean}}\times100}
+]
+
+---
+
+# Example Comparison
+
+### Dataset A
+
+```text
+48, 49, 50, 51, 52
+```
+
+Mean = **50**
+
+Standard Deviation = **Small**
+
+### Dataset B
+
+```text
+20, 35, 50, 65, 80
+```
+
+Mean = **50**
+
+Standard Deviation = **Large**
+
+Although both datasets have the same mean, Dataset B has **greater variability**.
 
 ---
 
 # Comparison of Measures of Spread
 
-| Measure            | Formula                   | Best Used For                     |
-| ------------------ | ------------------------- | --------------------------------- |
-| Range              | Max − Min                 | Quick estimate of spread          |
-| Variance           | Average squared deviation | Statistical analysis              |
-| Standard Deviation | √Variance                 | Data Science & Machine Learning   |
-| IQR                | Q3 − Q1                   | Skewed data and outlier detection |
-
----
-
-# Real-Life Example
-
-Suppose two classes have the same average score (**70**).
-
-### Class A
-
-```text
-68, 69, 70, 71, 72
-```
-
-Students' marks are very close together.
-
-**Spread = Low**
-
----
-
-### Class B
-
-```text
-30, 50, 70, 90, 110
-```
-
-Students' marks vary widely.
-
-**Spread = High**
-
-Although both classes have the same average, **Class B has much greater variation**.
-
----
-
-# Applications
-
-Measures of spread are used in:
-
-* Student performance analysis
-* Salary comparison
-* Stock market analysis
-* Weather forecasting
-* Quality control
-* Medical research
-
----
-
-# Applications in Data Science
-
-Measures of spread are essential for:
-
-* Exploratory Data Analysis (EDA)
-* Outlier detection
-* Feature scaling
-* Data normalization
-* Model evaluation
-* Risk analysis
+| Measure                  | Formula                   | Purpose                  |
+| ------------------------ | ------------------------- | ------------------------ |
+| Range                    | Max − Min                 | Overall spread           |
+| IQR                      | Q3 − Q1                   | Middle 50% spread        |
+| Variance                 | Average squared deviation | Measure variability      |
+| Standard Deviation       | √Variance                 | Average spread from mean |
+| Coefficient of Variation | (SD / Mean) × 100         | Relative variability     |
 
 ---
 
 # Python Example
 
 ```python
-import statistics
+import numpy as np
 
 data = [10, 20, 30, 40, 50]
 
 print("Range:", max(data) - min(data))
-print("Variance:", statistics.variance(data))
-print("Standard Deviation:", statistics.stdev(data))
+print("Variance:", np.var(data))
+print("Standard Deviation:", np.std(data))
+print("IQR:", np.percentile(data, 75) - np.percentile(data, 25))
 ```
 
 ---
 
-# Pandas Example
+# Applications
 
-```python
-import pandas as pd
+Measures of Spread are used in:
 
-df = pd.DataFrame({
-    "Marks": [10, 20, 30, 40, 50]
-})
+* Statistics
+* Data Science
+* Machine Learning
+* Finance
+* Healthcare
+* Quality Control
+* Manufacturing
+* Business Analytics
+* Risk Analysis
 
-print("Range:", df["Marks"].max() - df["Marks"].min())
-print("Variance:", df["Marks"].var())
-print("Standard Deviation:", df["Marks"].std())
-```
+---
+
+# Advantages
+
+* Describes variability in data.
+* Helps compare datasets.
+* Detects outliers.
+* Supports statistical analysis.
+* Improves understanding of data distribution.
+
+---
+
+# Limitations
+
+* Range is affected by extreme values.
+* Variance is expressed in squared units, making interpretation less intuitive.
+* Standard deviation assumes numerical data.
+* Some measures are sensitive to outliers.
 
 ---
 
 # Interview Questions
 
-| Question                                             | Answer                                                                   |
-| ---------------------------------------------------- | ------------------------------------------------------------------------ |
-| What is a Measure of Spread?                         | A statistical measure that describes how spread out the data values are. |
-| What is another name for Measure of Spread?          | Measure of Dispersion.                                                   |
-| What are the main measures of spread?                | Range, Variance, Standard Deviation, and IQR.                            |
-| Which measure is most commonly used in Data Science? | Standard Deviation.                                                      |
-| Which measure is useful for detecting outliers?      | Interquartile Range (IQR).                                               |
+| Question                                                          | Answer                                                                                         |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| What is a Measure of Spread?                                      | A statistical measure that describes how widely data values are distributed around the center. |
+| What are the main measures of spread?                             | Range, IQR, Variance, Standard Deviation, and Coefficient of Variation.                        |
+| Which measure is most affected by outliers?                       | Range.                                                                                         |
+| Which measure represents the spread of the middle 50% of data?    | Interquartile Range (IQR).                                                                     |
+| What is the relationship between Variance and Standard Deviation? | Standard Deviation is the square root of Variance.                                             |
 
 ---
 
 # Quick Cheat Sheet
 
-| Measure            | Formula                                 |
-| ------------------ | --------------------------------------- |
-| Range              | Max − Min                               |
-| Variance           | Average squared deviation from the mean |
-| Standard Deviation | √Variance                               |
-| IQR                | Q3 − Q1                                 |
+| Measure                  | Formula                                 |
+| ------------------------ | --------------------------------------- |
+| Range                    | Max − Min                               |
+| IQR                      | Q3 − Q1                                 |
+| Variance                 | Average squared deviation from the mean |
+| Standard Deviation       | √Variance                               |
+| Coefficient of Variation | (SD ÷ Mean) × 100                       |
 
 ---
 
 # Key Points to Remember
 
-* **Measure of Spread = Measure of Dispersion**
-* It describes **how far data values are spread around the center**.
-* The four important measures are:
+* **Measures of Spread** describe **how dispersed the data values are**.
+* They complement **Measures of Central Tendency** by explaining the variability of data.
+* The five main measures are:
 
-  * **Range** → Quick measure of spread.
+  * **Range** → Difference between maximum and minimum values.
+  * **Interquartile Range (IQR)** → Spread of the middle 50% of data.
   * **Variance** → Average squared deviation from the mean.
-  * **Standard Deviation** → Most important measure in Data Science.
-  * **Interquartile Range (IQR)** → Measures the spread of the middle 50% of the data and helps detect outliers.
-* Measures of spread are widely used in **Statistics**, **Data Science**, **Machine Learning**, **Finance**, and **Business Analytics**.
+  * **Standard Deviation** → Average distance from the mean.
+  * **Coefficient of Variation (CV)** → Relative spread compared to the mean.
+* **Small spread** means data values are close together.
+* **Large spread** means data values are widely dispersed.
 
-### Easy Way to Remember
+---
 
-* **Central Tendency → Where is the center?**
-* **Measure of Spread → How far are the data values from the center?**
+# Easy Way to Remember
+
+| Measure                      | Remember As                        |
+| ---------------------------- | ---------------------------------- |
+| **Range**                    | 📏 Total spread (Highest − Lowest) |
+| **IQR**                      | 📦 Spread of the middle 50%        |
+| **Variance**                 | 📊 Average squared variation       |
+| **Standard Deviation**       | 📍 Average distance from the mean  |
+| **Coefficient of Variation** | 📈 Relative variability            |
 
 # What are Outliers?
 
-**Outliers** are data values that are **significantly different** from the rest of the observations in a dataset. They are unusually **very high** or **very low** compared to other data points.
+**Outliers** are data values that are **significantly different** from the rest of the observations in a dataset. They are unusually **high** or **low** compared to most of the data.
 
-Outliers can occur due to:
-
-* Data entry errors
-* Measurement errors
-* Experimental errors
-* Natural variations in the data
+Outliers can occur due to **measurement errors, data entry mistakes, or genuine extreme observations**.
 
 ---
 
 # Simple Definition
 
-> **An Outlier is a data value that is much larger or much smaller than the other values in a dataset.**
+> **Outliers are observations that lie far away from the majority of the data values in a dataset.**
 
 ---
 
-# Why Do We Identify Outliers?
+# Why Do We Study Outliers?
 
-Identifying outliers helps us to:
+Outliers help us to:
 
 * Detect unusual observations.
-* Find data entry or measurement errors.
+* Identify data entry or measurement errors.
+* Understand data variability.
 * Improve data quality.
-* Improve Machine Learning model performance.
-* Make more accurate statistical analyses.
+* Build more accurate Machine Learning models.
+* Make better statistical decisions.
 
 ---
 
-# Example 1: Dataset Without Outlier
+# Example
+
+Consider the following dataset:
 
 ```text
-10, 12, 14, 15, 16, 18, 20
-```
-
-All values are close to each other.
-
-**Outliers = None**
-
----
-
-# Example 2: Dataset With Outlier
-
-```text
-10, 12, 14, 15, 16, 18, 100
+10, 12, 13, 15, 16, 18, 20, 95
 ```
 
 Here,
 
-* Most values are between **10 and 18**
-* **100** is much larger than the rest
+* Most values lie between **10 and 20**.
+* **95** is much larger than the other values.
 
-**Outlier = 100**
+Therefore,
+
+**95 is an Outlier.**
 
 ---
 
-# Visual Representation
+# Another Example
 
-### Without Outlier
-
-```text
-10  12  14  15  16  18  20
-```
-
-### With Outlier
+Dataset:
 
 ```text
-10  12  14  15  16  18                     100
+55, 57, 60, 62, 61, 59, 58, 120
 ```
 
-The value **100** is far away from the other observations.
+Most values are around **60**, while **120** is much larger than the rest.
+
+**120 is an Outlier.**
 
 ---
 
 # Types of Outliers
 
-| Type         | Description           |
-| ------------ | --------------------- |
-| Low Outlier  | Extremely small value |
-| High Outlier | Extremely large value |
+| Type              | Description                                                |
+| ----------------- | ---------------------------------------------------------- |
+| **Lower Outlier** | An unusually small value compared to the rest of the data. |
+| **Upper Outlier** | An unusually large value compared to the rest of the data. |
+
+### Example
+
+```text
+5, 10, 12, 13, 14, 15, 18, 100
+```
+
+* **5** → Lower Outlier
+* **100** → Upper Outlier
+
+---
+
+# Causes of Outliers
+
+Outliers may occur because of:
+
+* Data entry mistakes
+* Measurement errors
+* Equipment malfunction
+* Natural variation in data
+* Rare or unusual events
 
 ---
 
 # How to Detect Outliers?
 
-## Method 1: Using the IQR (Interquartile Range)
+The most common methods are:
 
-The **IQR method** is the most common technique.
+| Method                    | Description                     |
+| ------------------------- | ------------------------------- |
+| Box Plot                  | Visual method                   |
+| IQR (Interquartile Range) | Most common statistical method  |
+| Z-Score                   | Measures distance from the mean |
+| Scatter Plot              | Visual detection                |
 
-### Step 1: Find Quartiles
+---
 
-* **Q1** = 25th Percentile
-* **Q3** = 75th Percentile
+# 1. Detecting Outliers Using IQR
 
-### Step 2: Calculate IQR
+### Step 1
+
+Calculate:
+
+* Q1 (First Quartile)
+* Q3 (Third Quartile)
+
+### Step 2
+
+Find the Interquartile Range (IQR):
 
 [
 \boxed{\text{IQR} = Q_3 - Q_1}
 ]
 
-### Step 3: Calculate Limits
+### Step 3
 
-**Lower Limit**
+Calculate the limits:
 
 [
-\boxed{Q_1 - 1.5 \times IQR}
+\boxed{\text{Lower Limit}=Q_1-1.5\times IQR}
 ]
 
-**Upper Limit**
-
 [
-\boxed{Q_3 + 1.5 \times IQR}
+\boxed{\text{Upper Limit}=Q_3+1.5\times IQR}
 ]
 
 Any value:
 
-* **Less than the Lower Limit**
-* **Greater than the Upper Limit**
-
-is considered an **Outlier**.
+* Below the **Lower Limit** → Lower Outlier
+* Above the **Upper Limit** → Upper Outlier
 
 ---
 
-# Example Using IQR
+# Example
 
 Dataset:
 
 ```text
-5, 7, 8, 9, 10, 12, 13, 15, 100
+10, 12, 13, 15, 16, 18, 20, 95
 ```
 
 Suppose:
 
-```text
-Q1 = 8
-Q3 = 13
-```
+* Q1 = 12.5
+* Q3 = 19
 
-Then
-
-```text
-IQR = 13 − 8 = 5
-```
-
-Lower Limit
-
-```text
-8 − (1.5 × 5) = 0.5
-```
-
-Upper Limit
-
-```text
-13 + (1.5 × 5) = 20.5
-```
-
-Since
-
-```text
-100 > 20.5
-```
-
-**100 is an Outlier.**
-
----
-
-## Method 2: Using Z-Score
-
-The **Z-score** measures how many standard deviations a value is away from the mean.
-
-### Formula
+Then,
 
 [
-\boxed{Z=\frac{X-\mu}{\sigma}}
+IQR = 19 - 12.5 = 6.5
 ]
 
-Where:
+Upper Limit:
 
-* **X** = Data value
-* **μ** = Mean
-* **σ** = Standard deviation
+[
+19 + (1.5 \times 6.5)=28.75
+]
 
-### Rule
-
-| Z-score           | Interpretation |
-| ----------------- | -------------- |
-| Between -3 and +3 | Normal value   |
-| Less than -3      | Outlier        |
-| Greater than +3   | Outlier        |
+Since **95 > 28.75**, **95 is an Outlier**.
 
 ---
 
-# Effects of Outliers
+# 2. Detecting Outliers Using a Box Plot
 
-Outliers can:
+A **Box Plot** visually displays outliers.
 
-* Increase or decrease the **Mean**.
-* Increase the **Variance**.
-* Increase the **Standard Deviation**.
-* Reduce Machine Learning model accuracy.
-* Affect statistical conclusions.
+```text
+      •  ← Outlier
+
+|-----|======|------|
+```
+
+* The box represents the middle **50%** of the data.
+* Points outside the whiskers are **outliers**.
+
+---
+
+# Effect of Outliers
+
+Outliers can affect statistical measures differently.
+
+| Measure            | Affected by Outliers? |
+| ------------------ | --------------------- |
+| Mean               | ✅ Yes                 |
+| Median             | ❌ No (or very little) |
+| Mode               | ❌ No                  |
+| Range              | ✅ Yes                 |
+| Standard Deviation | ✅ Yes                 |
+| Variance           | ✅ Yes                 |
+
+---
+
+# Example
+
+### Dataset A
+
+```text
+10, 12, 13, 15, 16
+```
+
+Mean = **13.2**
+
+### Dataset B
+
+```text
+10, 12, 13, 15, 100
+```
+
+Mean = **30**
+
+Only one extreme value (**100**) changes the mean significantly.
 
 ---
 
@@ -3042,13 +3623,12 @@ Outliers can:
 
 Common techniques include:
 
-| Method                  | Description                             |
-| ----------------------- | --------------------------------------- |
-| Remove                  | Delete incorrect or irrelevant outliers |
-| Replace                 | Replace with Mean or Median             |
-| Capping (Winsorization) | Limit extreme values                    |
-| Transformation          | Apply log or square root transformation |
-| Keep                    | If the value is genuine and important   |
+* Remove incorrect outliers.
+* Correct data entry errors.
+* Replace with median or mean (if appropriate).
+* Cap extreme values (Winsorization).
+* Apply data transformations (e.g., log transformation).
+* Keep them if they represent genuine observations.
 
 ---
 
@@ -3059,38 +3639,32 @@ Common techniques include:
 ```python
 import pandas as pd
 
-df = pd.DataFrame({
-    "Marks": [10,12,14,15,16,18,100]
-})
+data = pd.Series([10,12,13,15,16,18,20,95])
 
-Q1 = df["Marks"].quantile(0.25)
-Q3 = df["Marks"].quantile(0.75)
+Q1 = data.quantile(0.25)
+Q3 = data.quantile(0.75)
 
 IQR = Q3 - Q1
 
 lower = Q1 - 1.5 * IQR
 upper = Q3 + 1.5 * IQR
 
-outliers = df[(df["Marks"] < lower) | (df["Marks"] > upper)]
+outliers = data[(data < lower) | (data > upper)]
 
 print(outliers)
 ```
 
 ---
 
-# Python Example (Z-Score)
+### Visualize Using Seaborn
 
 ```python
-from scipy.stats import zscore
-import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-df = pd.DataFrame({
-    "Marks": [10,12,14,15,16,18,100]
-})
+sns.boxplot(x=data)
 
-df["Z-Score"] = zscore(df["Marks"])
-
-print(df)
+plt.show()
 ```
 
 ---
@@ -3099,948 +3673,405 @@ print(df)
 
 Outlier detection is used in:
 
-* Fraud detection
-* Credit card transaction analysis
-* Medical diagnosis
-* Manufacturing quality control
-* Stock market analysis
-* Sensor monitoring
+* Data Cleaning
+* Statistics
+* Data Science
+* Machine Learning
+* Fraud Detection
+* Medical Diagnosis
+* Financial Analysis
+* Quality Control
+* Network Security
 
 ---
 
-# Applications in Data Science
+# Advantages
 
-Outlier detection is important for:
+* Detects unusual observations.
+* Improves data quality.
+* Increases model accuracy.
+* Helps identify errors and anomalies.
 
-* Data Cleaning
-* Exploratory Data Analysis (EDA)
-* Feature Engineering
-* Model Training
-* Anomaly Detection
-* Data Preprocessing
+---
+
+# Limitations
+
+* Not every outlier is an error.
+* Removing valid outliers may lose important information.
+* Different detection methods may produce different results.
 
 ---
 
 # Interview Questions
 
-| Question                                                        | Answer                                                             |
-| --------------------------------------------------------------- | ------------------------------------------------------------------ |
-| What is an Outlier?                                             | A value that is significantly different from the rest of the data. |
-| Which method is most commonly used to detect outliers?          | IQR (Interquartile Range) method.                                  |
-| What is the formula for IQR?                                    | `IQR = Q3 − Q1`                                                    |
-| What are the IQR limits?                                        | Lower: `Q1 − 1.5 × IQR`, Upper: `Q3 + 1.5 × IQR`                   |
-| Which measure of central tendency is most affected by outliers? | Mean.                                                              |
+| Question                                                         | Answer                                                             |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------ |
+| What is an Outlier?                                              | A value that is significantly different from the rest of the data. |
+| Which graph is commonly used to detect outliers?                 | Box Plot.                                                          |
+| Which statistical method is commonly used to detect outliers?    | IQR (Interquartile Range).                                         |
+| Are outliers always errors?                                      | No, they may represent genuine extreme observations.               |
+| Which measure of central tendency is least affected by outliers? | Median.                                                            |
 
 ---
 
 # Quick Cheat Sheet
 
-| Concept     | Formula                           |
-| ----------- | --------------------------------- |
-| IQR         | `Q3 − Q1`                         |
-| Lower Limit | `Q1 − 1.5 × IQR`                  |
-| Upper Limit | `Q3 + 1.5 × IQR`                  |
-| Z-Score     | `(X − Mean) / Standard Deviation` |
+| Concept          | Description                    |
+| ---------------- | ------------------------------ |
+| Outlier          | An unusually high or low value |
+| Lower Outlier    | Value below the lower limit    |
+| Upper Outlier    | Value above the upper limit    |
+| Detection Method | IQR, Box Plot, Z-Score         |
+| Visualization    | Box Plot                       |
 
 ---
 
 # Key Points to Remember
 
-* **Outliers** are unusually **high or low** values compared to the rest of the dataset.
-* They may result from **errors** or represent **valid but rare observations**.
-* The two most common detection methods are:
-
-  * **IQR Method** (most widely used)
-  * **Z-Score Method**
+* **Outliers** are values that are **far from the rest of the dataset**.
+* They can be **extremely high** or **extremely low**.
+* The most common method to detect outliers is the **IQR (Interquartile Range)** method.
+* A **Box Plot** is the most common graph used to visualize outliers.
 * Outliers can significantly affect:
 
-  * Mean
-  * Variance
-  * Standard Deviation
-  * Machine Learning model performance
-* Before removing outliers, determine whether they are **errors** or **meaningful observations**.
+  * **Mean**
+  * **Range**
+  * **Variance**
+  * **Standard Deviation**
+* **Median** is generally more robust than the mean when outliers are present.
 
-### Easy Way to Remember
+---
 
-* **Normal Values** → Close to each other.
-* **Outlier** → A value far away from the rest.
-* **IQR Method** → Best for skewed data.
-* **Z-Score Method** → Best for approximately normally distributed data.
+# Easy Way to Remember
 
-# What is Data Distribution?
+| Concept           | Remember As                                   |
+| ----------------- | --------------------------------------------- |
+| **Outlier**       | 📍 A value far away from the rest of the data |
+| **Upper Outlier** | ⬆️ Unusually high value                       |
+| **Lower Outlier** | ⬇️ Unusually low value                        |
+| **IQR Method**    | 📏 Detects outliers using quartiles           |
+| **Box Plot**      | 📦 Best graph for identifying outliers        |
 
-**Data Distribution** describes **how the values in a dataset are spread or distributed** over a range of values. It shows the **pattern, shape, and frequency** of the data.
+# What is the Five-Number Summary?
 
-In simple words, it tells us:
+The **Five-Number Summary** is a statistical summary that describes the **distribution of a dataset** using **five important values**. These values provide information about the **center, spread, and overall distribution** of the data.
 
-* Where most of the data values are located.
-* How the values are spread.
-* Whether the data is symmetric or skewed.
-* Whether there are any outliers.
+It is widely used in **Statistics**, **Data Science**, and **Machine Learning** for data analysis and is the basis for creating a **Box Plot**.
 
 ---
 
 # Simple Definition
 
-> **Data Distribution is the way data values are spread across different values or intervals in a dataset.**
+> **The Five-Number Summary is a set of five values—Minimum, First Quartile (Q1), Median (Q2), Third Quartile (Q3), and Maximum—that summarize the distribution of a dataset.**
 
 ---
 
-# Why Do We Study Data Distribution?
+# Why Do We Use the Five-Number Summary?
 
-Studying data distribution helps us to:
+The Five-Number Summary helps us to:
 
-* Understand the nature of the data.
-* Identify patterns and trends.
+* Understand the distribution of data.
+* Measure the spread of data.
+* Identify the center of the data.
 * Detect outliers.
-* Choose appropriate statistical methods.
-* Select suitable Machine Learning algorithms.
-* Make better business decisions.
+* Create Box Plots.
+* Compare different datasets.
 
 ---
 
-# Example Dataset 1
+# The Five Numbers
 
-Marks of students:
+| Measure                 | Meaning                               |
+| ----------------------- | ------------------------------------- |
+| **Minimum**             | Smallest value in the dataset         |
+| **Q1 (First Quartile)** | 25% of the data lies below this value |
+| **Median (Q2)**         | Middle value of the dataset           |
+| **Q3 (Third Quartile)** | 75% of the data lies below this value |
+| **Maximum**             | Largest value in the dataset          |
+
+---
+
+# Overview
 
 ```text
-40, 45, 48, 50, 52, 55, 58, 60, 62
+Five-Number Summary
+
+Minimum → Q1 → Median → Q3 → Maximum
+   │        │        │        │        │
+ Smallest   25%     50%      75%    Largest
 ```
-
-Most marks are around **50–60**.
-
-The data is **fairly evenly distributed**.
 
 ---
 
-# Example Dataset 2
+# Example
+
+Consider the dataset:
 
 ```text
-40, 42, 45, 46, 48, 50, 95
+5, 7, 9, 12, 15, 18, 20, 22, 25
 ```
 
-Here,
+### Step 1: Arrange the Data
 
-* Most values are between **40–50**
-* One value (**95**) is much larger.
-
-This distribution contains an **outlier**.
-
----
-
-# How is Data Distribution Represented?
-
-Data distribution can be represented using:
-
-| Method                   | Purpose                        |
-| ------------------------ | ------------------------------ |
-| Histogram                | Shows frequency distribution   |
-| Frequency Table          | Shows count of observations    |
-| Relative Frequency Table | Shows proportion or percentage |
-| Density Plot             | Shows data density             |
-| Box Plot                 | Shows spread and outliers      |
-| Ogive                    | Shows cumulative frequency     |
+```text
+5, 7, 9, 12, 15, 18, 20, 22, 25
+```
 
 ---
 
-# Types of Data Distribution
+### Step 2: Find the Five Numbers
 
-## 1. Normal Distribution
+| Measure     | Value |
+| ----------- | ----: |
+| Minimum     |     5 |
+| Q1          |     8 |
+| Median (Q2) |    15 |
+| Q3          |    21 |
+| Maximum     |    25 |
 
-A **Normal Distribution** is a symmetric, bell-shaped distribution where most values are concentrated around the mean.
+---
 
-### Characteristics
+# Understanding Each Value
 
-* Bell-shaped curve
-* Mean = Median = Mode
-* Symmetrical
-* No skewness
+### 1. Minimum
+
+The **smallest observation** in the dataset.
 
 Example:
 
 ```text
-            *
-          *   *
-        *       *
-      *           *
-    *               *
+5, 7, 9, 12, 15
 ```
+
+Minimum = **5**
 
 ---
 
-## 2. Positively Skewed Distribution (Right Skewed)
+### 2. First Quartile (Q1)
 
-Most values are on the **left**, with a long tail extending to the **right**.
-
-### Characteristics
-
-* Tail points to the right.
-* Mean > Median > Mode
+* Divides the **lowest 25%** of the data.
+* Also called the **25th percentile**.
 
 Example:
 
 ```text
-*******
-******
-*****
-****
-***
-**
-*
-        ---------->
+5, 7, 9, 12
 ```
 
-Example data:
-
-```text
-20, 22, 23, 24, 25, 26, 80
-```
+Q1 = **8** (average of 7 and 9)
 
 ---
 
-## 3. Negatively Skewed Distribution (Left Skewed)
+### 3. Median (Q2)
 
-Most values are on the **right**, with a long tail extending to the **left**.
-
-### Characteristics
-
-* Tail points to the left.
-* Mean < Median < Mode
+* Middle value of the dataset.
+* Divides the data into two equal halves.
+* Also called the **50th percentile**.
 
 Example:
 
 ```text
-<----------
-        *
-       **
-      ***
-    ****
-  ******
-********
+5, 7, 9, 12, 15, 18, 20, 22, 25
 ```
 
-Example data:
-
-```text
-10, 50, 52, 54, 55, 56, 58
-```
+Median = **15**
 
 ---
 
-## 4. Uniform Distribution
+### 4. Third Quartile (Q3)
 
-Every value has nearly the **same frequency**.
+* Divides the **highest 25%** of the data.
+* Also called the **75th percentile**.
 
 Example:
 
 ```text
-*****
-*****
-*****
-*****
-*****
+18, 20, 22, 25
 ```
 
----
-
-# Components of Data Distribution
-
-| Component | Description                         |
-| --------- | ----------------------------------- |
-| Center    | Mean, Median, Mode                  |
-| Spread    | Range, Variance, Standard Deviation |
-| Shape     | Normal, Skewed, Uniform             |
-| Outliers  | Unusually high or low values        |
+Q3 = **21** (average of 20 and 22)
 
 ---
 
-# Importance in Data Science
+### 5. Maximum
 
-Understanding data distribution helps in:
+The **largest observation** in the dataset.
 
-* Data Cleaning
-* Feature Engineering
-* Outlier Detection
-* Data Transformation
-* Model Selection
-* Model Evaluation
-
-For example:
-
-* Many Machine Learning algorithms assume the data follows a **Normal Distribution**.
-* Skewed data may require **log transformation** or **standardization** before training a model.
-
----
-
-# Python Example (Histogram)
-
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-
-df = pd.DataFrame({
-    "Marks": [40,45,48,50,52,55,58,60,62]
-})
-
-plt.hist(df["Marks"], bins=5)
-plt.title("Data Distribution")
-plt.xlabel("Marks")
-plt.ylabel("Frequency")
-plt.show()
-```
-
----
-
-# Pandas Example
-
-```python
-import pandas as pd
-
-df = pd.DataFrame({
-    "Marks": [40,45,48,50,52,55,58,60,62]
-})
-
-df["Marks"].plot(kind="hist", bins=5)
-```
-
----
-
-# Applications
-
-Data distribution is used in:
-
-* Education (student marks)
-* Finance (stock returns)
-* Healthcare (patient measurements)
-* Sales analysis
-* Weather forecasting
-* Manufacturing quality control
-
----
-
-# Interview Questions
-
-| Question                                                     | Answer                                                                          |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| What is Data Distribution?                                   | The way data values are spread across a dataset.                                |
-| Which graph is commonly used to visualize data distribution? | Histogram.                                                                      |
-| Which distribution is bell-shaped?                           | Normal Distribution.                                                            |
-| What does a skewed distribution indicate?                    | The data is not symmetric.                                                      |
-| Why is data distribution important?                          | It helps choose appropriate statistical techniques and machine learning models. |
-
----
-
-# Quick Cheat Sheet
-
-| Concept              | Description                   |
-| -------------------- | ----------------------------- |
-| Data Distribution    | Spread of data values         |
-| Normal Distribution  | Bell-shaped and symmetric     |
-| Positive Skew        | Tail on the right             |
-| Negative Skew        | Tail on the left              |
-| Uniform Distribution | Equal frequency across values |
-| Best Graph           | Histogram                     |
-
----
-
-# Key Points to Remember
-
-* **Data Distribution** describes **how data values are spread** in a dataset.
-* It helps identify the **center, spread, shape, and outliers**.
-* Common types of distributions:
-
-  * **Normal Distribution**
-  * **Positive (Right) Skewed Distribution**
-  * **Negative (Left) Skewed Distribution**
-  * **Uniform Distribution**
-* **Histogram** is the most commonly used graph to visualize data distribution.
-* Understanding data distribution is essential in **Statistics**, **Data Science**, **Machine Learning**, and **Business Analytics** because it influences data preprocessing, model selection, and interpretation.
-
-### Easy Way to Remember
-
-* **Data Distribution = How the data is spread**
-* **Histogram = Best graph to visualize distribution**
-* **Normal = Bell-shaped**
-* **Positive Skew = Tail to the right**
-* **Negative Skew = Tail to the left**
-
-# Mean, Variance, and Standard Deviation in Data Distribution
-
-**Mean**, **Variance**, and **Standard Deviation** are the three most important statistical measures used to describe a **data distribution**.
-
-* **Mean** tells us the **center** of the data.
-* **Variance** tells us **how spread out** the data is from the mean.
-* **Standard Deviation** tells us the **average distance** of the data values from the mean.
-
-Together, they help us understand the **center and spread** of a dataset.
-
----
-
-# Example Dataset
-
-Consider the following dataset:
+Example:
 
 ```text
-10, 20, 30, 40, 50
+5, 7, 9, 12, 15, 18, 20, 22, 25
 ```
 
----
-
-# 1. Mean (Center of Distribution)
-
-## What is Mean?
-
-The **Mean** is the average of all values in the dataset.
-
-It represents the **center** of the data distribution.
-
-## Simple Definition
-
-> **Mean is the average value of all observations in a dataset.**
-
-## Formula
-
-[
-\boxed{\text{Mean}=\frac{\sum X}{N}}
-]
-
-Where:
-
-* **ΣX** = Sum of all values
-* **N** = Number of observations
-
-## Calculation
-
-[
-\text{Mean}=\frac{10+20+30+40+50}{5}
-]
-
-[
-=\frac{150}{5}=30
-]
-
-**Mean = 30**
-
-### Interpretation
-
-The average value of the dataset is **30**.
-
----
-
-# Mean in Data Distribution
-
-```text
-10     20     30     40     50
-               ↑
-             Mean
-```
-
-The mean represents the **center** of the distribution.
-
----
-
-# 2. Variance (Spread of Distribution)
-
-## What is Variance?
-
-**Variance** measures **how far the data values are spread from the mean**.
-
-A **small variance** means the values are close to the mean.
-
-A **large variance** means the values are spread far from the mean.
-
-## Simple Definition
-
-> **Variance measures the average squared distance of data values from the mean.**
-
-genui{"probability_statistics_learning_block":{"type_id":"VARIANCE"}}
-
-## Formula (Population Variance)
-
-[
-\boxed{\sigma^2=\frac{\sum (x-\mu)^2}{N}}
-]
-
-Where:
-
-* **x** = Data value
-* **μ** = Mean
-* **N** = Number of observations
-
-### Calculation
-
-|     Value | Mean | Deviation (x−μ) | Squared Deviation |
-| --------: | ---: | --------------: | ----------------: |
-|        10 |   30 |             -20 |               400 |
-|        20 |   30 |             -10 |               100 |
-|        30 |   30 |               0 |                 0 |
-|        40 |   30 |              10 |               100 |
-|        50 |   30 |              20 |               400 |
-| **Total** |      |                 |          **1000** |
-
-[
-\text{Variance}=\frac{1000}{5}=200
-]
-
-**Variance = 200**
-
-### Interpretation
-
-The data has a spread of **200 square units** around the mean.
-
----
-
-# 3. Standard Deviation (Average Spread)
-
-## What is Standard Deviation?
-
-**Standard Deviation (SD)** is the **square root of the variance**.
-
-Unlike variance, it is measured in the **same unit as the original data**, making it easier to interpret.
-
-## Simple Definition
-
-> **Standard Deviation measures the average distance of data values from the mean.**
-
-## Formula
-
-[
-\boxed{\sigma=\sqrt{\text{Variance}}}
-]
-
-### Calculation
-
-[
-SD=\sqrt{200}=14.14
-]
-
-**Standard Deviation ≈ 14.14**
-
-### Interpretation
-
-On average, the values are about **14.14 units away from the mean**.
-
----
-
-# Relationship Between Mean, Variance, and Standard Deviation
-
-| Measure            | Describes                | Unit          |
-| ------------------ | ------------------------ | ------------- |
-| Mean               | Center of data           | Same as data  |
-| Variance           | Spread of data (squared) | Squared units |
-| Standard Deviation | Average spread           | Same as data  |
-
----
-
-# Low vs High Standard Deviation
-
-### Dataset A
-
-```text
-48, 49, 50, 51, 52
-```
-
-* Mean = 50
-* Standard Deviation = Low
-
-Values are close together.
-
----
-
-### Dataset B
-
-```text
-10, 30, 50, 70, 90
-```
-
-* Mean = 50
-* Standard Deviation = High
-
-Values are widely spread.
+Maximum = **25**
 
 ---
 
 # Visual Representation
 
-## Low Standard Deviation
-
 ```text
-          ███
-        ███████
-      ███████████
-        ███████
-          ███
+Minimum    Q1      Median      Q3      Maximum
+   |--------|----------|----------|-----------|
+   5        8         15         21          25
 ```
 
-Data is concentrated near the mean.
-
 ---
 
-## High Standard Deviation
+# Relation with Box Plot
+
+A **Box Plot** is constructed using the Five-Number Summary.
 
 ```text
-   ██
-  ████
- ██████
-████████
- ██████
-  ████
-   ██
+Minimum      Q1      Median      Q3      Maximum
+   |-----------|========|-----------|
+               Box
 ```
 
-Data is spread over a wider range.
+Where:
+
+* Left whisker → Minimum
+* Left edge of box → Q1
+* Line inside box → Median
+* Right edge of box → Q3
+* Right whisker → Maximum
 
 ---
 
-# Importance in Data Distribution
+# Five-Number Summary vs Measures of Central Tendency
 
-| Measure            | Importance                            |
-| ------------------ | ------------------------------------- |
-| Mean               | Finds the center of the distribution  |
-| Variance           | Measures variability                  |
-| Standard Deviation | Measures the average spread of values |
-
----
-
-# Applications in Data Science
-
-These measures are used in:
-
-* Exploratory Data Analysis (EDA)
-* Feature Scaling
-* Data Standardization
-* Outlier Detection
-* Risk Analysis
-* Machine Learning Model Evaluation
+| Five-Number Summary       | Measures of Central Tendency   |
+| ------------------------- | ------------------------------ |
+| Describes distribution    | Describes center               |
+| Uses five values          | Uses Mean, Median, Mode        |
+| Shows spread and outliers | Shows average or typical value |
 
 ---
 
 # Python Example
 
 ```python
-import statistics
+import numpy as np
 
-data = [10,20,30,40,50]
+data = [5,7,9,12,15,18,20,22,25]
 
-print("Mean:", statistics.mean(data))
-print("Variance:", statistics.variance(data))
-print("Standard Deviation:", statistics.stdev(data))
+print("Minimum:", np.min(data))
+print("Q1:", np.percentile(data, 25))
+print("Median:", np.median(data))
+print("Q3:", np.percentile(data, 75))
+print("Maximum:", np.max(data))
 ```
 
 ---
 
-# Pandas Example
+# Using Pandas
 
 ```python
 import pandas as pd
 
-df = pd.DataFrame({
-    "Marks":[10,20,30,40,50]
-})
+data = pd.Series([5,7,9,12,15,18,20,22,25])
 
-print("Mean:", df["Marks"].mean())
-print("Variance:", df["Marks"].var())
-print("Standard Deviation:", df["Marks"].std())
+print(data.describe())
 ```
 
----
-
-# Interview Questions
-
-| Question                                                              | Answer                                                        |
-| --------------------------------------------------------------------- | ------------------------------------------------------------- |
-| What does the Mean represent?                                         | The center (average) of the dataset.                          |
-| What does Variance measure?                                           | The spread of data around the mean.                           |
-| What does Standard Deviation measure?                                 | The average distance of values from the mean.                 |
-| Which measure is easier to interpret, Variance or Standard Deviation? | Standard Deviation, because it has the same unit as the data. |
-| Which measure is most commonly used in Data Science?                  | Standard Deviation.                                           |
-
----
-
-# Quick Cheat Sheet
-
-| Measure            | Formula       | Purpose        |
-| ------------------ | ------------- | -------------- |
-| Mean               | `ΣX / N`      | Center of data |
-| Variance           | `Σ(x−μ)² / N` | Spread of data |
-| Standard Deviation | `√Variance`   | Average spread |
-
----
-
-# Key Points to Remember
-
-* **Mean** tells you **where the center of the data is**.
-* **Variance** tells you **how much the data varies from the mean**.
-* **Standard Deviation** tells you **the average spread of the data** and is easier to interpret than variance.
-* If the **standard deviation is small**, the data points are close to the mean.
-* If the **standard deviation is large**, the data points are widely spread from the mean.
-* These three measures are fundamental in **Statistics**, **Data Science**, **Machine Learning**, and **Business Analytics**.
-
-### Easy Way to Remember
-
-| Measure                | Think of It As                                |
-| ---------------------- | --------------------------------------------- |
-| **Mean**               | 📍 Center of the data                         |
-| **Variance**           | 📏 How spread out the data is (squared units) |
-| **Standard Deviation** | 📐 Average distance from the center           |
-
-# What is a Density Curve?
-
-A **Density Curve** is a **smooth, continuous curve** that represents the **distribution of data**. It shows how the data values are spread over a range of values.
-
-The **area under the entire density curve is always equal to 1 (or 100%)**, representing the total probability.
-
----
-
-# Simple Definition
-
-> **A Density Curve is a smooth curve that represents the distribution and probability of data values in a dataset.**
-
----
-
-# Why Do We Use a Density Curve?
-
-A density curve helps us to:
-
-* Understand the shape of a data distribution.
-* Compare different datasets.
-* Estimate probabilities.
-* Identify skewness and spread.
-* Visualize continuous data without using bars.
-
----
-
-# Example
-
-Suppose we have the marks of 100 students.
+### Output
 
 ```text
-45, 50, 52, 55, 56, 58, 60, 61, 63, ...
-```
-
-Instead of drawing a histogram, we can draw a **smooth density curve** to show where most of the marks are concentrated.
-
----
-
-# Density Curve
-
-```text
-Density
- ^
- |                  *
- |               *     *
- |             *         *
- |           *             *
- |         *                 *
- |_______*_____________________*________> Data Values
-        40    50    60    70    80
-```
-
----
-
-# How to Read a Density Curve
-
-* **Peak (Highest Point)** → Where most observations occur.
-* **Left Side** → Smaller values.
-* **Right Side** → Larger values.
-* **Area Under the Curve** → Represents probability.
-
-For example:
-
-* If the peak is around **60**, most data values are close to **60**.
-
----
-
-# Characteristics of a Density Curve
-
-* Smooth and continuous.
-* Represents **continuous numerical data**.
-* Total area under the curve = **1 (100%)**.
-* Never goes below the X-axis.
-* Used to visualize the distribution of data.
-
----
-
-# Relationship Between Histogram and Density Curve
-
-A density curve is often drawn over a histogram.
-
-| Histogram             | Density Curve             |
-| --------------------- | ------------------------- |
-| Uses bars             | Uses a smooth curve       |
-| Shows frequencies     | Shows probability density |
-| Bars touch each other | Continuous smooth line    |
-
----
-
-# Types of Density Curves
-
-## 1. Normal Density Curve
-
-A symmetric, bell-shaped curve.
-
-```text
-            *
-          *   *
-        *       *
-      *           *
-    *               *
-```
-
-Characteristics:
-
-* Mean = Median = Mode
-* Symmetrical
-* No skewness
-
----
-
-## 2. Positively Skewed Density Curve
-
-```text
-*******
-******
-*****
-****
-***
-**
-*
-        ---------->
-```
-
-Characteristics:
-
-* Long tail on the right.
-* Mean > Median > Mode.
-
----
-
-## 3. Negatively Skewed Density Curve
-
-```text
-<----------
-        *
-       **
-      ***
-    ****
-  ******
-********
-```
-
-Characteristics:
-
-* Long tail on the left.
-* Mean < Median < Mode.
-
----
-
-# Density Curve vs Histogram
-
-| Density Curve                               | Histogram                       |
-| ------------------------------------------- | ------------------------------- |
-| Smooth curve                                | Rectangular bars                |
-| Shows probability density                   | Shows frequency                 |
-| Area under curve = 1                        | Bar heights represent frequency |
-| Better for understanding distribution shape | Better for viewing counts       |
-
----
-
-# Importance in Data Science
-
-Density curves help in:
-
-* Exploratory Data Analysis (EDA)
-* Understanding data distribution
-* Detecting skewness
-* Comparing multiple datasets
-* Probability estimation
-* Machine Learning preprocessing
-
----
-
-# Python Example (Seaborn)
-
-```python
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-data = [45,50,52,55,56,58,60,61,63,65,68,70]
-
-sns.kdeplot(data, fill=True)
-
-plt.title("Density Curve")
-plt.show()
-```
-
----
-
-# Python Example (Histogram + Density Curve)
-
-```python
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-sns.histplot(data, kde=True)
-
-plt.show()
+count     9
+mean     14.8
+std       ...
+min       5
+25%       8
+50%      15
+75%      21
+max      25
 ```
 
 ---
 
 # Applications
 
-Density curves are used in:
+The Five-Number Summary is used in:
 
-* Student marks analysis
-* Salary distribution
-* Stock market analysis
-* Medical research
-* Customer behavior analysis
-* Weather forecasting
+* Statistics
+* Data Science
+* Machine Learning
+* Exploratory Data Analysis (EDA)
+* Box Plot creation
+* Outlier detection
+* Business Analytics
+* Medical Research
+
+---
+
+# Advantages
+
+* Provides a quick summary of the dataset.
+* Easy to understand.
+* Helps detect outliers.
+* Useful for comparing datasets.
+* Forms the basis of a Box Plot.
+
+---
+
+# Limitations
+
+* Does not include every data value.
+* Does not describe the shape of the distribution completely.
+* Does not show the mean.
 
 ---
 
 # Interview Questions
 
-| Question                                              | Answer                                                                                   |
-| ----------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| What is a Density Curve?                              | A smooth curve representing the distribution and probability density of continuous data. |
-| What does the area under a density curve represent?   | Total probability (1 or 100%).                                                           |
-| Can a density curve go below the X-axis?              | No.                                                                                      |
-| Which type of data is represented by a density curve? | Continuous numerical data.                                                               |
-| Which graph is often used with a density curve?       | Histogram.                                                                               |
+| Question                                         | Answer                                                             |
+| ------------------------------------------------ | ------------------------------------------------------------------ |
+| What is the Five-Number Summary?                 | A summary of a dataset using Minimum, Q1, Median, Q3, and Maximum. |
+| What are the five numbers?                       | Minimum, Q1, Median, Q3, Maximum.                                  |
+| Which graph is based on the Five-Number Summary? | Box Plot.                                                          |
+| What does Q1 represent?                          | The 25th percentile.                                               |
+| What does Q3 represent?                          | The 75th percentile.                                               |
 
 ---
 
 # Quick Cheat Sheet
 
-| Feature       | Description                                |
-| ------------- | ------------------------------------------ |
-| Purpose       | Show data distribution                     |
-| Shape         | Smooth curve                               |
-| Data Type     | Continuous numerical data                  |
-| Total Area    | 1 (100%)                                   |
-| Best Used For | Understanding probability and distribution |
+| Measure     | Represents      |
+| ----------- | --------------- |
+| Minimum     | Smallest value  |
+| Q1          | 25th percentile |
+| Median (Q2) | 50th percentile |
+| Q3          | 75th percentile |
+| Maximum     | Largest value   |
 
 ---
 
 # Key Points to Remember
 
-* **Density Curve = Smooth representation of a data distribution.**
-* It is used for **continuous numerical data**.
-* The **total area under the curve is always 1 (100%)**.
-* It helps identify:
+* The **Five-Number Summary** describes the **distribution of a dataset** using **five values**.
+* The five values are:
 
-  * Center of the data
-  * Spread of the data
-  * Skewness
-  * Shape of the distribution
-* A density curve is commonly drawn **along with a histogram** to better visualize the distribution.
-* It is widely used in **Statistics**, **Data Science**, **Machine Learning**, and **Probability**.
+  * **Minimum**
+  * **First Quartile (Q1)**
+  * **Median (Q2)**
+  * **Third Quartile (Q3)**
+  * **Maximum**
+* It is used to:
 
-### Easy Way to Remember
+  * Summarize data.
+  * Measure data spread.
+  * Detect outliers.
+  * Create **Box Plots**.
+* It is an important tool in **Statistics**, **Exploratory Data Analysis (EDA)**, and **Machine Learning**.
 
-* **Histogram → Uses Bars**
-* **Density Curve → Uses a Smooth Curve**
-* **Both show how data is distributed**.
+---
+
+# Easy Way to Remember
+
+| Measure         | Remember As                     |
+| --------------- | ------------------------------- |
+| **Minimum**     | ⬇️ Smallest value               |
+| **Q1**          | 📍 25% of data below this value |
+| **Median (Q2)** | 🎯 Middle value (50%)           |
+| **Q3**          | 📍 75% of data below this value |
+| **Maximum**     | ⬆️ Largest value                |
 
