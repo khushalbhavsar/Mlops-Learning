@@ -1,11 +1,13 @@
 # What is loops in Python?
-# Loops are used to execute a block of code repeatedly as long as a specified condition is true. Python provides two types of loops: for loops and while loops.
+# Loops are used to execute a block of code repeatedly as long as a specified condition is true. 
+# Python provides two types of loops: for loops and while loops.
 
 # What is a for loop in Python?
 # A for loop is used to iterate over a sequence (like a list, tuple, dictionary, set, or string) and execute a block of code for each item in the sequence.
 
 # What is a while loop in Python?
-# A while loop is used to execute a block of code as long as a specified condition is true. The loop will continue until the condition becomes false.
+# A while loop is used to execute a block of code as long as a specified condition is true. 
+# The loop will continue until the condition becomes false.
 
 # Python Loops - One Complete Example
 

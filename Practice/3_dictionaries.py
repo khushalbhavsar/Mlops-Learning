@@ -1,8 +1,9 @@
 # What is Dictionaries in Python?
-# A dictionary is a collection of key-value pairs. Each key is unique and maps to a value. Dictionaries are mutable, meaning you can change their content without changing their identity.
+# A dictionary is a collection of key-value pairs. 
+# Each key is unique and maps to a value. 
+# Dictionaries are mutable, meaning you can change their content without changing their identity.
 
 # Python Dictionary Methods - One Complete Example
-
 # Original dictionary
 student = {
     "name": "Khushal",
@@ -12,7 +13,7 @@ student = {
 
 print("Original Dictionary:", student)
 
-# get() -> Returns the value of a key
+# get() -> Returns the value of a key 
 print("get('name'):", student.get("name"))
 
 # keys() -> Returns all keys

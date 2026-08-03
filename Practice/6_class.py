@@ -1,5 +1,6 @@
 # What is class in Python?
-# A class is a blueprint for creating objects. It defines a set of attributes and methods that the created objects will have. Classes allow for encapsulation, inheritance, and polymorphism, which are key concepts in object-oriented programming.
+# A class is a blueprint for creating objects. 
+# It defines a set of attributes and methods that the created objects will have. Classes allow for encapsulation, inheritance, and polymorphism, which are key concepts in object-oriented programming.
 
 # Create a Student class.
 class Student:

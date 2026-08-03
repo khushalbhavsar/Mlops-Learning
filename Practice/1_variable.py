@@ -1,5 +1,6 @@
 # What is a variable in Python?
-# A variable is a named location in memory that stores a value. In Python, you can create a variable by assigning a value to it using the equals sign (=). Variables can hold different data types such as integers, floats, strings, lists, dictionaries, etc.
+# A variable is a named location in memory that stores a value.
+# In Python, you can create a variable by assigning a value to it using the equals sign (=). Variables can hold different data types such as integers, floats, strings, lists, dictionaries, etc.
 
 # Swap two variables without using a third variable.
 a = int(input("Enter the first number (a): "))
