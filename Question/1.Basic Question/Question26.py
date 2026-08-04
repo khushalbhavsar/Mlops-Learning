@@ -8,6 +8,7 @@ my_dict = {
 # To access a specific value, we use its corresponding key. For example, to get the value of "name":
 name_value = my_dict["name"] # This will retrieve the value associated with the key "name"
 print(f"The value for the key 'name' is: {name_value}")
+print(f"The value for the key 'age' is: {my_dict['age']}")
 
 # Example input: {"name": "Alice", "age": 30, "city": "New York"}
 # Example output: "The value for the key 'name' is: Alice"
