@@ -1,550 +1,393 @@
-# Pytest
+# PyTest Complete Roadmap (Basic → Advanced)
 
-Pytest is a widely used Python testing framework for unit, integration, API, automation, and cloud validation testing.
+## Module 1: Introduction to PyTest
+
+* What is Testing?
+* Why Testing?
+* What is Unit Testing?
+* Why PyTest?
+* PyTest vs unittest
+* Installing PyTest
+* First Test
+* Running Tests
+* Naming Conventions
+
+## Module 2: Assertions
+
+* assert keyword
+* Assertion messages
+* Comparing values
+* Checking exceptions
+* Floating point comparisons
+* Multiple assertions
+
+## Module 3: Test Discovery
+
+* How PyTest finds tests
+* Naming rules
+* Directory structure
+* Running specific tests
+* Running test classes
+* Running test methods
+* Running by keyword
+
+## Module 4: Fixtures
+
+* What is Fixture?
+* Why Fixtures?
+* Creating Fixtures
+* Using Fixtures
+* Fixture Scope
+* Autouse Fixtures
+* yield Fixtures
+* Dependency between Fixtures
+* Fixture Best Practices
+
+## Module 5: Parameterization
+
+* @pytest.mark.parametrize
+* Multiple parameters
+* IDs
+* Combining fixtures and parameterization
+
+## Module 6: Markers
+
+* @pytest.mark.skip
+* skipif
+* xfail
+* custom markers
+* smoke
+* regression
+* sanity
+* api
+* database
+
+## Module 7: conftest.py
+
+* What is conftest.py?
+* Shared fixtures
+* Global fixtures
+* Multiple conftest files
+* Real project examples
+
+## Module 8: pytest.ini
+
+* Configuration
+* Register markers
+* Default options
+* Logging
+* Test paths
+
+## Module 9: Fixture Scope
+
+* function
+* class
+* module
+* package
+* session
+
+Performance comparison
+
+## Module 10: HTML Reports
+
+* pytest-html
+* Custom reports
+* Screenshots
+* Environment details
+* CI integration
+
+## Module 11: Advanced Fixtures
+
+* Temporary directories
+* Monkeypatch
+* capsys
+* caplog
+* request object
+
+## Module 12: Mocking
+
+* unittest.mock
+* patch
+* Mock APIs
+* Mock Database
+* Mock File System
+
+## Module 13: API Testing
+
+* requests library
+* GET
+* POST
+* PUT
+* PATCH
+* DELETE
+* Authentication
+* Authorization
+* Headers
+* Cookies
+* Response Validation
+
+## Module 14: Database Testing
+
+* SQLite
+* MySQL
+* PostgreSQL
+* CRUD Testing
+
+## Module 15: Selenium + PyTest
+
+* Browser automation
+* Fixtures
+* Page Object Model
+* Parallel execution
+
+## Module 16: PyTest Plugins
+
+* pytest-xdist
+* pytest-html
+* pytest-cov
+* pytest-rerunfailures
+* pytest-mock
+
+## Module 17: CI/CD Integration
+
+* Jenkins
+* GitHub Actions
+* Docker
+* Kubernetes
+
+## Module 18: Real Project
+
+* API Automation Framework
+* Folder Structure
+* Reports
+* Fixtures
+* Logging
+* Configurations
+* CI Pipeline
 
 ---
 
-## Table of Contents
+# Learning Plan
 
-1. [What is Pytest?](#1-what-is-pytest)
-2. [Pytest Architecture](#2-pytest-architecture)
-3. [Pytest Project Structure](#3-pytest-project-structure)
-4. [Test Discovery](#4-test-discovery)
-5. [Assertions](#5-assertions)
-6. [Fixtures](#6-fixtures)
-7. [Fixture Scope](#7-fixture-scope)
-8. [conftest.py](#8-conftestpy)
-9. [Markers](#9-markers)
-10. [Parameterization](#10-parameterization)
-11. [pytest.ini](#11-pytestini)
-12. [Complete Project Structure](#12-complete-project-structure)
-13. [Important Commands](#13-important-commands)
-14. [Complete Pytest Flow](#14-complete-pytest-flow)
-15. [Best Practices](#15-best-practices)
-16. [Most Asked Interview Questions](#16-most-asked-interview-questions)
-17. [Final Revision Table](#17-final-revision-table)
+Since you want **proper notes from basic to advanced**, we'll cover **one module at a time**, and each module will include:
+
+* ✅ Theory (simple definitions)
+* ✅ Why it is needed
+* ✅ Syntax
+* ✅ Code examples
+* ✅ Output explanation
+* ✅ Real-world examples
+* ✅ Interview questions
+* ✅ Common mistakes
+* ✅ Best practices
+* ✅ Hands-on exercises
+* ✅ Mini project at the end of the module
 
 ---
 
-## 1. What is Pytest?
+# Module 1: Introduction to PyTest
+
+## What is Testing?
 
 ### Definition
 
-**Pytest** is an open-source Python testing framework used for writing and executing automated tests.
+**Testing** is the process of verifying that a software application behaves as expected and meets its requirements.
+
+The goal is to identify bugs before the software reaches users.
+
+---
+
+## Example
+
+Imagine a calculator application.
+
+If a user enters:
+
+```text
+2 + 3
+```
+
+Expected output:
+
+```text
+5
+```
+
+If the application returns:
+
+```text
+8
+```
+
+There is a bug.
+
+Testing helps detect this issue.
+
+---
+
+# What is Unit Testing?
+
+## Definition
+
+**Unit Testing** is a type of software testing where the smallest testable units (usually functions or methods) are tested individually.
+
+Each unit is tested in isolation.
+
+---
+
+Example
+
+```python
+def add(a, b):
+    return a + b
+```
+
+We can test it:
+
+```python
+assert add(2, 3) == 5
+```
+
+---
+
+# What is PyTest?
+
+## Definition
+
+**PyTest** is a powerful, open-source Python testing framework used to write, organize, and execute automated tests.
 
 It supports:
 
-- Unit testing
-- Functional testing
-- API testing
-- Integration testing
-- Automation testing
-
-### Why Pytest?
-
-Instead of manually checking outputs:
-
-```python
-if add(2, 3) == 5:
-    print("PASS")
-else:
-    print("FAIL")
-```
-
-Use Pytest:
-
-```python
-def test_add():
-    assert add(2, 3) == 5
-```
-
-Advantages:
-
-- Easy syntax
-- Automatic discovery
-- Reusable setup
-- Better reports
-- Powerful fixtures
+* Unit Testing
+* Functional Testing
+* API Testing
+* Integration Testing
+* End-to-End Testing
 
 ---
 
-## 2. Pytest Architecture
+# Why Use PyTest?
 
-```text
-Pytest
-  ↓
-Test Discovery Engine
-  ↓
-Collect Test Files
-  ↓
-Load conftest.py
-  ↓
-Execute Fixtures
-  ↓
-Run Test Functions
-  ↓
-Assertions
-  ↓
-Pass / Fail Report
-```
-
----
-
-## 3. Pytest Project Structure
-
-```text
-project/
-├── app/
-│   └── calculator.py
-├── tests/
-│   ├── test_calculator.py
-│   ├── test_login.py
-│   └── test_api.py
-├── conftest.py
-├── pytest.ini
-├── requirements.txt
-└── README.md
-```
-
-### calculator.py
+Without PyTest:
 
 ```python
 def add(a, b):
     return a + b
 
-
-def sub(a, b):
-    return a - b
+print(add(2, 3))
 ```
 
-### test_calculator.py
+You manually inspect the output.
+
+With PyTest:
 
 ```python
-from app.calculator import *
+def test_add():
+    assert add(2, 3) == 5
+```
 
+PyTest automatically reports whether the test passed or failed.
+
+---
+
+# Why is PyTest Popular?
+
+* Simple syntax
+* Powerful assertion introspection
+* Automatic test discovery
+* Rich plugin ecosystem
+* Fixture support
+* Parameterized testing
+* HTML reporting
+* Parallel execution
+* Easy CI/CD integration (Jenkins, GitHub Actions)
+
+---
+
+# PyTest vs unittest
+
+| Feature          | PyTest           | unittest                  |
+| ---------------- | ---------------- | ------------------------- |
+| Syntax           | Simple           | More verbose              |
+| Assertions       | `assert` keyword | Many `assert*` methods    |
+| Fixtures         | Built-in         | Uses `setUp` / `tearDown` |
+| Parameterization | Built-in         | Requires extra code       |
+| Plugins          | Extensive        | Limited                   |
+| Learning Curve   | Easy             | Moderate                  |
+
+---
+
+# Installing PyTest
+
+Check Python version:
+
+```bash
+python --version
+```
+
+Install PyTest:
+
+```bash
+pip install pytest
+```
+
+Verify installation:
+
+```bash
+pytest --version
+```
+
+Example output:
+
+```text
+pytest 8.x.x
+```
+
+---
+
+# Project Structure
+
+```text
+pytest-course/
+│
+├── app/
+│   ├── calculator.py
+│
+├── tests/
+│   └── test_calculator.py
+│
+├── requirements.txt
+│
+└── pytest.ini
+```
+
+---
+
+# Create a Simple Python File
+
+**`app/calculator.py`**
+
+```python
+def add(a, b):
+    return a + b
+```
+
+---
+
+# Write Your First Test
+
+**`tests/test_calculator.py`**
+
+```python
+from app.calculator import add
 
 def test_add():
     assert add(2, 3) == 5
-
-
-def test_sub():
-    assert sub(10, 5) == 5
-```
-
-Run:
-
-```bash
-pytest
 ```
 
 ---
 
-## 4. Test Discovery
-
-### Definition
-
-Pytest automatically finds test files, test functions, and test classes.
-
-### Rules
-
-Files:
-
-```text
-test_login.py
-test_api.py
-test_math.py
-```
-
-Or:
-
-```text
-login_test.py
-```
-
-Functions:
-
-```python
-def test_login():
-    ...
-
-
-def test_add():
-    ...
-```
-
-Classes:
-
-```python
-class TestLogin:
-    ...
-```
-
-Example:
-
-```text
-tests/
-├── test_login.py
-├── test_api.py
-└── math.py
-```
-
-Only `test_login.py` and `test_api.py` are executed.
-
-Run discovery:
-
-```bash
-pytest --collect-only
-```
-
----
-
-## 5. Assertions
-
-Assertions verify expected results.
-
-### Equal
-
-```python
-assert 5 == 5
-```
-
-### Not Equal
-
-```python
-assert 5 != 10
-```
-
-### True
-
-```python
-assert True
-```
-
-### False
-
-```python
-assert not False
-```
-
-### List
-
-```python
-assert 5 in [1, 2, 3, 4, 5]
-```
-
-### Dictionary
-
-```python
-user = {"name": "Khushal"}
-assert user["name"] == "Khushal"
-```
-
-### Exception
-
-```python
-import pytest
-
-
-def divide(a, b):
-    return a / b
-
-
-def test_divide():
-    with pytest.raises(ZeroDivisionError):
-        divide(5, 0)
-```
-
----
-
-## 6. Fixtures
-
-### Definition
-
-Fixtures provide reusable setup and cleanup logic.
-
-Instead of:
-
-```python
-def test_login():
-    open_browser()
-    login()
-    close_browser()
-
-
-def test_logout():
-    open_browser()
-    logout()
-    close_browser()
-```
-
-Use fixture:
-
-```python
-import pytest
-
-
-@pytest.fixture
-def browser():
-    print("Browser Started")
-    yield
-    print("Browser Closed")
-
-
-def test_login(browser):
-    print("Login")
-
-
-def test_logout(browser):
-    print("Logout")
-```
-
-Output:
-
-```text
-Browser Started
-Login
-Browser Closed
-Browser Started
-Logout
-Browser Closed
-```
-
-### Fixture Workflow
-
-```text
-Fixture
-  ↓
-Setup
-  ↓
-Test
-  ↓
-Yield
-  ↓
-Cleanup
-```
-
----
-
-## 7. Fixture Scope
-
-### Function Scope
-
-Runs before every test.
-
-```python
-@pytest.fixture(scope="function")
-```
-
-### Class Scope
-
-Runs once per class.
-
-```python
-@pytest.fixture(scope="class")
-```
-
-### Module Scope
-
-Runs once per module (file).
-
-```python
-@pytest.fixture(scope="module")
-```
-
-### Session Scope
-
-Runs once for the complete test session.
-
-```python
-@pytest.fixture(scope="session")
-```
-
-Example:
-
-```python
-import pytest
-
-
-@pytest.fixture(scope="session")
-def database():
-    print("Database Connected")
-    yield
-    print("Database Closed")
-```
-
----
-
-## 8. conftest.py
-
-### Definition
-
-A special Pytest file for shared fixtures.
-
-Project:
-
-```text
-project/
-├── conftest.py
-└── tests/
-    ├── test_login.py
-    └── test_api.py
-```
-
-`conftest.py`:
-
-```python
-import pytest
-
-
-@pytest.fixture
-def token():
-    return "ABC123"
-```
-
-`test_api.py`:
-
-```python
-def test_api(token):
-    assert token == "ABC123"
-```
-
-Fixtures are automatically available. No import required.
-
----
-
-## 9. Markers
-
-### Definition
-
-Markers group and categorize tests.
-
-Example:
-
-```python
-import pytest
-
-
-@pytest.mark.smoke
-def test_login():
-    pass
-
-
-@pytest.mark.regression
-def test_signup():
-    pass
-```
-
-Run only smoke:
-
-```bash
-pytest -m smoke
-```
-
-Run regression:
-
-```bash
-pytest -m regression
-```
-
----
-
-## 10. Parameterization
-
-### Definition
-
-Run one test multiple times with different inputs.
-
-Without parameterization:
-
-```python
-def test_add1():
-    assert 2 + 3 == 5
-
-
-def test_add2():
-    assert 5 + 5 == 10
-
-
-def test_add3():
-    assert 7 + 8 == 15
-```
-
-With parameterization:
-
-```python
-import pytest
-
-
-@pytest.mark.parametrize(
-    "a,b,result",
-    [
-        (2, 3, 5),
-        (5, 5, 10),
-        (7, 8, 15),
-    ],
-)
-def test_add(a, b, result):
-    assert a + b == result
-```
-
-Output:
-
-```text
-PASS
-PASS
-PASS
-```
-
-One function, three test cases.
-
----
-
-## 11. pytest.ini
-
-### Definition
-
-Configuration file for Pytest defaults and test behavior.
-
-Example:
-
-```ini
-[pytest]
-addopts = -v
-markers =
-    smoke
-    regression
-    api
-python_files = test_*.py
-python_functions = test_*
-```
-
-Purpose:
-
-- Register markers
-- Configure default options
-- Set test discovery naming rules
-
----
-
-## 12. Complete Project Structure
-
-```text
-project/
-├── app/
-│   └── calculator.py
-├── tests/
-│   ├── test_calculator.py
-│   ├── test_login.py
-│   └── test_api.py
-├── conftest.py
-├── pytest.ini
-├── requirements.txt
-└── README.md
-```
-
----
-
-## 13. Important Commands
+# Running Tests
 
 Run all tests:
 
@@ -552,159 +395,145 @@ Run all tests:
 pytest
 ```
 
-Verbose:
+Run with detailed output:
 
 ```bash
 pytest -v
 ```
 
-Show print statements:
+Run a specific file:
 
 ```bash
-pytest -s
+pytest tests/test_calculator.py
 ```
 
-Run one file:
+Run a specific test function:
 
 ```bash
-pytest tests/test_api.py
-```
-
-Run one function:
-
-```bash
-pytest tests/test_api.py::test_login
-```
-
-Run marker:
-
-```bash
-pytest -m smoke
-```
-
-Collect tests:
-
-```bash
-pytest --collect-only
-```
-
-HTML report:
-
-```bash
-pytest --html=report.html
-```
-
-Last failed:
-
-```bash
-pytest --lf
-```
-
-Stop after first failure:
-
-```bash
-pytest -x
+pytest tests/test_calculator.py::test_add
 ```
 
 ---
 
-## 14. Complete Pytest Flow
+# Understanding the Output
+
+If the implementation is correct:
 
 ```text
-Developer
-  ↓
-Write Python Code
-  ↓
-Write Tests
-  ↓
-pytest
-  ↓
-Test Discovery
-  ↓
-Load conftest.py
-  ↓
-Load Fixtures
-  ↓
-Execute Tests
-  ↓
-Assertions
-  ↓
-Pass / Fail
-  ↓
-Generate Report
+=============================
+1 passed in 0.02s
+=============================
+```
+
+If the function is incorrect:
+
+```python
+def add(a, b):
+    return a - b
+```
+
+PyTest reports:
+
+```text
+> assert -1 == 5
+E AssertionError
+```
+
+This makes it easy to identify the failing assertion.
+
+---
+
+# Naming Conventions
+
+PyTest automatically discovers tests when you follow these conventions:
+
+### Test files
+
+```text
+test_calculator.py
+test_login.py
+```
+
+### Test functions
+
+```python
+def test_add():
+    ...
+
+def test_login():
+    ...
+```
+
+### Test classes
+
+```python
+class TestCalculator:
+
+    def test_add(self):
+        ...
 ```
 
 ---
 
-## 15. Best Practices
+# Real-World Example
 
-- Keep tests independent.
-- Use meaningful test names.
-- Use fixtures instead of duplicate setup code.
-- Store common fixtures in `conftest.py`.
-- Register custom markers in `pytest.ini`.
-- Use parameterization to reduce duplicate test cases.
-- Use assertions for validation instead of `print`.
-- Organize tests under a dedicated `tests/` directory.
-- Generate reports for CI/CD pipelines.
+Suppose your team develops an API:
 
----
+```python
+GET /users/1
+```
 
-## 16. Most Asked Interview Questions
+You want to ensure it always returns status code **200**.
 
-### What is Pytest?
+```python
+import requests
 
-An open-source Python testing framework for writing and executing automated tests.
+def test_get_user():
+    response = requests.get("https://api.example.com/users/1")
+    assert response.status_code == 200
+```
 
-### What is Test Discovery?
-
-Pytest automatically discovers:
-
-- test files (`test_*.py` or `*_test.py`)
-- test functions (`test_*`)
-- test classes (`Test*`)
-
-### What is a Fixture?
-
-Reusable setup and teardown logic shared across tests.
-
-### What is `conftest.py`?
-
-A special file that contains shared fixtures and hooks. Fixtures defined here are automatically available to tests in the same directory hierarchy.
-
-### What is a Marker?
-
-A label used to categorize tests (for example: `smoke`, `regression`) and run selected groups.
-
-### What is Parameterization?
-
-A feature that runs the same test function multiple times with different input values.
-
-### What is `pytest.ini`?
-
-A configuration file used to define default options, register markers, and customize test discovery.
-
-### What are Fixture Scopes?
-
-- **function**: Runs before each test
-- **class**: Runs once per test class
-- **module**: Runs once per module
-- **session**: Runs once per test session
+Whenever a developer changes the backend, PyTest immediately tells you if this endpoint has broken.
 
 ---
 
-## 17. Final Revision Table
+# Best Practices
 
-| Topic | Definition | Most Important Syntax |
-| --- | --- | --- |
-| **Framework Structure** | Organizes tests into a maintainable project layout | `tests/`, `conftest.py`, `pytest.ini` |
-| **Fixtures** | Reusable setup and cleanup code | `@pytest.fixture` |
-| **Fixture Scope** | Controls how often a fixture runs | `scope="function"`, `"class"`, `"module"`, `"session"` |
-| **Markers** | Categorize tests | `@pytest.mark.smoke` |
-| **Parameterization** | Run one test with multiple inputs | `@pytest.mark.parametrize()` |
-| **Assertions** | Validate expected outcomes | `assert actual == expected` |
-| **Test Discovery** | Automatically finds test files/functions | `pytest --collect-only` |
-| **conftest.py** | Stores shared fixtures and hooks | `@pytest.fixture` |
-| **pytest.ini** | Global Pytest configuration | `addopts=-v`, `markers=...` |
+* Keep one responsibility per test.
+* Use descriptive test names (`test_login_with_valid_credentials`).
+* Avoid dependencies between tests.
+* Store tests in a separate `tests/` directory.
+* Use fixtures instead of duplicating setup code.
 
 ---
+
+# Module 1 Exercises
+
+1. Install PyTest.
+2. Create a `calculator.py` with `add()` and `subtract()` functions.
+3. Write tests for both functions.
+4. Intentionally introduce a bug and observe the failure output.
+5. Run:
+
+   * `pytest`
+   * `pytest -v`
+   * A single test file
+   * A single test function
+
+---
+
+## Next Module
+
+**Module 2: Assertions (Complete Guide)**
+
+We'll cover:
+
+* `assert` in detail
+* How PyTest rewrites assertions
+* Comparing lists, dictionaries, and objects
+* Exception testing with `pytest.raises`
+* Floating-point comparisons
+* Custom assertion messages
+* Real-world examples and interview questions
+
+By the end of this course, you'll be able to build a **production-ready PyTest automation framework** for **API testing, Selenium, CI/CD (Jenkins/GitHub Actions), Docker, and Kubernetes**, which is the level typically expected in DevOps and SRE roles.
