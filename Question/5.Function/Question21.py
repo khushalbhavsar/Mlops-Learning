@@ -6,4 +6,5 @@ def print_local_variable():
 
 print_local_variable()
 
-# What is local_var? It is a local variable that is defined inside the function print_local_variable(). It can only be accessed within the function and will raise a NameError if accessed outside the function.
+# What is local_var? 
+# It is a local variable that is defined inside the function print_local_variable(). It can only be accessed within the function and will raise a NameError if accessed outside the function.

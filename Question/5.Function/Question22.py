@@ -7,4 +7,6 @@ def print_local_variable():
 print_local_variable()
 print(local_var)  # This will raise a NameError because local_var is not defined outside the function   
 
-# Why loal_var is not accessible outside the function? It is because local_var is a local variable that is defined inside the function print_local_variable(). It can only be accessed within the function and will raise a NameError if accessed outside the function.
+# Why loal_var is not accessible outside the function? 
+# It is because local_var is a local variable that is defined inside the function print_local_variable(). 
+# It can only be accessed within the function and will raise a NameError if accessed outside the function.
